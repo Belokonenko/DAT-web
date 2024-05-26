@@ -1,0 +1,80 @@
+.our-team {
+    --width-radial-gradient: 40%;
+
+    background: radial-gradient(
+            ellipse var(--width-radial-gradient) 50% at 0% 97%,
+            rgb(132, 190, 81, 0.2) 0%,
+            rgb(210, 230, 189, 0) 100%
+        ),
+        radial-gradient(
+            ellipse var(--width-radial-gradient) 50% at 0% 60%,
+            rgb(231, 78, 19, 0.1) 0%,
+            rgb(231, 78, 19, 0) 100%
+        ),
+        radial-gradient(
+            ellipse var(--width-radial-gradient) 50% at 100% 20%,
+            rgb(231, 78, 19, 0.1) 0%,
+            rgb(231, 78, 19, 0) 100%
+        ),
+        radial-gradient(
+            ellipse var(--width-radial-gradient) 50% at 100% 97%,
+            rgb(132, 190, 81, 0.2) 0%,
+            rgb(210, 230, 189, 0) 100%
+        );
+
+    @include phone-l {
+        --width-radial-gradient: 20%;
+    }
+
+    &__breadcrumbs {
+        margin-bottom: 21px;
+    }
+
+    &__title {
+        margin-bottom: 35px;
+
+        @include phone-l {
+            margin-bottom: 22px;
+        }
+    }
+
+    &__sec-gallery {
+        padding-bottom: 125px;
+
+        @include phone-l {
+            margin-bottom: 50px;
+        }
+    }
+
+    &__gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+
+        @include phone-l {
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(3, max-content);
+        }
+    }
+
+    &__title-gallery {
+        margin-bottom: 30px;
+        @include phone-l {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__wrap-img {
+        text-align: center;
+    }
+
+    &__img {
+        border-radius: 10px;
+    }
+
+    &__name-member {
+        font-weight: 600;
+        font-size: 22px;
+        text-align: center;
+    }
+}

@@ -1,0 +1,18 @@
+.logo {
+    display: inline-block;
+    cursor: pointer;
+    width: 158px;
+    height: 71px;
+    text-decoration: none;
+
+    @include tablet {
+        width: 106px;
+        height: 48px;
+    }
+
+    &__img {
+        width: 100%;
+        height: auto;
+    }
+}
+

@@ -1,0 +1,21 @@
+.partners-cont {
+    padding-bottom: 120px;
+    
+    @include phone-m {
+        padding-bottom: 37px;
+    }
+    
+    &__title {
+        margin-bottom: 27px;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+        gap: 30px;
+
+        @include phone-m {
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        }
+    }
+}

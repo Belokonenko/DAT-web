@@ -1,0 +1,47 @@
+.agreement {
+
+    --width-radial-gradient: 40%;
+    background: radial-gradient(ellipse var(--width-radial-gradient) 25% at 0% 25%,
+            rgb(231, 78, 19, 0.1) 0%,
+            rgb(231, 78, 19, 0) 100%),
+        radial-gradient(ellipse var(--width-radial-gradient) 25% at 100% 30%,
+            rgb(231, 78, 19, 0.1) 0%,
+            rgb(231, 78, 19, 0) 100%),
+        radial-gradient(ellipse var(--width-radial-gradient) 25% at 0% 75%,
+            rgb(231, 78, 19, 0.1) 0%,
+            rgb(231, 78, 19, 0) 100%),
+        // green
+        radial-gradient(ellipse var(--width-radial-gradient) 25% at 0% 50%,
+            rgb(132, 190, 81, 0.2) 0%,
+            rgb(210, 230, 189, 0) 100%),
+        radial-gradient(ellipse var(--width-radial-gradient) 25% at 100% 60%,
+            rgb(132, 190, 81, 0.2) 0%,
+            rgb(210, 230, 189, 0) 100%),
+        radial-gradient(ellipse var(--width-radial-gradient) 25% at 100% 97%,
+            rgb(132, 190, 81, 0.2) 0%,
+            rgb(210, 230, 189, 0) 100%);
+
+
+    @include phone-l {
+        --width-radial-gradient: 30%;
+    }
+
+    background-color: var(--color-bg-light);
+    padding-bottom: 100px;
+
+    @include phone-l {
+        padding-bottom: 40px;
+    }
+
+    & p {
+        margin-bottom: 20px;
+    }
+
+    & h2 {
+        margin-bottom: 20px;
+        padding-top: 20px;
+        font-weight: 700;
+        font-size: 18px;
+        color: var(--color-main);
+    }
+}

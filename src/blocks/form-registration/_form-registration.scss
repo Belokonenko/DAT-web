@@ -1,0 +1,218 @@
+.form-registration {
+    &__form {
+        position: relative;
+
+        margin: 0 auto;
+
+        max-width: 540px;
+    }
+
+    &__fildset {
+        display: grid;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 20px 30px;
+        
+        @include tablet {
+            grid-template-columns: 1fr;
+
+            gap: 20px 30px;
+        }
+    }
+
+    &__fild {
+        position: relative;
+
+        width: 100%;
+        height: 40px;
+
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        border-radius: 90px;
+    }
+    
+    &__addres-wrap {
+        grid-column: 1/-1; 
+    }
+    
+    // &__label {
+    //     position: absolute;
+    //     top: -60%;
+    //     left: 0;
+    // }
+
+    &__input {
+        padding: 0 19px 0 19px;
+
+        width: 100%;
+        height: 100%;
+
+        font-size: 16px;
+        font-weight: 400;
+
+        color: var(--color-text-dark-alt);
+        background-color: transparent;
+        border: none;
+        border-radius: 90px;
+
+        appearance: none;
+    }
+
+    &__input:focus {
+        outline: 2px solid var(--color-main-light);
+    }
+
+    &__input.error {
+        border: 1px solid red;
+        outline: none;
+    }
+
+    &__error {
+        position: absolute;
+        bottom: -40%;
+        left: 0;
+
+        display: flex;
+
+        font-size: 10px;
+
+        color: red;
+    }
+
+    &__input:placeholder {
+        font-size: 16px;
+        font-weight: 400;
+
+        color: var(--color-text-dark-alt);
+    }
+
+    &__fild-textaria {
+        grid-column: 1/-1;
+
+        height: 100px;
+
+        border-radius: 20px;
+    }
+
+    &__textaria {
+        padding: 10px 19px;
+
+        width: 100%;
+        height: 100%;
+
+        font-size: 16px;
+        font-weight: 400;
+
+        color: var(--color-text-dark-alt);
+        background-color: transparent;
+        border: none;
+        border-radius: 20px;
+
+        resize: none;
+
+        appearance: none;
+    }
+
+    &__agree {
+        display: flex;
+
+        align-items: center;
+        justify-content: start;
+
+        margin-bottom: 11px;
+
+        height: 20px;
+
+        font-size: 16px;
+        font-weight: 400;
+
+        color: var(--color-text-dark-alt);
+        border: none;
+
+        @include phone-m {
+            margin-bottom: 0px;
+        }
+    }
+
+    &__agree-href {
+        color: var(--color-main-light);
+    }
+    &__agree-href:focus {
+        border-bottom: 2px solid var(--color-main-light);
+        outline: none;
+    }
+
+    &__password,
+    &__confirm-password,
+    &__agree,
+    &__button {
+        grid-column: 1/-1;
+
+        width: 100%;
+    }
+
+    &__block-new-pass {
+        grid-template-columns: 50%;
+
+        @include tablet {
+        grid-template-columns: 1fr;
+        }
+    }
+ 
+ 
+    &__old-pass-wrap,
+    &__new-pass-wrap,
+    &__new-pass-confirm-wrap {
+        grid-column: 1/2;
+    }
+    // checkbox-castom
+
+    &__lable-check {
+        position: relative;
+
+        display: block;
+
+        padding-left: 35px;
+
+        cursor: pointer;
+        user-select: none;
+    }
+
+    &__checkmark {
+        position: absolute;
+        top: -4px;
+        left: 0;
+
+        display: flex;
+
+        width: 20px;
+        height: 20px;
+
+        border: 1px solid var(--color-main-light);
+        border-radius: 3px;
+
+        &::after {
+            content: "";
+
+            position: absolute;
+            bottom: -2;
+            left: 0;
+
+            width: 30px;
+            height: 30px;
+
+            background-image: url(../../images/Svg/Check-Mark.svg);
+            visibility: hidden;
+        }
+    }
+
+    &__checkbox {
+        &:checked ~ .form-registration__checkmark::after {
+            visibility: visible;
+        }
+
+        &:focus-visible ~ .form-registration__checkmark {
+            outline: 2px solid var(--color-main-light);
+        }
+    }
+}

@@ -1,0 +1,57 @@
+.quantity {
+    &__text {
+        font-weight: 700;
+    }
+
+    // /* Скрыть стрелки у элемента ввода числа */
+    // &__number-input::-webkit-outer-spin-button,
+    // &__number-input::-webkit-inner-spin-button {
+    //     -webkit-appearance: none;
+    //     margin: 0;
+    // }
+
+    // &__number-input {
+    //     -moz-appearance: textfield; /* Firefox */
+    // }
+
+    &__number-input[type="number"]::-webkit-outer-spin-button,
+    &__number-input[type="number"]::-webkit-inner-spin-button {
+        -webkit-appearance: none; // Yeah, yeah everybody write about it
+    }
+
+    &__number-input[type="number"],
+    &__number-input[type="number"]:hover,
+    &__number-input[type="number"]:focus {
+        appearance: none;
+        -moz-appearance: textfield;
+    }
+
+    &__number-input {
+        appearance: none;
+        width: 47px;
+        height: 47px;
+        border-radius: 50%;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        text-align: center;
+
+        &:focus {
+            outline: 1px solid var(--color-main-light);
+        }
+    }
+
+    &__decrement-button,
+    &__increment-button {
+        flex-grow: 0;
+        flex-shrink: 0;
+        line-height: 1;
+        text-align: center;
+        width: 20px;
+        height: 20px;
+        border: 10px solid transparent;
+        background-color: var(--color-main-light);
+        color: var(--color-text-light);
+        border-radius: 50%;
+        box-sizing: content-box;
+        background-clip: content-box;
+    }
+}

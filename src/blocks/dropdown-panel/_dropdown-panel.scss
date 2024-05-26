@@ -1,0 +1,70 @@
+.dropdown-panel {
+    position:fixed;
+    z-index: 2;
+    top:-250%;
+    display: block;
+    width: 100%;
+    min-height: 600px;
+    height: calc(100vh - var(--top-min-height));
+    background-color: var(--color-main);
+    padding-top: calc(var(--top-min-height));
+    transition: all 1s ease;
+    color: var(--color-text-light);
+}
+
+.dropdown-panel_active {
+    top: 0;
+}
+// .dropdown-panel__btn-arr {
+//     width: 35px;
+//     height: 25px;
+// }
+.dropdown-panel__container {
+    display: grid;
+    grid-template-columns: max-content 1fr max-content max-content;
+    grid-template-rows: repeat(3, 60px);
+    gap:0 18px ;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.dropdown-panel__logo {
+    grid-column: 1/3;
+}
+.dropdown-panel__price {
+    color: #fff;
+}
+.dropdown-panel__search {
+    grid-column: 2/-1;
+    width: 100%;
+}
+
+.dropdown-panel__form {
+    margin-right: 0;
+}
+
+.dropdown-panel__order {
+    grid-column: 1/-1; 
+    justify-self: start;
+}
+
+.dropdown-panel__dec-line {
+    border-top: rgba(255, 255, 255, 0.10) solid 1px;
+    margin-bottom: 30px;
+}
+
+.dropdown-panel__list {
+    background-color: var(--color-main);
+
+}
+
+.dropdown-panel__item {
+    height: 50px;
+}
+
+.dropdown-panel__tel {
+    color: #fff;
+}
+
+.dropdown-panel__nav {
+}

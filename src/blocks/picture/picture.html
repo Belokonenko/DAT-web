@@ -1,0 +1,26 @@
+<picture>
+    <source
+        type="image/webp"
+        srcset="
+            @@path_img.webp    1x,
+            @@path_img@2x.webp 2x,
+            @@path_img@3x.webp 3x,
+            @@path_img@4x.webp 4x
+        "
+    />
+    <img
+        class="@@class-name"
+        width="@@width"
+        height="@@height"
+        src="@@path_img.jpeg"
+        srcset="
+            @@path_img@2x.jpeg 2x,
+            @@path_img@3x.jpeg 3x,
+            @@path_img@4x.jpeg 4x
+        "
+        alt="@@alt"
+    />
+</picture>
+
+<!-- @@include('../picture/picture.html', { "path_img" : "img/prod-petunia/pet", "alt": -->
+<!-- "image", "class-name":"card__img", "width":"97", "height": "132" }) -->

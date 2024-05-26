@@ -1,0 +1,93 @@
+.button-burger {
+  position: relative;
+  height: 28px;
+  width: 28px;
+  border-right: none;
+
+  &__element {
+    position: absolute;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5px;
+    width: 100%;
+    transition: all 0.3s ease;
+  }
+
+  &__top {
+    top: 10%;
+  }
+
+  &__mid {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &__bot {
+    bottom: 10%;
+  }
+
+  &__dot {
+    width: 5px;
+    height: 100%;
+    background-color: #84c551;
+    border-radius: 50%;
+  }
+
+  &__line {
+    width: 70%;
+    height: 100%;
+    background: #84c551;
+    border-radius: 90px;
+  }
+
+  &__dot-r {
+    display: none;
+  }
+
+  // --- active ---
+
+  &.button-burger_active .button-burger__top {
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+  }
+
+  &.button-burger_active .button-burger__mid {
+    top: 50%;
+    opacity: 0;
+  }
+
+  &.button-burger_active .button-burger__bot {
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
+  }
+
+  &.button-burger_active .button-burger__dot-r {
+    width: 5px;
+    height: 5px;
+    background-color: #84c551;
+    border-radius: 50%;
+  }
+
+  &.button-burger_active .button-burger__line {
+    width: 60%;
+    height: 5px;
+    background: #84c551;
+    border-radius: 90px;
+  }
+
+  &.button-burger_active .button-burger__dot-r {
+    display: block;
+  }
+
+  // --- /active ---
+}
+
+@media (max-width: 992px) {
+  .button-burger {
+    display: inline-flex;
+    align-self: center;
+  }
+}
+
+// ---  burger ---

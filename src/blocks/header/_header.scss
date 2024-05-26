@@ -1,0 +1,41 @@
+.header {
+    position: absolute;
+    width: 100%;
+    min-height: var(--header-min-height);
+    z-index: 2;
+
+    &__sub {
+        display: grid;
+        grid-template-columns: max-content 1fr 1fr repeat(3, max-content);
+        gap: 16px; align-items: center; padding-top: calc(var(--top-min-height) + 20px);
+        padding-bottom: 20px;
+        background-color: transparent;
+
+        @include tablet {
+            grid-template-columns: max-content 1fr repeat(3, max-content);
+        }
+
+        @include phone-l {
+            grid-template-columns: 1fr repeat(2, max-content);
+        }
+    }
+
+    .header__search {
+        @include tablet {
+            display: none;
+        }
+    }
+
+    &__order {
+        justify-self: start;
+        margin-left: 15px;
+
+        @include phone-m{
+            display: none;
+        }
+    }
+
+    &__heart {
+        translate: 0.5px 1px;
+    }
+}

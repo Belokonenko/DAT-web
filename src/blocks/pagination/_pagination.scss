@@ -1,0 +1,49 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 10px;
+
+    &__button {
+        flex-grow: 0;
+        flex-shrink: 0;
+        border-radius: 50%;
+        width: 30px;
+        aspect-ratio: 1;
+        border: 1px solid var(--color-accent);
+        color: var(--color-accent);
+        fill: currentColor;
+        line-height: 1;
+
+        font-weight: 400;
+        font-size: 14px;
+        text-align: center;
+
+        @include hover {
+            background-color: var(--color-accent);
+            color: var(--color-text-light);
+            fill: currentColor;
+        }
+
+        &_active {
+            background-color: var(--color-accent);
+            color: var(--color-text-light);
+            fill: currentColor;
+        }
+    }
+
+    &__prev,
+    &__next {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__prev {
+        margin-right: 10px;
+    }
+
+    &__next {
+        margin-left: 10px;
+    }
+}

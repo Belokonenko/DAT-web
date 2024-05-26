@@ -1,0 +1,66 @@
+.partners-card {
+    max-width: 540px;
+    &__article {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+
+        @include tablet {
+            grid-template-columns: 1fr auto ;
+        }
+
+        @include phone-m {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__title {
+        align-self: center;
+        justify-content: start;
+        max-width: 236px;
+        font-size: 20px;
+
+        @include phone {
+            font-size: 18px;
+        }
+    }
+
+    &__img-wrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 182px;
+        max-width: 255px;
+        aspect-ratio: 1/0.5;
+        border-radius: 20px;
+        order: -1;
+        font-size: 0;
+        background-color: var(--color-bg-alpha);
+        overflow: hidden;
+
+        @include phone-l {
+            max-width: 182px;
+        }
+    }
+
+    &__img {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        background-color: var(--color-bg-alpha);
+        border-radius: 10px;
+        padding: 15px;
+        order: -1;
+
+        @include phone-l {
+            width: 80%;
+        }
+        @include phone {
+            width: 80%;
+        }
+    }
+
+    &__desc {
+        grid-column: 1/-1;
+    }
+}

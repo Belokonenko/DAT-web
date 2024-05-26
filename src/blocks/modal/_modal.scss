@@ -1,0 +1,62 @@
+.modal {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    z-index: 100;
+    max-width: 1110px;
+    padding: 50px 95px 60px 95px;
+    margin: unset;
+    transform: translate(-50%, -50%);
+    background-color: var(--color-bg-light);
+    border-radius: 1rem;
+    border: none;
+
+    @include tablet {
+        width: 90%;
+        padding: 35px 20px 20px 20px;
+    }
+    @include phone {
+        width: 95%;
+    }
+
+    &::backdrop {
+        background: rgba(0, 0, 0, 0.7);
+    }
+
+    &__btn-close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        box-sizing: content-box;
+        width: 30px;
+        aspect-ratio: 1;
+        padding: 10px;
+
+        @include tablet {
+            right: 10px;
+            top: 10px;
+        }
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+
+            width: 30px;
+            height: 4px;
+            background-color: var(--color-main-light);
+
+            border-radius: 5px;
+            left: 50%;
+            translate: -50% -50%;
+        }
+
+        &::before {
+            rotate: 45deg;
+        }
+
+        &::after {
+            rotate: -45deg;
+        }
+    }
+}

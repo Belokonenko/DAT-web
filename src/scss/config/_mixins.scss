@@ -1,0 +1,143 @@
+@mixin fluid-text($max: 48, $min: 16) {
+    font-size: clamp(#{$min}px, #{calc($max / 1439 * 100)}vw, #{$max}px);
+}
+
+@mixin reset-link {
+    color: inherit;
+
+    &,
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+@mixin reset-button {
+    cursor: pointer;
+    user-select: none;
+    outline: none;
+    border: none;
+    font: inherit;
+    padding: 0;
+}
+
+@mixin flex-center($isInLine: false) {
+    @if $isInLine {
+        display: inline-flex;
+    } @else {
+        display: flex;
+    }
+
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin abs-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+}
+
+@mixin square($size) {
+    width: $size;
+    aspect-ratio: 1;
+}
+
+@mixin hover {
+    @media (hover: hover) {
+        &:hover {
+            @content;
+        }
+    }
+
+    @media (hover: none) {
+        &:active {
+            @content;
+        }
+    }
+}
+
+@mixin hover-arg($twoclass) {
+    @media (hover: hover) {
+        &:hover .#{$twoclass} {
+            @content;
+        }
+    }
+
+    @media (hover: none) {
+        &:active .#{$twoclass} {
+            @content;
+        }
+    }
+}
+
+@mixin font-face($name, $file, $weight: 400, $style: normal) {
+    @font-face {
+        font-family: "#{$name}";
+        src: url("../fonts/#{$file}.woff2") format("woff2");
+        font-weight: $weight;
+        font-style: $style;
+        font-display: swap;
+    }
+}
+
+// !плавное убирание placeholder
+@mixin hide-placeholder($time: 300, $effect: ease) {
+    &::-webkit-input-placeholder,
+    &::-moz-placeholder,
+    &:-moz-placeholder,
+    &:-ms-input-placeholder {
+        opacity: 1;
+        transition: opacity #{$time} + ms $effect;
+    }
+
+    &:focus {
+        &::-webkit-input-placeholder,
+        &::-moz-placeholder,
+        &:-moz-placeholder,
+        &:-ms-input-placeholder {
+            opacity: 0;
+            transition: opacity #{$time} + ms $effect;
+        }
+    }
+}
+
+@mixin responsive-background-image($image-path) {
+    background-image: image-set(
+        url("#{$image-path}.webp") type("image/webp") 1x,
+        url("#{$image-path}@2x.webp") type("image/webp") 2x,
+        url("#{$image-path}@3x.webp") type("image/webp") 3x,
+        url("#{$image-path}@4x.webp") type("image/webp") 4x,
+        url("#{$image-path}.jpeg") 1x,
+        url("#{$image-path}@2x.jpeg") 2x,
+        url("#{$image-path}@3x.jpeg") 3x,
+        url("#{$image-path}@4x.jpeg") 4x
+    );
+}
+
+// @include responsive-background-image('../images/1/c-001');
+
+@mixin responsive-background-image-gradient(
+    $image-path,
+    $direction: 180deg,
+    $start-color: rgba(255, 255, 255, 1),
+    $end-color: rgba(255, 255, 255, 0)
+) {
+    background-image: linear-gradient($direction, $start-color, $end-color),
+        image-set(
+            url("#{$image-path}.webp") type("image/webp") 1x,
+            url("#{$image-path}@2x.webp") type("image/webp") 2x,
+            url("#{$image-path}@3x.webp") type("image/webp") 3x,
+            url("#{$image-path}@4x.webp") type("image/webp") 4x,
+            url("#{$image-path}.jpg") type("image/jpeg") 1x,
+            url("#{$image-path}@2x.jpg") type("image/jpeg") 2x,
+            url("#{$image-path}@3x.jpg") type("image/jpeg") 3x,
+            url("#{$image-path}@4x.jpg") type("image/jpeg") 4x
+        );
+}
+
+// .my-element {
+//   @include responsive-background-image-gradient('path/to/image', 45deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+//   background-size: cover;
+//   /* Дополнительные свойства фона */
+// }

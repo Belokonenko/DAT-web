@@ -1,0 +1,49 @@
+.description {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    min-height: 500px;
+    color: var(--color-text-light);
+    padding: 110px 0;
+
+    @include responsive-background-image("../images/descript-bg/descript-bg");
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    @include phone-m{
+        padding: 35px 0;
+        @include responsive-background-image("../images/descript-bg-mobile/desc");
+    }
+
+    &__title {
+        margin-bottom: 20px;
+        @include phone-l {
+            margin-bottom: 13px;
+        }
+    }
+
+    & p {
+        font-weight: 400;
+        margin-bottom: 25px;
+        line-height: 1.2;
+    }
+
+    // &__decor-ellipse_0-0 {
+    //     top: 0;
+    //     right: 0;
+    //     transform: translate(50%, -50%);
+    // }
+
+    // &__decor-ellipse_0-1 {
+    //     left: 0;
+    //     top: 0;
+    //     transform: translateX(-50%);
+    // }
+
+    // &__decor-ellipse_1-0 {
+    //     right: -500px;
+    //     bottom: -500px;
+    // }
+}

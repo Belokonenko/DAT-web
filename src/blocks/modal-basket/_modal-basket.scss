@@ -1,0 +1,133 @@
+.modal-basket {
+    --width-radial-gradient: 40%;
+    width: 100%;
+
+    background: #f8f8f8; /* Цвет фона */
+    background: radial-gradient(
+            ellipse var(--width-radial-gradient) 50% at 0% 50%,
+            rgb(132, 190, 81, 0.2) 0%,
+            rgb(210, 230, 189, 0) 100%
+        ),
+        radial-gradient(
+            ellipse var(--width-radial-gradient) 50% at 0% 0%,
+            rgb(231, 78, 19, 0.1) 0%,
+            rgb(231, 78, 19, 0) 100%
+        ),
+        radial-gradient(
+            ellipse var(--width-radial-gradient) 50% at 100% 50%,
+            rgb(231, 78, 19, 0.1) 0%,
+            rgb(231, 78, 19, 0) 100%
+        );
+
+    @include phone-l {
+        --width-radial-gradient: 20%;
+    }
+
+    &__title {
+        margin-bottom: 25px;
+    }
+
+    &__form {
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-left: none;
+        border-right: none;
+        padding: 30px 0;
+        margin-bottom: 30px;
+    }
+
+    &__wrap-select-quantity {
+        display: grid;
+        align-content: start;
+        justify-content: end;
+        gap: 28px;
+
+        @include phone-l {
+        gap: 20px;
+            justify-content: start;
+        }
+    }
+
+
+    &__block-btn {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+
+        @include tablet {
+            flex-direction: column;
+            gap: 11px;
+        }
+    }
+
+    &__quantity {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.product-info {
+    &__title {
+        font-weight: 700;
+        font-size: 25px;
+    }
+
+    &__details-block {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+
+        @include tablet {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @include phone-l {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+
+    &__description {
+        display: grid;
+        grid-template-rows: repeat(4, max-content);
+        align-self: center;
+    }
+
+    &__packaging {
+        margin-bottom: 30px;
+    }
+
+    &__block-firm {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        gap: 10px;
+    }
+
+    &__firm-text {
+        font-weight: 400;
+        color: var(--color-text-dark);
+        opacity: 0.5;
+    }
+}
+
+.product-pic {
+    position: relative;
+    display: block;
+    width: 285px;
+    height: 192px;
+    border-radius: 15px;
+    background-color: var(--color-bg-alpha);
+    box-shadow: var(--shadow);
+
+    @include tablet {
+        grid-column: 1/-1;
+        left: 50%;
+        translate: -50% 0;
+    }
+
+    &__img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 92px;
+        translate: -50% -50%;
+    }
+}

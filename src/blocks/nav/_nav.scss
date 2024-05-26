@@ -1,0 +1,106 @@
+.nav {
+    @include tablet {
+        display: none;
+    }
+
+    &__list {
+        display: flex;
+        align-content:stretch;
+        height: 100%;
+        width: 100%;
+
+    }
+
+    &__item {
+        flex-grow: 1;
+        height: var(--top-min-height);
+    }
+
+    &__button {
+        display: inline-flex;
+        gap: 5px;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        color: var(--color-text-light);
+        font-weight: 300;
+        background-color: var(--color-main);
+    }
+
+    &__button:hover {
+        background: var(--color-epsilon);
+    }
+
+    &__button:focus-visible {
+        background: var(--color-epsilon);
+    }
+
+    &__button-text {
+        line-height: 0;
+    }
+
+    &__btn-menu:hover .drop-menu {
+        height: calc(var(--top-min-height) * 3);
+    }
+
+    &__btn-menu:focus-within .drop-menu {
+        height: calc(var(--top-min-height) * 3);
+    }
+    &__btn-menu:hover .nav__arr-menu {
+        rotate: 180deg;
+    }
+
+    &__btn-menu:focus-within .nav__arr-menu {
+        rotate: 180deg;
+    }
+
+    &__arr-menu {
+        fill: var(--color-text-light);
+        transition: var(--transition-duration);
+        align-self: center;
+    }
+}
+
+// drop-menu
+.drop-menu {
+    position: absolute;
+    height: 0;
+    width: 200px;
+    overflow: hidden;
+    transition: height 0.5s ease; /* Анимация высоты на 0.5 секунды */
+    border-radius: 0 0 20px 20px;
+}
+
+.drop-menu__button {
+    justify-content: start;
+    padding-left: 30px;
+}
+// ---  adaptive ---
+
+//desctop
+
+@media (max-width: 1440px) {
+}
+@media (max-width: 1270px) {
+}
+@media (max-width: 1024px) {
+}
+
+//tablet
+
+@media (max-width: 992px) {
+}
+@media (max-width: 768px) {
+}
+
+//phones
+
+@media (max-width: 425px) {
+}
+@media (max-width: 375px) {
+}
+@media (max-width: 320px) {
+}
+
+// ---  /adaptive ---

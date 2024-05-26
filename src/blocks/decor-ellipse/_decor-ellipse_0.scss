@@ -1,0 +1,15 @@
+.decor-ellipse_0 {
+    position: absolute;
+    width: 713px;
+    height: 713px;
+    border-radius: 713px;
+    background: radial-gradient(
+        50% 50% at 50% 50%,
+        rgba(231, 78, 19, 0.1) 0%,
+        rgba(231, 78, 19, 0) 100%
+    );
+
+    @include tablet {
+        width: 70%;
+    }
+}

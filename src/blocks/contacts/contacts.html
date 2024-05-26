@@ -1,0 +1,255 @@
+<section class="contacts content-padding">
+    <div class="container">
+        <div class="breadcrumbs contacts__breadcrumbs">
+            <ul class="breadcrumbs__list">
+                <li class="breadcrumbs__item">
+                    <a class="button breadcrumbs__ref" href="index.html"
+                        >home</a
+                    >
+                </li>
+                <li class="breadcrumbs__item">
+                    <a class="button breadcrumbs__ref breadcrumbs__ref_active">
+                        Contacts
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <h1
+            class="title title_leaf-l title_leaf-r title_size_l contacts__title"
+        >
+            Contacts
+        </h1>
+
+        <div class="contacts__info-block">
+            <div class="contacts__info-item">
+                <button
+                    class="button button_round button-round button_theme_dark"
+                >
+                    <svg class="button-round__img" width="16" height="20">
+                        <use xlink:href="#point-light"></use>
+                    </svg>
+                </button>
+                <address>
+                    Ukraine, Vinnytsia region,<br />
+                    Vinnytsia, 122, Khmelnytskyi highway
+                </address>
+            </div>
+
+            <div class="contacts__info-item">
+                <button
+                    class="button button_round button-round button_theme_dark"
+                >
+                    <svg class="button-round__img" width="20" height="20">
+                        <use xlink:href="#back-time"></use>
+                    </svg>
+                </button>
+                <div>
+                    <p class="text_strong">Mon-Fri</p>
+                    <time datetime="09:00">9:00</time> -
+                    <time datetime="18:00">18:00</time>
+                </div>
+            </div>
+
+            <div class="contacts__info-item contacts__info-top">
+                <button
+                    class="button button_round button-round button_theme_dark"
+                >
+                    <svg class="button-round__img" width="16" height="16">
+                        <use xlink:href="#mail"></use>
+                    </svg>
+                </button>
+
+                <a href="email:shop@ukrsemena.com">shop@ukrsemena.com</a>
+            </div>
+
+            <div class="contacts__dec-line"></div>
+
+            <h3 class="contacts__info-text contacts__info-title text_accent">
+                Department of sales and agronomic support
+            </h3>
+
+            <p class="contacts__info-text contacts__info-desc">
+                If you need help with placing an order, advice on the use of
+                products, have questions about your orders, contact here:
+            </p>
+
+            <div class="contacts__info-item">
+                <button
+                    class="button button_round button-round button_theme_dark"
+                >
+                    <svg class="button-round__img" width="20" height="20">
+                        <use xlink:href="#back-time"></use>
+                    </svg>
+                </button>
+                <div>
+                    <p class="text_strong">Mon-Fri</p>
+                    <time datetime="09:00">9:00</time> -
+                    <time datetime="18:00">17:00</time>
+                </div>
+            </div>
+            <div class="contacts__info-item">
+                <button
+                    class="button button_round button-round button_theme_dark"
+                >
+                    <svg class="button-round__img" width="16" height="16">
+                        <use xlink:href="#phone"></use>
+                    </svg>
+                </button>
+                <div>
+                    <a href="tel:0504242820">(050) 42-42-820</a>
+                    <br />
+                    <a href="tel:0504242824">(050) 42-42-824</a>
+                </div>
+            </div>
+            <div class="contacts__info-item">
+                <button
+                    class="button button_round button-round button_theme_dark"
+                >
+                    <svg class="button-round__img" width="16" height="16">
+                        <use xlink:href="#phone"></use>
+                    </svg>
+                </button>
+                <div>
+                    <a href="tel:0971825141">(097) 182-51-41</a>
+                    <br />
+                    <a href="tel:0981237000">(098) 123-70-00</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="write">
+            <h2
+                class="
+                    title title_leaf-l title_leaf-r title_size_l
+                    write__title
+                "
+            >
+                Write to Us
+            </h2>
+
+            <p class="write__desc">
+                Enter your contact details and the text of the message if you
+                have any questions or suggestions, and we will answer you
+                shortly.
+            </p>
+
+            <form
+                class="write__form form-registration form-registration__form"
+                action=""
+                onsubmit="return validateForm()"
+            >
+                <fieldset class="form-registration__fildset">
+                    <legend class="visually-hidden">Write to Us</legend>
+
+                    <div class="form-registration__fild">
+                        <input
+                            class="name form-registration__input"
+                            name="name"
+                            id="name"
+                            type="text"
+                            placeholder="Name"
+                            required
+                            minlength="2"
+                            maxlength="50"
+                            spellcheck="false"
+                            title="Name"
+                        />
+                        <span
+                            class="form-registration__error"
+                            id="name_message_err"
+                        ></span>
+                    </div>
+
+                    <div class="form-registration__fild">
+                        <input
+                            class="surname form-registration__input"
+                            name="surname "
+                            id="surname"
+                            type="text"
+                            placeholder="Surname"
+                            required
+                            minlength="2"
+                            maxlength="50"
+                            spellcheck="false"
+                            title="Surname"
+                        />
+                        <span
+                            class="form-registration__error"
+                            id="surname_message_err"
+                        ></span>
+                    </div>
+
+                    <div class="form-registration__fild">
+                        <input
+                            class="email form-registration__input"
+                            id="email"
+                            name="email"
+                            type="email"
+                            placeholder="E-mail"
+                            required
+                            spellcheck="false"
+                            title="example@mail.com"
+                        />
+                        <span
+                            class="form-registration__error"
+                            id="email_message_err"
+                        ></span>
+                    </div>
+
+                    <!-- pattern="\+380 \(\d{2}\) \d{3}-\d{2}-\d{2}" -->
+                    <!-- title="+380 (xx) xxx-xx-xx" -->
+                    <div class="form-registration__fild">
+                        <input
+                            class="phone-input form-registration__input"
+                            name="phone-input"
+                            id="phone-input"
+                            type="tel"
+                            placeholder="Phone"
+                            required
+                            minlength="5"
+                            maxlength="20"
+                            spellcheck="false"
+                        />
+                        <span
+                            class="form-registration__error"
+                            id="phone-input_message_err"
+                        ></span>
+                    </div>
+
+                    <div
+                        class="
+                            form-registration__fild
+                            form-registration__fild-textaria
+                        "
+                    >
+                        <textarea
+                            class="
+                                form-registration__textaria
+                                form-registration__input
+                            "
+                            name="message"
+                            id="message"
+                            placeholder="Write to Us"
+                            spellcheck="true"
+                            title="Your Message"
+                        ></textarea>
+                        <span
+                            class="form-registration__error"
+                            id="message_error"
+                        ></span>
+                    </div>
+
+                    <button
+                        class="
+                            button button_accent button_smooth
+                            form-registration__button
+                        "
+                    >
+                        Sign up
+                    </button>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</section>

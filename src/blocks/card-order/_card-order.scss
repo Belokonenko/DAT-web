@@ -1,0 +1,129 @@
+.card-order {
+    background-color: var(--color-bg-alpha);
+    min-height: 117px;
+
+    &__inner {
+        display: grid;
+        grid-template-columns: max-content 1fr max-content max-content;
+        gap: 20px;
+        align-items: center;
+        padding: 20px;
+
+        @include phone-l {
+            padding: 10px;
+            gap: 10px;
+            grid-template-columns: max-content 1fr max-content;
+            grid-template-rows: repeat(2, auto);
+        }
+        @include phone {
+            padding: 5px;
+            gap: 5px;
+        }
+    }
+
+    &__wrap-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px;
+        width: 112px;
+        height: 76px;
+        box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.15);
+        background: var(--color-bg-alpha);
+
+        @include phone-l {
+            width: 80px;
+        }
+    }
+
+    &__img {
+    }
+
+    &__wrap-desc {
+        @include phone-l {
+            order: 1;
+            grid-column: 1/-1;
+
+        }
+    }
+
+    &__title {
+        grid-column: 1/-1;
+        font-weight: 700;
+        font-size: 18px;
+    }
+
+    &__block-data {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 10px 20px;
+        flex-wrap: wrap;
+    }
+
+    &__quntity {
+        align-self: baseline;
+    }
+
+    &__date {
+        color: rgba(0, 0, 0, 0.2);
+        align-self: baseline;
+    }
+
+    &__status {
+        align-self: baseline;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 108px;
+        height: 27px;
+        border-radius: 25px;
+        color: var(--color-text-light);
+        
+        &_paid {
+            background-color: var(--color-accent-dark);
+        }
+        
+        &_on-way {
+            background-color: gold;
+        }
+        
+        &_completed {
+            background-color: var(--color-main);
+        }
+    }
+
+    &__cost {
+        font-weight: 700;
+        font-size: 25px;
+        color: var(--color-main-light);
+    }
+
+    &__delete {
+        width: 40px;
+        height: 40px;
+        background: none;
+        border: none;
+        position: relative;
+        cursor: pointer;
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 24px;
+            height: 2px;
+            background-color: gray;
+        }
+
+        &::before {
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+
+        &::after {
+            transform: translate(-50%, -50%) rotate(-45deg);
+        }
+    }
+}

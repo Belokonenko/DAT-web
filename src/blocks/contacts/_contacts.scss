@@ -1,0 +1,103 @@
+.contacts {
+    background-color: var(--color-bg-light);
+
+    &__title {
+        margin-bottom: 30px;
+    }
+
+    &__info-block {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(min-content, auto));
+        gap: 0 20px;
+        grid-auto-rows: min-content;
+        border-radius: 20px;
+        min-height: 280px;
+        box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.15);
+        padding: 40px;
+        background: var(--color-bg-alpha);
+        margin-bottom: 108px;
+        background-color: var(--color-bg-alpha);
+
+        @include tablet {
+            grid-template-columns: repeat(2, minmax(min-content, auto));
+            gap: 20px 20px;
+            padding: 20px;
+
+            margin-bottom: 37px;
+        }
+
+        @include phone-l {
+            grid-template-columns: repeat(1, minmax(min-content, auto));
+            gap: 20px 20px;
+        }
+    }
+
+    &__info-item {
+        display: grid;
+        grid-template-columns: min-content max-content;
+        gap: 10px;
+        align-items: center;
+        height: min-content;
+        line-height: 1.2;
+
+        @include phone-l {
+            grid-template-columns: min-content 1fr;
+            height: auto;
+            align-items: start;
+        }
+    }
+
+    &__dec-line {
+        position: absolute;
+        top: 40%;
+        border-bottom: 0.1px solid rgba(0, 0, 0, 0.05);
+        width: 100%;
+        
+        @include tablet {
+            top: 35%;
+        }
+        
+        @include tablet {
+            top: 37%;
+        }
+    }
+
+    &__info-top {
+        margin-bottom: 68px;
+        
+        @include tablet {
+            margin-bottom: 50px;
+        }
+    }
+    &__info-title {
+        margin-bottom: 5px;
+        
+        @include tablet {
+            margin-bottom: 0px;
+        }
+    }
+
+    &__info-desc {
+        margin-bottom: 25px;
+        
+        @include tablet {
+            margin-bottom: 0px;
+        }
+    }
+
+    &__info-text {
+        grid-column: 1/-1;
+        line-height: 1.2;
+    }
+}
+
+.write {
+    padding-bottom: 120px;
+    &__desc {
+        max-width: 641px;
+        margin-inline: auto;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+}

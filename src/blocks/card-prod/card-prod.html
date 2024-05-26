@@ -1,0 +1,28 @@
+<article class="card">
+    <hr />
+    <a href="product-page.html">
+        <div class="card__img-wrap">
+            @@include('../picture-png/picture-png.html', { "path_img" : "images/prod-crorpp/cro", "alt": "image", "class-name":"card__img", "width":"97", "height": "132" })
+        </div>
+
+        <div class="card__block-text">
+            <h3 class="card__prod-name">@@name</h3>
+            <p class="card__prod-state">@@state</p>
+            <div class="">
+                <p class="card__prod-parce">@@price $</p>
+                <p class="card__prod-quantity">@@unit unit</p>
+            </div>
+        </div>
+    </a>
+    <button class="card__btn-compare button button-round button_round button_theme_dark">
+        <svg class="button-round__img" width="16" height="16">
+            <use xlink:href="#scale"></use>
+        </svg>
+    </button>
+
+    <button class="button button-round button_round button_theme_dark card__btn" type="button">
+        <svg class="button-round__img phone" width="16" height="16">
+            <use xlink:href="#basket"></use>
+        </svg>
+    </button>
+</article>

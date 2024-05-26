@@ -1,0 +1,90 @@
+.title {
+    position: relative;
+    font-size: 45px;
+    font-weight: 700;
+    @include tablet {
+        font-size: 45px;
+    }
+
+    &_leaf-l-h1 {
+        &::before {
+            position: absolute;
+            display: inline-block;
+            left: -40px;
+            content: url("../images/Svg/leaf.svg");
+            height: 32px;
+            width: 25px;
+            margin-right: 10px;
+
+            @include tablet {
+                top: 19px;
+            }
+        }
+    }
+
+    &_leaf-l {
+        display: flex;
+        align-items: baseline;
+        gap: 10px;
+
+        &::before {
+            display: inline-block;
+            content: "";
+            height: 25px;
+            width: 32px;
+
+            background-image: url(../images/Svg/leaf.svg);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+
+            @include tablet {
+                width: 14px;
+                height: 11px;
+            }
+        }
+    }
+
+    &_leaf-r {
+        justify-content: center;
+
+        @include tablet {
+            margin-bottom: 20px;
+        }
+
+        &::after {
+            display: inline-block;
+            content: "";
+            height: 25px;
+            width: 32px;
+
+            background-image: url(../images/Svg/leaf.svg);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+
+            transform: scaleX(-1);
+            @include tablet {
+                width: 14px;
+                height: 11px;
+            }
+        }
+    }
+
+    &_size_l {
+        font-size: 45px;
+
+        line-height: 1.5;
+        text-align: center;
+        @include tablet {
+            font-size: 22px;
+        }
+    }
+
+    &_size_xl {
+        font-size: 55px;
+        @include tablet {
+            font-size: 25px;
+        }
+    }
+}

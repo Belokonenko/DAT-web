@@ -1,0 +1,26 @@
+<picture>
+    <source
+        type="image/webp"
+        srcset="
+            @@path_img.webp    1x,
+            @@path_img@2x.webp 2x,
+            @@path_img@3x.webp 3x,
+            @@path_img@4x.webp 4x
+        "
+    />
+    <img
+        class="@@class-name"
+        width="@@width"
+        height="@@height"
+        src="@@path_img.png"
+        srcset="
+            @@path_img@2x.png 2x,
+            @@path_img@3x.png 3x,
+            @@path_img@4x.png 4x
+        "
+        alt="@@alt"
+    />
+</picture>
+
+<!-- @@include('../picture-png/picture-png.html', { "path_img" : "images/prod-crorpp/cro", "alt": -->
+<!-- "image", "class-name":"card__img", "width":"97", "height": "132" }) -->

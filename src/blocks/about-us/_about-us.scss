@@ -1,0 +1,98 @@
+.about-us {
+    position: relative;
+
+    &__decor-ellipse-0-0 {
+        position: absolute;
+        right: 0px;
+        transform: translateX(50%);
+    }
+
+    &__decor-ellipse-0-1 {
+        position: absolute;
+        left: 0;
+        transform: translateX(-50%);
+    }
+
+    &__container {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        max-width: 1350px;
+        padding: 100px 0px;
+        margin: 0 auto;
+        background-color: transparent;
+        padding-inline: 10px;
+
+        @include tablet {
+            grid-template-columns: 1fr;
+            grid-template-rows: max-content max-content;
+            padding-inline: var(--container-padding-x);
+        }
+    }
+
+    &__text-wrap {
+        padding-left: 20%;
+
+        @include desktop {
+            padding-left: 10%;
+        }
+
+        @include tablet {
+            padding: 0;
+        }
+    }
+
+    &__title {
+        margin-bottom: 20px;
+
+        @include tablet {
+            margin-top: 30px;
+        }
+    }
+
+    &__text {
+        margin-bottom: 5px;
+    }
+
+    &__btn {
+        margin-top: 50px;
+    }
+
+    //--- img ---
+
+    &__img-wrap {
+        position: relative;
+        display: flex;
+        align-self: start;
+        max-width: 683px;
+        aspect-ratio: 1 / 0.85;
+        border-radius: 0 48% 0 45%;
+
+        @include responsive-background-image("../images/about-us/a-us");
+
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+
+        @include tablet {
+            width: 100%;
+            max-width: 100%;
+        }
+    }
+
+    &__leaf1 {
+        position: absolute;
+        left: -8%;
+        bottom: 13%;
+        width: 35%;
+    }
+    
+    &__leaf2 {
+        position: absolute;
+        left: 10%;
+        bottom: -6%;
+        width: 25%;
+        transform: scaleX(-1);
+    }
+}

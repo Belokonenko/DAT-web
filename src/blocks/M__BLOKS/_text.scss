@@ -1,0 +1,22 @@
+.text {
+    &_faded {
+        color: rgba(0, 0, 0, 0.5);
+    }
+
+    &_accent {
+        font-weight: 700;
+        color: var(--color-main);
+    }
+    &_accent-light {
+        font-weight: 700;
+        font-size: 25px;
+        color: var(--color-main-light);
+    }
+    &_light {
+        color: var(--color-text-light);
+    }
+
+    &_strong {
+        font-weight: 700;
+    }
+}

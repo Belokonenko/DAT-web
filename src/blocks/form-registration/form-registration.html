@@ -1,0 +1,125 @@
+<form class="form-registration form-registration__form">
+    <fieldset class="form-registration__fildset">
+        <legend class="visually-hidden">Registration</legend>
+
+        <div class="form-registration__fild">
+            <input
+                class="name form-registration__input"
+                name="name"
+                id="name"
+                type="text"
+                placeholder="Name"
+                required
+                minlength="2"
+                maxlength="50"
+                spellcheck="false"
+                title="Name"
+            />
+            <span class="form-registration__error" id="name_message_err"></span>
+        </div>
+
+        <div class="form-registration__fild">
+            <input
+                class="surname form-registration__input"
+                name="surname "
+                id="surname"
+                type="text"
+                placeholder="Surname"
+                required
+                minlength="2"
+                maxlength="50"
+                spellcheck="false"
+                title="Surname"
+            />
+            <span class="form-registration__error" id="surname_message_err"></span>
+        </div>
+
+        <div class="form-registration__fild">
+            <input
+                class="email form-registration__input"
+                id="email"
+                name="email"
+                type="email"
+                placeholder="E-mail"
+                required
+                spellcheck="false"
+                title="example@mail.com"
+            />
+            <span class="form-registration__error" id="email_message_err"></span>
+        </div>
+
+        <!-- pattern="\+380 \(\d{2}\) \d{3}-\d{2}-\d{2}" -->
+        <!-- title="+380 (xx) xxx-xx-xx" -->
+        <div class="form-registration__fild">
+            <input
+                class="phone-input form-registration__input"
+                name="phone-input"
+                id="phone-input"
+                type="tel"
+                placeholder="Phone"
+                required
+                minlength="5"
+                maxlength="20"
+                spellcheck="false"
+            />
+            <span
+                class="form-registration__error"
+                id="phone-input_message_err"
+            ></span>
+        </div>
+
+        <div class="form-registration__fild form-registration__password">
+            <input
+                class="password form-registration__input"
+                id="password"
+                name="password"
+                type="password"
+                placeholder="Password"
+                required
+                minlength="6"
+                title="please enter your password"
+            />
+            <span class="form-registration__error" id="password_message_err"></span>
+        </div>
+        <div class="form-registration__fild form-registration__confirm-password">
+            <input
+                class="confirm-password form-registration__input"
+                id="confirm-password"
+                name="confirmPassword"
+                type="password"
+                placeholder="Confirm password"
+                required
+                minlength="6"
+                title="please repeat your password"
+            />
+            <span
+                class="form-registration__error"
+                id="confirm-password_message_err"
+            ></span>
+        </div>
+
+        <div class="form-registration__fild form-registration__agree">
+            <label class="form-registration__lable-check" for="agree">
+                <input
+                    class="form-registration__checkbox visually-hidden"
+                    type="checkbox"
+                    name="agree"
+                    id="agree"
+                    required
+                />
+
+                I agree to the processing and protection of
+
+                <a class="form-registration__agree-href" href="404.html"
+                    >personal data
+                </a>
+
+                <span class="form-registration__checkmark"></span>
+            </label>
+        </div>
+
+        <button class="button button_accent button_smooth form-registration__button">
+            Sign up
+        </button>
+    </fieldset>
+</form>
