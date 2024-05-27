@@ -1,30 +1,31 @@
-// 'use strict';
-// import buttonBurger from './modules/button-burger';
-// import order from './modules/order';
-// import sliders from './modules/slider';
-// import seeds from './modules/seeds';
-// import navProd from './modules/navProd';
-// import scrollToTop from './modules/scrollToTop';
-// import modal from './modules/modal';
-// import modalBasket from './modules/modal-basket';
-// import customSelect from './modules/custom-select';
-// import quantity from './modules/quantity/quantity';
-// import modalLogin from './modules/modalLogin';
-// import tabs from './modules/tabs';
+'use strict';
+import order from '../../blocks/order/order';
 
-// document.addEventListener('DOMContentLoaded', () => {
-//     buttonBurger('dropdown-panel');
-//     order();
-//     sliders();
-//     seeds();
-//     navProd();
-//     scrollToTop();
-//     modal('.modal-login', '.btn-open-modal', '.modal-login__btn-close');
-//     modal('.modal-basket', '.btn-modal-basket', '.modal-basket__btn-close');
-//     modalBasket();
-//     customSelect();
-//     quantity();
-//     modalLogin();
-//     tabs();
+import buttonBurger from '../../blocks/button-burger/button-burger';
 
-// });
+import sliders from '../../blocks/slider/slider';
+import seeds from '../../blocks/seeds/seeds';
+import navProd from '../../blocks/nav-prod/navProd';
+import scrollToTop from '../../blocks/scrollToTop/scrollToTop';
+import modal from '../../blocks/modal/modal';
+import modalBasket from '../../blocks/modal-basket/modal-basket';
+// import customSelect from '../../blocks/custom-select/customSelect';
+import quantity from '../../blocks/quantity/quantity';
+import modalLogin from '../../blocks/modal-login/modalLogin';
+import tabs from '../../blocks/tabs/tabs';
+
+document.addEventListener('DOMContentLoaded', () => {
+    order();
+    buttonBurger('dropdown-panel');
+    sliders();
+    seeds();
+    navProd();
+    scrollToTop();
+    modal('.modal-login', '.btn-open-modal', '.modal-login__btn-close');
+    modal('.modal-basket', '.btn-modal-basket', '.modal-basket__btn-close');
+    modalBasket();
+    customSelect();
+    quantity();
+    modalLogin();
+    tabs();
+});
