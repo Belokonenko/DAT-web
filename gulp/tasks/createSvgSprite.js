@@ -19,7 +19,7 @@ const createSvgSprite = () => {
         },
       })
     )
-    .pipe(gulp.dest(filePaths.srcFolder + '/components/svg-sprite/'));
+    .pipe(gulp.dest(filePaths.srcFolder + '/blocks/svg-sprites/'));
 };
 
 export { createSvgSprite };

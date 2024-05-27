@@ -9,7 +9,7 @@ import navProd from '../../blocks/nav-prod/navProd';
 import scrollToTop from '../../blocks/scrollToTop/scrollToTop';
 import modal from '../../blocks/modal/modal';
 import modalBasket from '../../blocks/modal-basket/modal-basket';
-// import customSelect from '../../blocks/custom-select/customSelect';
+import customSelect from '../../blocks/custom-select/customSelect';
 import quantity from '../../blocks/quantity/quantity';
 import modalLogin from '../../blocks/modal-login/modalLogin';
 import tabs from '../../blocks/tabs/tabs';
