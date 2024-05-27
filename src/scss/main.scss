@@ -10,7 +10,6 @@
 /**
 * Подключение sass function и mixins и extends стилей
 */
-@import 'config/functions';
 @import 'config/mixins';
 @import 'config/media';
 @import 'config/patternSelectors';
@@ -27,7 +26,7 @@
 /**
 * Подключение custom scrollbar для всего сайта
 */
-@import 'config/scrollbar';
+// @import 'config/scrollbar';
 
 /**
 * Общие параметры, шаблоны(заготовки) и вспомогательные классы
