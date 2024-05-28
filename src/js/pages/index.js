@@ -1,8 +1,6 @@
 'use strict';
 import order from '../../blocks/order/order';
-
 import buttonBurger from '../../blocks/button-burger/button-burger';
-
 import sliders from '../../blocks/slider/slider';
 import seeds from '../../blocks/seeds/seeds';
 import navProd from '../../blocks/nav-prod/navProd';
@@ -15,7 +13,6 @@ import modalLogin from '../../blocks/modal-login/modalLogin';
 import tabs from '../../blocks/tabs/tabs';
 
 document.addEventListener('DOMContentLoaded', () => {
-    buttonBurger();
     order();
     buttonBurger('dropdown-panel');
     sliders();
@@ -27,7 +24,6 @@ document.addEventListener('DOMContentLoaded', () => {
     modalBasket();
     quantity();
     modalLogin();
-    
     //---
     customSelect();
     tabs();
