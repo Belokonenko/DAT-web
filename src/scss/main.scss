@@ -1,27 +1,23 @@
 /**
 * Подключение шрифтов локально из папки "./src/fonts"
 */
-@import './config/fonts';
+@import "config/fonts";
 
 /** Обнуление */
-@import 'config/reset';
-
+@import "config/reset";
 
 /**
 * Подключение sass function и mixins и extends стилей
 */
-@import 'config/mixins';
-@import 'config/media';
-@import 'config/patternSelectors';
-@import 'config/keyframes';
-@import 'config/patternSelectors';
-@import 'config/utils';
+@import "config/mixins";
+@import "config/media";
+@import "config/patternSelectors";
+@import "config/keyframes";
+@import "config/patternSelectors";
+@import "config/utils";
 
 /** Подключение переменных */
-@import 'config/variables';
-
-
-
+@import "config/variables";
 
 /**
 * Подключение custom scrollbar для всего сайта
@@ -31,8 +27,7 @@
 /**
 * Общие параметры, шаблоны(заготовки) и вспомогательные классы
 */
-@import 'config/globals';
-
+@import "config/globals";
 
 // /**
 // * Подключение стилей отдельных блоков и секций
