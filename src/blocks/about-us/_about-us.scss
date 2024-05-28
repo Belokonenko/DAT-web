@@ -30,6 +30,10 @@
         }
     }
 
+    &__list {
+        list-style: circle;
+    }
+    
     &__text-wrap {
         padding-left: 20%;
 
@@ -87,7 +91,7 @@
         bottom: 13%;
         width: 35%;
     }
-    
+
     &__leaf2 {
         position: absolute;
         left: 10%;
