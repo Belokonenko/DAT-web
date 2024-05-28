@@ -15,6 +15,7 @@ import modalLogin from '../../blocks/modal-login/modalLogin';
 import tabs from '../../blocks/tabs/tabs';
 
 document.addEventListener('DOMContentLoaded', () => {
+    buttonBurger();
     order();
     buttonBurger('dropdown-panel');
     sliders();
@@ -24,8 +25,10 @@ document.addEventListener('DOMContentLoaded', () => {
     modal('.modal-login', '.btn-open-modal', '.modal-login__btn-close');
     modal('.modal-basket', '.btn-modal-basket', '.modal-basket__btn-close');
     modalBasket();
-    customSelect();
     quantity();
     modalLogin();
+    
+    //---
+    customSelect();
     tabs();
 });

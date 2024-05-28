@@ -1,7 +1,9 @@
 .button {
+    user-select: none;
     line-height: 1;
     transform: var(--transition-duration);
     background-color: transparent;
+    
     @include reset-button;
 
     @include tablet {
