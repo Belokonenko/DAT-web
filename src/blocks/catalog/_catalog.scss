@@ -1,4 +1,4 @@
-.catalog-prod {
+.catalog {
     position: relative;
 
     background-color: var(--color-bg-light);
@@ -73,6 +73,20 @@
             background-color: var(--color-main-light);
             color: var(--color-text-light);
             height: 40px;
+        }
+    }
+
+
+    &__filter-crads {
+        display: grid;
+
+        grid-template-columns: max-content 1fr;
+
+        gap: 30px;
+        @include tablet {
+            grid-template-columns: 1fr;
+
+            gap: 0px;
         }
     }
 }
@@ -172,18 +186,6 @@
     }
 }
 
-.fliter-cards__wrap {
-    display: grid;
-
-    grid-template-columns: max-content 1fr;
-
-    gap: 30px;
-    @include tablet {
-        grid-template-columns: 1fr;
-
-        gap: 0px;
-    }
-}
 
 .group-prod {
     &__list {

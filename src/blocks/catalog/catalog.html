@@ -1,6 +1,7 @@
-<div class="catalog-prod">
-    <!-- content -->
-    <div class="catalog-prod__wrap container">
+<div class="catalog">
+    <div class="catalog__wrap container">
+        <!-- breadcrumbs -->
+
         <div class="breadcrumbs categories__breadcrumbs">
             <ul class="breadcrumbs__list">
                 <li class="breadcrumbs__item">
@@ -17,16 +18,17 @@
 
         <!-- catalog title -->
 
-        <h1 class="title title_leaf-l title_size_l title_leaf-r catalog-prod__title">Plant protection</h1>
+        <h1 class="title title_leaf-l title_size_l title_leaf-r catalog__title">Plant protection</h1>
 
         <div class="sort">
+            
             <p class="sort__counter">
                 products
-                <span class="catalog-prod__counter-num">621</span>
+                <span class="sort__counter-num">621</span>
                 shown
             </p>
 
-            <button class="button button_smooth button_interactive catalog-prod__btn-filter" type="button">Filter</button>
+            <button class="catalog__btn-filter button button_smooth button_interactive" type="button">Filter</button>
 
             <select class="sort__select">
                 <option class="sort__options" value="" disabled selected>sort by</option>
@@ -36,8 +38,10 @@
             </select>
         </div>
 
-        <div class="fliter-cards__wrap">
+        <div class="catalog__filter-crads">
+           
             <div class="filter__wrap">
+                 
                 <ul class="list group-prod__list">
                     <li class="group-prod__item categories__item_active">
                         <span class="group-prod__name">Herbicides</span>
@@ -76,6 +80,8 @@
                         <span class="group-prod__count">(233)</span>
                     </li>
                 </ul>
+              
+
                 <form class="filter">
                     <button class="button filter__btn" type="button">
                         <svg class="filter__btn-icon" width="20" height="20">
@@ -177,8 +183,8 @@
                 <ul class="list cards-prod__list">
                     @@for (var i = 0; i < 15; i++) {
                     <li>
-                        @@include('../card-prod/card-prod.html', { "path_img" : "images/petunia.jpg", "alt" : "petunia", "name": "Petunia Sofistika F1 0", "state" :"instock" , "price" : "4",
-                        "unit" : "1", } )
+                        @@include('../card-prod/card-prod.html', { "path_img" : "images/petunia.jpg", "alt" : "petunia", "name": "Petunia Sofistika F1 0", "state" :"instock" ,
+                        "price" : "4", "unit" : "1", } )
                     </li>
 
                     }
@@ -208,12 +214,12 @@
                 </div>
             </section>
         </div>
-        <!-- / catalog-prod-2  --->
+        <!-- / catalog  --->
     </div>
 
     <!-- /wrap-catalog -->
 
-    <!-- <section class="description desc__catalog-prod"> -->
+    <!-- <section class="description desc__catalog"> -->
     <!--     <div class="description__text-wrap container"> -->
     <!--         <h2 class="title description__title">Plant protection</h2> -->
 
