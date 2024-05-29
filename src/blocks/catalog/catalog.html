@@ -38,9 +38,9 @@
         </div>
 
         <div class="catalog__filter-crads">
-            
+            <!-- filter -->
+
             <div class="filter">
-                 
                 <ul class="group-prod__list list">
                     <li class="group-prod__item categories__item_active">
                         <span class="group-prod__name">Herbicides</span>
@@ -80,10 +80,7 @@
                     </li>
                 </ul>
 
-                <!-- filter -->
-
                 <form class="filter__form">
-                
                     <button class="button filter__btn" type="button">
                         <svg class="filter__btn-icon" width="20" height="20">
                             <use xlink:href="#arrow-vector"></use>
@@ -178,11 +175,13 @@
             </div>
 
             <!-- block cards products -->
-            
-            <section class="cards-prod__wrap">
+
+            <div >
                 <h2 class="visually-hidden">List product</h2>
+
                 <!-- list card product -->
-                <ul class="list cards-prod__list">
+
+                <ul class="catalog__cards-list list">
                     @@for (var i = 0; i < 15; i++) {
                     <li>
                         @@include('../card-prod/card-prod.html', { "path_img" : "images/petunia.jpg", "alt" : "petunia", "name": "Petunia Sofistika F1 0", "state" :"instock" ,
@@ -193,6 +192,7 @@
                 </ul>
 
                 <!-- pagination-page -->
+
                 <div class="pagination">
                     <button class="button pagination__button pagination__prev" type="button" title="previous page">
                         <svg class="pagination__btn-icon" width="12" height="12">
@@ -214,7 +214,7 @@
                         </svg>
                     </button>
                 </div>
-            </section>
+            </div>
         </div>
         <!-- / catalog  --->
     </div>
