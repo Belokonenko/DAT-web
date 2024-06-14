@@ -1,48 +1,35 @@
 .sort {
     display: flex;
-
     align-items: center;
     justify-content: space-between;
-
     margin-bottom: 7px;
 
     @include tablet {
         display: grid;
-
         grid-template-columns: 1fr 1fr;
-
         gap: 20px;
     }
 
     &__counter {
-        order: 1;
-
         grid-column: 1/-1;
-
         text-align: center;
+        color: rgba(0, 0, 0, 0.5);
     }
 
     &__select {
         position: relative;
-
         padding: 10px 60px 10px 30px;
-
         min-width: 250px;
-
         font-family: Montserrat, sans-serif;
         font-size: 14px;
         font-weight: 600;
         font-style: normal;
-
         line-height: normal;
-
         color: #484848;
         background-color: transparent;
         border: 1px solid rgba(0, 0, 0, 0.2);
         border-radius: 20px;
-
         cursor: pointer;
-
         appearance: none;
 
         &:focus {
@@ -56,9 +43,7 @@
 
     &__by {
         position: relative;
-
         display: inline-flex;
-
         background-color: transparent;
 
         @include tablet {
@@ -71,9 +56,7 @@
         font-size: 14px;
         font-weight: 600;
         font-style: normal;
-
         line-height: normal;
-
         color: #484848;
     }
 }
