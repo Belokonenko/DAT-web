@@ -1,4 +1,4 @@
-export default function filter() {
+export const filter = () =>  {
     const filterBtn = document.querySelector('.catalog-prod__btn-filter');
     const filterBlock = document.querySelector('.filter');
     const filterBtnClose = document.querySelector('.filter__btn');
