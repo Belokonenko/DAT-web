@@ -36,9 +36,6 @@
         }
     }
 
-    &__img {
-    }
-
     &__wrap-desc {
         @include phone-l {
             order: 1;
