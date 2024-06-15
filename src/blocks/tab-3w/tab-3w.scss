@@ -2,7 +2,7 @@
     position: relative;
     display: grid;
     gap: 20px;
-    
+
     max-width: 445px;
     max-height: 398px;
     height: 100%;
@@ -44,7 +44,7 @@
     display: flex;
     justify-content: center;
     gap: 20px;
-    min-height: 88px ;
+    min-height: 88px;
 }
 
 .thumbnail {
@@ -72,11 +72,21 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #fff;
+    background-color: transparent;
+    color: var(--color-main-light);
+    font-size: 40px;
     border: none;
     padding: 10px;
     cursor: pointer;
+    transition: all .15s ease-in-out ;
+
+    &:hover {
+        color: var(--color-accent);
+    }
+    
+    &:active {
+        color: var(--color-accent-dark);
+    }
 }
 
 .prev {
