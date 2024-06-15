@@ -24,7 +24,7 @@ const filePaths = {
     },
     watch: {
         js: [`${srcFolder}/js/**/*.js`, `${srcFolder}/blocks/**/*.js`],
-        scss: [`${srcFolder}/scss/**/*.scss`, `${srcFolder}/blocks/**/*.scss`],
+        scss: [`${srcFolder}/scss/**/*.scss`, `${srcFolder}/blocks/**/*.scss`, `${srcFolder}/components/**/*.scss`],
         html: `${srcFolder}/**/*.html`,
         images: `${srcFolder}/**/*.{jpg,jpeg,png,svg,gif,webp,ico}`,
         static: `${srcFolder}/static/**/*.*`,

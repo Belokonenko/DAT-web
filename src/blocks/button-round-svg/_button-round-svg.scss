@@ -1,0 +1,21 @@
+.button-round-svg {
+    border-radius: 50%;
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.button_them-one {
+    color: var(--color-accent-dark);
+    border: 1px solid currentColor ;
+    background-color: transparent;
+}
+
+.button_them-one svg {
+    fill: currentColor;
+    // stroke: currentcolor;
+}
