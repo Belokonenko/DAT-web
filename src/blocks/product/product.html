@@ -20,25 +20,29 @@
             </ul>
         </div>
 
-        <div>
+        <div class="product__banner">
             @@include('../tab-3w/tab-3w.html')
 
             <div>
-                <h1 class="title banner__m-l banner__title title_leaf-l-h1 title_size_xl">Herbicide Command®, FMC UKRAINE</h1>
+                <h1 class="title banner__m-l banner__title title_leaf-l-h1 title_size_xl product__banner-title">Herbicide Command®, FMC UKRAINE</h1>
 
-                <div>
-                    <span> In stock </span>
-                    <span> 1,619.03 UAH/liter </span>
-                </div>
-                <div>
+                <div class="product__price-block">
                     <div>
+                        <img src="images/Svg/check.svg" aria-hidden="true" />
+                        <span class="product__stock"> In stock </span>
+                    </div>
+                    <span class="text_faded"> 1,619.03 UAH/liter </span>
+                </div>
+
+                <div class="product__info-block">
+                    <div class="product__manufacture-payment-block" >
                         <div>
-                            <h2>Manufacturer</h2>
-                            <img src="" alt="logo" />
-                            <span>FMC Ukraine</span>
+                            <h2 class="text_strong">Manufacturer</h2>
+                            <img src="images/logo-fmc/fmc@4.png" width="58" height="20" alt="logo manufacturer" />
+                            <span class="text_faded">FMC Ukraine</span>
                         </div>
                         <div>
-                            <h2>Payment</h2>
+                            <h2 class="text_strong">Payment</h2>
                             <div>
                                 <img src="images/Svg/visa.svg" alt="logo visa" />
                                 <img src="images/Svg/master-card.svg" alt="logo master-card" />
@@ -46,9 +50,9 @@
                             </div>
                         </div>
                     </div>
-                    <div>
-                        <h2>Delivery</h2>
-                        <p>Tomorrow according to the carrier's rates</p>
+                    <div class="product__delivery-buy">
+                        <h2 class="text_strong">Delivery</h2>
+                        <p class="text_faded">Tomorrow according to the carrier's rates</p>
                         <button class="button button_smooth button_accent-light button_img-text" type="button">
                             <svg class="" width="18.4" height="16">
                                 <use xlink:href="#phone"></use>
@@ -56,28 +60,28 @@
                             Request a call
                         </button>
                     </div>
-
-                    <div>
-                        <div>
-                            <span>7,814.63 UAH</span>
-                            <span>Price for 5 liters</span>
-                        </div>
+                </div>
+                
+                <div class="product__total-buy-block">
+                    <div class="product__total-block">
+                        <span class="product__total-price">7,814.63 UAH</span>
+                        <span class="product__total">Price for 5 liters</span>
                     </div>
-                    <div>
+                    <div class="product__buy-block">
                         <button class="button button_smooth button_accent button_img-text" type="button ">
-                            <svg class="" width="20" height="20">
+                            <svg  width="20" height="20">
                                 <use xlink:href="#list"></use>
                             </svg>
 
                             Buy
                         </button>
-                        
+
                         <button class="button button-round-svg button_them-one">
                             <svg width="16" height="16" aria-hidden="true">
                                 <use xlink:href="#heart"></use>
                             </svg>
                         </button>
-                        
+
                         <button class="button button-round-svg button_them-one">
                             <svg width="16" height="16" aria-hidden="true">
                                 <use xlink:href="#scale"></use>
