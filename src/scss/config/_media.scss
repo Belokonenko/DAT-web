@@ -6,12 +6,14 @@
         @content;
     }
 }
+
 // Small devices (portrait phones, less than 425px)
 @mixin phone-s {
     @media (max-width: 424.98px) {
         @content;
     }
 }
+
 // Small devices (portrait phones, less than 576px)
 @mixin phone-m {
     @media (max-width: 575.98px) {
@@ -77,6 +79,7 @@
         @content;
     }
 }
+
 // XX-Large devices (larger desktops, 1400px and up)
 
 @mixin desktop-xl-up {
