@@ -3,7 +3,7 @@
     line-height: 1;
     transform: var(--transition-duration);
     background-color: transparent;
-    
+
     @include reset-button;
 
     @include tablet {
@@ -12,24 +12,25 @@
 
     &-round {
         vertical-align: middle;
+
         &__img {
             width: 19px;
             aspect-ratio: 1;
         }
     }
-    
+
     &_img-text {
         min-width: 260px;
-        height: 44px;  
+        height: 44px;
         padding: 0px 23px;
         gap: 10px;
-        
+
         & svg {
             fill: currentColor;
             translate: 0 -1px;
         }
     }
-    
+
     &_accent-light {
         display: flex;
         width: 219px;
@@ -106,7 +107,8 @@
         background-color: var(--color-bg-alpha);
         font-size: 14px;
         font-weight: 600;
-        line-height: 105.9%; /* 14.826px */
+        line-height: 105.9%;
+        /* 14.826px */
         text-transform: uppercase;
 
         &:hover {
@@ -208,8 +210,6 @@
             transition: box-shadow 0.2s ease-in-out;
             transition: all 0.3s ease;
         }
-
-
 
         &:active {
             box-shadow: 0 0 0px rgba(0, 0, 0, 0.5);
