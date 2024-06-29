@@ -13,9 +13,9 @@ export default function customSelect() {
             const firstOption = selectOptions.children[0];
             selectStyled.textContent = firstOption.textContent;
 
-            selectStyled.addEventListener('click', function () {
+            selectStyled.addEventListener('click', function() {
                 item.classList.toggle('custom-select_active');
-                
+
                 selectOptions.style.display = selectOptions.style.display === 'none' ? 'block' : 'none';
 
                 selectArr.classList.toggle('custom-select__arr-menu_active');

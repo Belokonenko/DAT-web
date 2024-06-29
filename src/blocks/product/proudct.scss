@@ -19,40 +19,62 @@
     &__price-block {
         display: flex;
         justify-content: space-between;
+        margin-bottom: 26px;
+    }
+
+    &__stock {
+        color: var(--color-main);
+    }
+
+    &__info-block {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        border-radius: 20px;
+        background-color: var(--color-bg-alpha);
+        padding: 10px;
+
+        @include  desktop {
+            grid-template-columns: 100% ;
+            grid-template-rows: 1fr 1fr;
+        }
     }
 
     &__manufacture-payment-block {
         padding: 10px;
     }
 
-    &__stock {
-        color: var(--color-main);
+    &__manufacture-block {
+        margin-bottom: 30px;
+
+        @include tablet {
+            margin-bottom: 15px;
+        }
     }
-  
-    &__info-block {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        border-radius: 20px;
-        background-color: var(--color-bg-alpha);
-        padding: 10px;
+
+    &__delivery-buy {
+        border-left: 1px solid rgba(0, 0, 0, 0.1);
+        padding: 10px 30px;
+
+        @include desktop {
+            border: none;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+
+        }
+    }
+    
+    &__delivery-text {
+        margin-bottom: 16px;
     }
 
     &__total-buy-block {
         display: flex;
         justify-content: space-between;
-     
     }
-   
+
     &__total-block {
         display: grid;
     }
-    
-    &__delivery-buy {
-        border-left: 1px solid var(--color-text-dark-alt);
-        padding: 10px 30px;
 
-    }
-    
     &__total-price {
         font-weight: 700;
         font-size: 25px;
@@ -62,7 +84,7 @@
     &__total {
         font-size: 14px;
     }
-    
+
     &__buy-block {
         display: flex;
         gap: 20px;

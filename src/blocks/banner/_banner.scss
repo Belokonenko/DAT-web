@@ -8,6 +8,7 @@
     background-size: cover;
 
     @include responsive-background-image("../images/banner-img-1/b_1");
+
     @include tablet {}
 
     &__inner {
@@ -63,6 +64,7 @@
 
             max-width: 70%;
         }
+
         @include phone-l {
             max-width: 100%;
         }
@@ -108,15 +110,19 @@
 
         aspect-ratio: 1 / 0.86;
         @include responsive-background-image("../images/banner-img-2/b-2");
+
         @include desktop-l {
             min-width: 600px;
         }
+
         @include desktop {
             min-width: 500px;
         }
+
         @include tablet {
             min-width: 94vw;
         }
+
         @include phone-m {
             min-width: 91vw;
         }
