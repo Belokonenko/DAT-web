@@ -1,5 +1,6 @@
 .account {
     padding-bottom: 120px;
+
     &__tab-wrap {
         display: grid;
 
@@ -8,6 +9,7 @@
         grid-template-columns: max-content 1fr;
 
         gap: 30px;
+
         @include tablet {
             grid-template-columns: 1fr;
         }
@@ -22,6 +24,7 @@
         border-radius: 20px;
 
         overflow: hidden;
+
         @include phone-l {
             justify-self: center;
         }
@@ -98,7 +101,7 @@
 
         gap: 30px;
     }
-    
+
     &__content-item {
         display: grid;
 
@@ -121,10 +124,12 @@
             justify-self: center;
             fill: var(--color-main-light);
         }
+
         & span {
             text-align: center;
         }
     }
+
     &__tab-reg {
         padding: 30px;
 
