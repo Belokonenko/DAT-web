@@ -86,7 +86,10 @@
     }
 
     &__btn-call {
-        min-width: 100%;
+
+        @include phone {
+            min-width: 100%;
+        }
     }
 
     /* --- */
@@ -120,6 +123,7 @@
         gap: 20px;
 
         @include phone-l {
+            gap: 10px;
             width: 100%;
             grid-template-columns: 1fr max-content max-content;
 
@@ -128,7 +132,7 @@
 
     &__btn-buy {
         @include phone-l {
-            min-width: 177px;
+            min-width: 140px;
         }
     }
 
