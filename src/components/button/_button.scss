@@ -12,6 +12,8 @@
 
     &-round {
         vertical-align: middle;
+        flex-grow: 0;
+        flex-shrink: 0;
 
         &__img {
             width: 19px;
