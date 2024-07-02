@@ -11,7 +11,7 @@ import customSelect from '../../blocks/custom-select/customSelect';
 import quantity from '../../blocks/quantity/quantity';
 import modalLogin from '../../blocks/modal-login/modalLogin';
 import tabs from '../../blocks/tabs/tabs';
-import {tab3w} from '../../blocks/tab-3w/tab-3w';
+import { tab3w } from '../../blocks/tab-3w/tab-3w';
 
 document.addEventListener('DOMContentLoaded', () => {
     order();
