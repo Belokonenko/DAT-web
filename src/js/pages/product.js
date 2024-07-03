@@ -12,6 +12,8 @@ import quantity from '../../blocks/quantity/quantity';
 import modalLogin from '../../blocks/modal-login/modalLogin';
 import tabs from '../../blocks/tabs/tabs';
 import { tab3w } from '../../blocks/tab-3w/tab-3w';
+import { productTab } from '../../blocks/product/product';
+
 
 document.addEventListener('DOMContentLoaded', () => {
     order();
@@ -30,4 +32,6 @@ document.addEventListener('DOMContentLoaded', () => {
     tabs();
     //--
     tab3w();
+    productTab();
+
 });

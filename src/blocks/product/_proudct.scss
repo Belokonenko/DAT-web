@@ -1,4 +1,33 @@
 .product {
+
+    --width-radial-gradient: 40%;
+
+    background: radial-gradient(
+            ellipse var(--width-radial-gradient) 50% at 0% 97%,
+            rgb(132, 190, 81, 0.2) 0%,
+            rgb(210, 230, 189, 0) 100%
+        ),
+        radial-gradient(
+            ellipse var(--width-radial-gradient) 50% at 0% 60%,
+            rgb(231, 78, 19, 0.1) 0%,
+            rgb(231, 78, 19, 0) 100%
+        ),
+        radial-gradient(
+            ellipse var(--width-radial-gradient) 50% at 100% 20%,
+            rgb(231, 78, 19, 0.1) 0%,
+            rgb(231, 78, 19, 0) 100%
+        ),
+        radial-gradient(
+            ellipse var(--width-radial-gradient) 50% at 100% 97%,
+            rgb(132, 190, 81, 0.2) 0%,
+            rgb(210, 230, 189, 0) 100%
+        );
+
+    @include phone-l {
+        --width-radial-gradient: 20%;
+    }
+
+
     &__breadcrumbs {
         margin-bottom: 10px;
     }
@@ -149,11 +178,13 @@
 
     &__tabs-btn {
         max-width: 220px;
-        max-height: 44px;
+        min-height: 44px;
         min-width: 134px;
         width: 100%;
-
+        padding: 5px 10px;
+        transition : all .5s ease;
         border-radius: 20px 20px 0 0;
+        
         font-weight: 700;
         font-size: 20px;
         text-align: center;
