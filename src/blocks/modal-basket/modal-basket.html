@@ -4,9 +4,12 @@
     <form class="modal-basket__form product-info" name="modal-basket__form" action="">
         <h3 class="product-info__title">Herbicide kommand®, FMS UKRAINE</h3>
         <div class="product-info__details-block">
-            @@include('../picture-png/picture-png.html', { "path_img" : "./images/prod-crorpp/cro", "alt": "image Crorpp", "class-name": "product-pic" ,"width":"254", "height": "171" })
+            <div class="product-info__wrap-img">
+                @@include('../picture-png/picture-png.html', { "path_img" : "./images/prod-crorpp/cro",
+                "alt": "image Crorpp", "class-name": "product-pic" ,"width":"254", "height": "171" })
+            </div>
 
-            
+
 
             <div class="product-info__description">
                 <span class="product-info__price text_accent-light">7814,63 грн</span>
@@ -44,9 +47,12 @@
                 <div class="quantity modal-basket__quantity">
                     <span class="quantity__text">Quantity</span>
 
-                    <button type="button" class="button quantity__decrement-button" aria-label="take away one item" title="take away one product">-</button>
-                    <input type="number" class="quantity__number-input" inputmode="numeric" value="1" min="1" pattern="[0-9]*" inputmode="numeric" />
-                    <button type="button" class="button quantity__increment-button" aria-label="add one product" title="add one product">+</button>
+                    <button type="button" class="button quantity__decrement-button" aria-label="take away one item"
+                        title="take away one product">-</button>
+                    <input type="number" class="quantity__number-input" inputmode="numeric" value="1" min="1"
+                        pattern="[0-9]*" inputmode="numeric" />
+                    <button type="button" class="button quantity__increment-button" aria-label="add one product"
+                        title="add one product">+</button>
                 </div>
             </div>
         </div>
@@ -69,7 +75,8 @@
         </button>
     </div>
 
-    <button class="modal__btn-close button modal-basket__btn-close" type="button" title="close basket" id="closeModalLogin">
+    <button class="modal__btn-close button modal-basket__btn-close" type="button" title="close basket"
+        id="closeModalLogin">
         <span class="visually-hidden">close</span>
     </button>
 </dialog>
