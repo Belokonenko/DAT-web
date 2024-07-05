@@ -1,6 +1,10 @@
 .account {
     padding-bottom: 120px;
-
+    
+    &__title {
+        margin-bottom: 30px;
+    }
+    
     &__tab-wrap {
         display: grid;
 
