@@ -1,17 +1,17 @@
-<section class=" container">
-	<div class="">
+<section class="make-an-order content-padding">
+	<div class="container">
 
-		<div class="breadcrumbs registration__breadcrumbs">
+		<div class="breadcrumbs make-an-order__breadcrumbs">
 			<ul class="breadcrumbs__list">
 				<li class="breadcrumbs__item">
 					<a class="button breadcrumbs__ref" href="index.html">home</a>
 				</li>
 				<li class="breadcrumbs__item">
-					<a class="button breadcrumbs__ref" href="404.html">Authorization</a>
+					<a class="button breadcrumbs__ref" href="basket.html">basket</a>
 				</li>
 				<li class="breadcrumbs__item">
 					<a class="button breadcrumbs__ref breadcrumbs__ref_active">
-						Registration
+						Make an order
 					</a>
 				</li>
 			</ul>
@@ -22,21 +22,159 @@
 			title_leaf-l 
 			title_leaf-r 
 			title_size_l 
-			registration__title">
-			Registration
+			make-an-order__title">
+			Make an order
 		</h1>
 
-		<p class="text registration__descr">
-			Log in to use all the features of your personal account:
+		<div class="make-an-order__content">
 
-			<span class="hidden-mobile">
-				order tracking, subscription settings, social media connections,
-				and more. We never and under no circumstances disclose personal
-				data of customers. Contact information will be used only for
-				placing orders and making it easier to work with the site
-			</span>
-		</p>
+			<form class="
+				form-registration 
+				form-registration__form 
+				make-an-order__checkout-info" action="" onsubmit="return validateForm()">
+
+				<fieldset class="form-registration__fildset make-an-order__contacts">
+					<legend class="visually-hidden">Write to Us</legend>
+
+					<div class="form-registration__fild">
+						<input class="form-registration__input name" name="name" id="name"
+							type="text" placeholder="Name" required="" minlength="2"
+							maxlength="50" spellcheck="false" title="Name">
+						<span class="form-registration__error" id="name_message_err"></span>
+					</div>
+
+					<div class="form-registration__fild">
+						<input class="form-registration__input surname" name="surname "
+							id="surname" type="text" placeholder="Surname" required=""
+							minlength="2" maxlength="50" spellcheck="false" title="Surname">
+						<span class="form-registration__error" id="surname_message_err"></span>
+					</div>
+
+					<div class="form-registration__fild">
+						<input class="form-registration__input email" id="email" name="email"
+							type="email" placeholder="E-mail" required="" spellcheck="false"
+							title="example@mail.com">
+						<span class="form-registration__error" id="email_message_err"></span>
+					</div>
+
+					<!-- pattern="\+380 \(\d{2}\) \d{3}-\d{2}-\d{2}" -->
+					<!-- title="+380 (xx) xxx-xx-xx" -->
+					<div class="form-registration__fild">
+						<input class="form-registration__input phone-input" name="phone-input"
+							id="phone-input" type="tel" placeholder="Phone" required=""
+							minlength="5" maxlength="20" spellcheck="false">
+						<span class="form-registration__error"
+							id="phone-input_message_err"></span>
+					</div>
+
+					<div class="form-registration__fild form-registration__fild-textaria">
+						<textarea class="form-registration__input form-registration__textaria"
+							name="message" id="message" placeholder="Write to Us"
+							spellcheck="true" title="Your Message"></textarea>
+						<span class="form-registration__error" id="message_error"></span>
+					</div>
+
+				</fieldset>
+
+				<fieldset class="form-registration__fildset make-an-order__delivery">
+					<legend class="visually-hidden">Write to Us</legend>
+
+					<div class="form-registration__fild">
+						<input class="form-registration__input name" name="name" id="name"
+							type="text" placeholder="Name" required="" minlength="2"
+							maxlength="50" spellcheck="false" title="Name">
+						<span class="form-registration__error" id="name_message_err"></span>
+					</div>
+
+					<div class="form-registration__fild">
+						<input class="form-registration__input surname" name="surname "
+							id="surname" type="text" placeholder="Surname" required=""
+							minlength="2" maxlength="50" spellcheck="false" title="Surname">
+						<span class="form-registration__error" id="surname_message_err"></span>
+					</div>
+
+					<div class="form-registration__fild">
+						<input class="form-registration__input email" id="email" name="email"
+							type="email" placeholder="E-mail" required="" spellcheck="false"
+							title="example@mail.com">
+						<span class="form-registration__error" id="email_message_err"></span>
+					</div>
+
+					<!-- pattern="\+380 \(\d{2}\) \d{3}-\d{2}-\d{2}" -->
+					<!-- title="+380 (xx) xxx-xx-xx" -->
+					<div class="form-registration__fild">
+						<input class="form-registration__input phone-input" name="phone-input"
+							id="phone-input" type="tel" placeholder="Phone" required=""
+							minlength="5" maxlength="20" spellcheck="false">
+						<span class="form-registration__error"
+							id="phone-input_message_err"></span>
+					</div>
+
+					<div class="form-registration__fild form-registration__fild-textaria">
+						<textarea class="form-registration__input form-registration__textaria"
+							name="message" id="message" placeholder="Write to Us"
+							spellcheck="true" title="Your Message"></textarea>
+						<span class="form-registration__error" id="message_error"></span>
+					</div>
+
+				</fieldset>
+				<fieldset class="make-an-order__payment">
+					<label class="checkbox__label">
+						<input class="checkbox__input" type="radio" name="payment">
+						<span class="checkbox__castom"></span>
+						<!-- castom -->
+						<span class="text">Cash</span>
+					</label>
+					<label class="checkbox__label">
+						<input class="checkbox__input" type="radio" name="payment">
+						<span class="checkbox__castom"></span>
+						<!-- castom -->
+						<span class="text">Card Payment</span>
+					</label>
+					<label class="checkbox__label">
+						<input class="checkbox__input" type="radio" name="payment">
+						<span class="checkbox__castom"></span>
+						<!-- castom -->
+						<span class="text">Online Card Payment</span>
+					</label>
+
+				</fieldset>
+
+			</form>
+
+
+			<div class="cart-items">
+
+			</div>
+
+
+		</div>
+
 	</div>
 
-
+	<!-- Your Contacts -->
+	<!-- First Name -->
+	<!-- Last Name -->
+	<!-- Items in the Cart -->
+	<!-- Herbicide Command®, FMC UKRAINE -->
+	<!-- Phone -->
+	<!-- E-mail -->
+	<!-- 7814.63 UAH -->
+	<!-- x1 -->
+	<!-- Comment -->
+	<!-- Herbicide Command®, FMC UKRAINE -->
+	<!-- 7814.63 UAH -->
+	<!-- x1 -->
+	<!-- Total: 2 items -->
+	<!-- For the amount of: 15629.26 UAH -->
+	<!-- Delivery -->
+	<!-- Region -->
+	<!-- City -->
+	<!-- Confirm Order -->
+	<!-- Branch -->
+	<!-- Postal Code -->
+	<!-- Payment -->
+	<!-- Cash -->
+	<!-- Card Payment -->
+	<!-- Online Card Payment -->
 </section>
