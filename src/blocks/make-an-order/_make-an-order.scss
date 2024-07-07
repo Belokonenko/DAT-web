@@ -1,0 +1,16 @@
+.make-an-order {
+  &__checkout-info {
+    display: grid;
+    gap: 30px
+  }
+
+  &__contacts,
+  &__delivery {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding-bottom: 30px;
+  }
+
+  &__title-2 {
+    padding-bottom: 20px;
+  }
+}

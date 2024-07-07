@@ -32,116 +32,139 @@
 				form-registration 
 				form-registration__form 
 				make-an-order__checkout-info" action="" onsubmit="return validateForm()">
+				<div>
+					<h2 class="text_strong make-an-order__title-2">Your Contacts</h2>
+					<fieldset class="form-registration__fildset make-an-order__contacts">
 
-				<fieldset class="form-registration__fildset make-an-order__contacts">
-					<legend class="visually-hidden">Write to Us</legend>
+						<legend class="visually-hidden">Your Contacts</legend>
 
-					<div class="form-registration__fild">
-						<input class="form-registration__input name" name="name" id="name"
-							type="text" placeholder="Name" required="" minlength="2"
-							maxlength="50" spellcheck="false" title="Name">
-						<span class="form-registration__error" id="name_message_err"></span>
-					</div>
+						<div class="form-registration__fild">
+							<input class="form-registration__input name" name="name"
+								id="name" type="text" placeholder="Name" required=""
+								minlength="2" maxlength="50" spellcheck="false"
+								title="Name">
+							<span class="form-registration__error"
+								id="name_message_err"></span>
+						</div>
 
-					<div class="form-registration__fild">
-						<input class="form-registration__input surname" name="surname "
-							id="surname" type="text" placeholder="Surname" required=""
-							minlength="2" maxlength="50" spellcheck="false" title="Surname">
-						<span class="form-registration__error" id="surname_message_err"></span>
-					</div>
+						<div class="form-registration__fild">
+							<input class="form-registration__input surname" name="surname "
+								id="surname" type="text" placeholder="Surname"
+								required="" minlength="2" maxlength="50"
+								spellcheck="false" title="Surname">
+							<span class="form-registration__error"
+								id="surname_message_err"></span>
+						</div>
 
-					<div class="form-registration__fild">
-						<input class="form-registration__input email" id="email" name="email"
-							type="email" placeholder="E-mail" required="" spellcheck="false"
-							title="example@mail.com">
-						<span class="form-registration__error" id="email_message_err"></span>
-					</div>
+						<div class="form-registration__fild">
+							<input class="form-registration__input email" id="email"
+								name="email" type="email" placeholder="E-mail"
+								required="" spellcheck="false" title="example@mail.com">
+							<span class="form-registration__error"
+								id="email_message_err"></span>
+						</div>
 
-					<!-- pattern="\+380 \(\d{2}\) \d{3}-\d{2}-\d{2}" -->
-					<!-- title="+380 (xx) xxx-xx-xx" -->
-					<div class="form-registration__fild">
-						<input class="form-registration__input phone-input" name="phone-input"
-							id="phone-input" type="tel" placeholder="Phone" required=""
-							minlength="5" maxlength="20" spellcheck="false">
-						<span class="form-registration__error"
-							id="phone-input_message_err"></span>
-					</div>
+						<!-- pattern="\+380 \(\d{2}\) \d{3}-\d{2}-\d{2}" -->
+						<!-- title="+380 (xx) xxx-xx-xx" -->
+						<div class="form-registration__fild">
+							<input class="form-registration__input phone-input"
+								name="phone-input" id="phone-input" type="tel"
+								placeholder="Phone" required="" minlength="5"
+								maxlength="20" spellcheck="false">
+							<span class="form-registration__error"
+								id="phone-input_message_err"></span>
+						</div>
 
-					<div class="form-registration__fild form-registration__fild-textaria">
-						<textarea class="form-registration__input form-registration__textaria"
-							name="message" id="message" placeholder="Write to Us"
-							spellcheck="true" title="Your Message"></textarea>
-						<span class="form-registration__error" id="message_error"></span>
-					</div>
+						<div class="form-registration__fild form-registration__fild-textaria">
+							<textarea
+								class="form-registration__input form-registration__textaria"
+								name="message" id="message" placeholder="Write to Us"
+								spellcheck="true" title="Your Message"></textarea>
+							<span class="form-registration__error"
+								id="message_error"></span>
+						</div>
+					</fieldset>
 
-				</fieldset>
+				</div>
+				<div>
+					<h2 class="text_strong make-an-order__title-2">Delivery</h2>
+					<fieldset class="form-registration__fildset make-an-order__delivery">
 
-				<fieldset class="form-registration__fildset make-an-order__delivery">
-					<legend class="visually-hidden">Write to Us</legend>
+						<legend class="visually-hidden">Delivery</legend>
 
-					<div class="form-registration__fild">
-						<input class="form-registration__input name" name="name" id="name"
-							type="text" placeholder="Name" required="" minlength="2"
-							maxlength="50" spellcheck="false" title="Name">
-						<span class="form-registration__error" id="name_message_err"></span>
-					</div>
+						<div class="form-registration__fild">
+							<input class="form-registration__input region" name="region"
+								id="region" type="text" placeholder="Region" required=""
+								minlength="2" maxlength="50" spellcheck="false"
+								title="Region">
 
-					<div class="form-registration__fild">
-						<input class="form-registration__input surname" name="surname "
-							id="surname" type="text" placeholder="Surname" required=""
-							minlength="2" maxlength="50" spellcheck="false" title="Surname">
-						<span class="form-registration__error" id="surname_message_err"></span>
-					</div>
+							<button class="button make-an-order__delivery-btn"
+								type="button">
 
-					<div class="form-registration__fild">
-						<input class="form-registration__input email" id="email" name="email"
-							type="email" placeholder="E-mail" required="" spellcheck="false"
-							title="example@mail.com">
-						<span class="form-registration__error" id="email_message_err"></span>
-					</div>
+								<svg class="order__arr-menu" width="10" height="10">
+									<use xlink:href="#arr-menu"></use>
+								</svg>
+							</button>
+							<span class="form-registration__error"
+								id="region_message_err"></span>
+						</div>
 
-					<!-- pattern="\+380 \(\d{2}\) \d{3}-\d{2}-\d{2}" -->
-					<!-- title="+380 (xx) xxx-xx-xx" -->
-					<div class="form-registration__fild">
-						<input class="form-registration__input phone-input" name="phone-input"
-							id="phone-input" type="tel" placeholder="Phone" required=""
-							minlength="5" maxlength="20" spellcheck="false">
-						<span class="form-registration__error"
-							id="phone-input_message_err"></span>
-					</div>
+						<div class="form-registration__fild">
+							<input class="form-registration__input city" name="city"
+								id="city" type="text" placeholder="City" required=""
+								minlength="2" maxlength="50" spellcheck="false"
+								title="City">
+							<span class="form-registration__error"
+								id="sity_message_err"></span>
+						</div>
 
-					<div class="form-registration__fild form-registration__fild-textaria">
-						<textarea class="form-registration__input form-registration__textaria"
-							name="message" id="message" placeholder="Write to Us"
-							spellcheck="true" title="Your Message"></textarea>
-						<span class="form-registration__error" id="message_error"></span>
-					</div>
+						<div class="form-registration__fild">
+							<input class="form-registration__input department"
+								id="department" name="department" type="text"
+								placeholder="Department" required="" spellcheck="false"
+								title="Department">
+							<span class="form-registration__error"
+								id="department_message_err"></span>
+						</div>
 
-				</fieldset>
-				<fieldset class="make-an-order__payment">
-					<label class="checkbox__label">
-						<input class="checkbox__input" type="radio" name="payment">
-						<span class="checkbox__castom"></span>
-						<!-- castom -->
-						<span class="text">Cash</span>
-					</label>
-					<label class="checkbox__label">
-						<input class="checkbox__input" type="radio" name="payment">
-						<span class="checkbox__castom"></span>
-						<!-- castom -->
-						<span class="text">Card Payment</span>
-					</label>
-					<label class="checkbox__label">
-						<input class="checkbox__input" type="radio" name="payment">
-						<span class="checkbox__castom"></span>
-						<!-- castom -->
-						<span class="text">Online Card Payment</span>
-					</label>
+						<div class="form-registration__fild">
+							<input class="form-registration__input index" name="index"
+								id="index" type="text" placeholder="Index" required=""
+								minlength="5" maxlength="20" spellcheck="false">
+							<span class="form-registration__error"
+								id="index_message_err"></span>
+						</div>
 
-				</fieldset>
+					</fieldset>
+				</div>
+				<div>
+					<h2 class="text_strong make-an-order__title-2">Payment</h2>
+					<fieldset class="make-an-order__payment">
 
+						<legend class="visually-hidden">Delivery</legend>
+
+						<label class="checkbox__label">
+							<input class="checkbox__input" type="radio" name="payment">
+							<span class="checkbox__castom"></span>
+							<!-- castom -->
+							<span class="text">Cash</span>
+						</label>
+						<label class="checkbox__label">
+							<input class="checkbox__input" type="radio" name="payment">
+							<span class="checkbox__castom"></span>
+							<!-- castom -->
+							<span class="text">Card Payment</span>
+						</label>
+						<label class="checkbox__label">
+							<input class="checkbox__input" type="radio" name="payment"
+								checked>
+							<span class="checkbox__castom"></span>
+							<!-- castom -->
+							<span class="text">Online Card Payment</span>
+						</label>
+					</fieldset>
+				</div>
 			</form>
-
 
 			<div class="cart-items">
 
@@ -151,7 +174,7 @@
 		</div>
 
 	</div>
-
+	<!-- department -->
 	<!-- Your Contacts -->
 	<!-- First Name -->
 	<!-- Last Name -->
