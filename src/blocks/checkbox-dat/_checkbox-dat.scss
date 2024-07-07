@@ -13,6 +13,7 @@
     user-select: none;
     font-size: 1rem;
 }
+
 .checkbox__text {
     font-size: 1rem;
     font-weight: 400;
@@ -21,15 +22,15 @@
 
 // --- style castom checkbox ---
 
-.checkbox__input:checked + .checkbox__castom::before {
+.checkbox__input:checked+.checkbox__castom::before {
     opacity: 1;
 }
 
-.checkbox__input:checked + .checkbox__castom {
+.checkbox__input:checked+.checkbox__castom {
     border-color: var(--color-main-light);
 }
 
-.checkbox__input:disabled + .checkbox__castom {
+.checkbox__input:disabled+.checkbox__castom {
     border-color: red;
 }
 
@@ -42,10 +43,10 @@
     aspect-ratio: 1;
     border-radius: 3px;
     border: 1px solid #ccc;
+
     &::before {
         content: '';
         position: absolute;
-        display: inline-flex;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
