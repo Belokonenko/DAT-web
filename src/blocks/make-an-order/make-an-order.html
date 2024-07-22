@@ -1,185 +1,138 @@
 <section class="make-an-order content-padding">
-	<div class="container">
+    <div class="container">
+        <div class="breadcrumbs make-an-order__breadcrumbs">
+            <ul class="breadcrumbs__list">
+                <li class="breadcrumbs__item">
+                    <a class="button breadcrumbs__ref" href="index.html">home</a>
+                </li>
+                <li class="breadcrumbs__item make-an-order__back-history-btn">
+                    <a class="button breadcrumbs__ref">basket</a>
+                </li>
+                <li class="breadcrumbs__item">
+                    <a class="button breadcrumbs__ref breadcrumbs__ref_active"> Make an order </a>
+                </li>
+            </ul>
+        </div>
 
-		<div class="breadcrumbs make-an-order__breadcrumbs">
-			<ul class="breadcrumbs__list">
-				<li class="breadcrumbs__item">
-					<a class="button breadcrumbs__ref" href="index.html">home</a>
-				</li>
-				<li class="breadcrumbs__item make-an-order__back-history-btn">
-					<a class="button breadcrumbs__ref">basket</a>
-				</li>
-				<li class="breadcrumbs__item">
-					<a class="button breadcrumbs__ref breadcrumbs__ref_active">
-						Make an order
-					</a>
-				</li>
-			</ul>
-		</div>
+        <h1 class="title title_leaf-l title_leaf-r title_size_l make-an-order__title">Make an order</h1>
 
-		<h1 class="
-			title 
-			title_leaf-l 
-			title_leaf-r 
-			title_size_l 
-			make-an-order__title">
-			Make an order
-		</h1>
+        <div class="make-an-order__content">
+            <form class="form-registration form-registration__form make-an-order__checkout-info" action="" onsubmit="return validateForm()">
+                <div>
+                    <h2 class="text_strong make-an-order__title-2">Your Contacts</h2>
+                    <fieldset class="form-registration__fildset make-an-order__contacts">
+                        <legend class="visually-hidden">Your Contacts</legend>
 
-		<div class="make-an-order__content">
+                        <div class="form-registration__fild">
+                            <input class="form-registration__input name" name="name" id="name" type="text" placeholder="Name" required="" minlength="2" maxlength="50" spellcheck="false" title="Name" />
+                            <span class="form-registration__error" id="name_message_err"></span>
+                        </div>
 
-			<form class="
-				form-registration 
-				form-registration__form 
-				make-an-order__checkout-info" action="" onsubmit="return validateForm()">
-				<div>
-					<h2 class="text_strong make-an-order__title-2">Your Contacts</h2>
-					<fieldset class="form-registration__fildset make-an-order__contacts">
+                        <div class="form-registration__fild">
+                            <input class="form-registration__input surname" name="surname " id="surname" type="text" placeholder="Surname" required="" minlength="2" maxlength="50" spellcheck="false" title="Surname" />
+                            <span class="form-registration__error" id="surname_message_err"></span>
+                        </div>
 
-						<legend class="visually-hidden">Your Contacts</legend>
+                        <div class="form-registration__fild">
+                            <input class="form-registration__input email" id="email" name="email" type="email" placeholder="E-mail" required="" spellcheck="false" title="example@mail.com" />
+                            <span class="form-registration__error" id="email_message_err"></span>
+                        </div>
 
-						<div class="form-registration__fild">
-							<input class="form-registration__input name" name="name"
-								id="name" type="text" placeholder="Name" required=""
-								minlength="2" maxlength="50" spellcheck="false"
-								title="Name">
-							<span class="form-registration__error"
-								id="name_message_err"></span>
-						</div>
+                        <!-- pattern="\+380 \(\d{2}\) \d{3}-\d{2}-\d{2}" -->
+                        <!-- title="+380 (xx) xxx-xx-xx" -->
+                        <div class="form-registration__fild">
+                            <input class="form-registration__input phone-input" name="phone-input" id="phone-input" type="tel" placeholder="Phone" required="" minlength="5" maxlength="20" spellcheck="false" />
+                            <span class="form-registration__error" id="phone-input_message_err"></span>
+                        </div>
 
-						<div class="form-registration__fild">
-							<input class="form-registration__input surname" name="surname "
-								id="surname" type="text" placeholder="Surname"
-								required="" minlength="2" maxlength="50"
-								spellcheck="false" title="Surname">
-							<span class="form-registration__error"
-								id="surname_message_err"></span>
-						</div>
+                        <div class="form-registration__fild form-registration__fild-textaria">
+                            <textarea class="form-registration__input form-registration__textaria" name="message" id="message" placeholder="Write to Us" spellcheck="true" title="Your Message"></textarea>
+                            <span class="form-registration__error" id="message_error"></span>
+                        </div>
+                    </fieldset>
+                </div>
+                <div>
+                    <h2 class="text_strong make-an-order__title-2">Delivery</h2>
+                    <fieldset class="form-registration__fildset make-an-order__delivery">
+                        <legend class="visually-hidden">Delivery</legend>
 
-						<div class="form-registration__fild">
-							<input class="form-registration__input email" id="email"
-								name="email" type="email" placeholder="E-mail"
-								required="" spellcheck="false" title="example@mail.com">
-							<span class="form-registration__error"
-								id="email_message_err"></span>
-						</div>
+                        <div class="form-registration__fild">
+                            <input class="form-registration__input region" name="region" id="region" type="text" placeholder="Region" required="" minlength="2" maxlength="50" spellcheck="false" title="Region" />
 
-						<!-- pattern="\+380 \(\d{2}\) \d{3}-\d{2}-\d{2}" -->
-						<!-- title="+380 (xx) xxx-xx-xx" -->
-						<div class="form-registration__fild">
-							<input class="form-registration__input phone-input"
-								name="phone-input" id="phone-input" type="tel"
-								placeholder="Phone" required="" minlength="5"
-								maxlength="20" spellcheck="false">
-							<span class="form-registration__error"
-								id="phone-input_message_err"></span>
-						</div>
+                            <button class="button make-an-order__delivery-btn" type="button">
+                                <svg class="order__arr-menu" width="10" height="10">
+                                    <use xlink:href="#arr-menu"></use>
+                                </svg>
+                            </button>
+                            <span class="form-registration__error" id="region_message_err"></span>
+                        </div>
 
-						<div class="form-registration__fild form-registration__fild-textaria">
-							<textarea
-								class="form-registration__input form-registration__textaria"
-								name="message" id="message" placeholder="Write to Us"
-								spellcheck="true" title="Your Message"></textarea>
-							<span class="form-registration__error"
-								id="message_error"></span>
-						</div>
-					</fieldset>
+                        <div class="form-registration__fild">
+                            <input class="form-registration__input city" name="city" id="city" type="text" placeholder="City" required="" minlength="2" maxlength="50" spellcheck="false" title="City" />
+                            <span class="form-registration__error" id="sity_message_err"></span>
+                        </div>
 
-				</div>
-				<div>
-					<h2 class="text_strong make-an-order__title-2">Delivery</h2>
-					<fieldset class="form-registration__fildset make-an-order__delivery">
+                        <div class="form-registration__fild">
+                            <input class="form-registration__input department" id="department" name="department" type="text" placeholder="Department" required="" spellcheck="false" title="Department" />
+                            <span class="form-registration__error" id="department_message_err"></span>
+                        </div>
 
-						<legend class="visually-hidden">Delivery</legend>
+                        <div class="form-registration__fild">
+                            <input class="form-registration__input index" name="index" id="index" type="text" placeholder="Index" required="" minlength="5" maxlength="20" spellcheck="false" />
+                            <span class="form-registration__error" id="index_message_err"></span>
+                        </div>
+                    </fieldset>
+                </div>
+                <div>
+                    <h2 class="text_strong make-an-order__title-2">Payment</h2>
+                    <fieldset class="make-an-order__payment">
+                        <legend class="visually-hidden">Delivery</legend>
 
-						<div class="form-registration__fild">
-							<input class="form-registration__input region" name="region"
-								id="region" type="text" placeholder="Region" required=""
-								minlength="2" maxlength="50" spellcheck="false"
-								title="Region">
+                        <div class="radio">
+                            <input type="radio" id="radio1" name="radio" class="radio__input" />
+                            <label for="radio1" class="radio__label">Cash</label>
+                        </div>
 
-							<button class="button make-an-order__delivery-btn"
-								type="button">
+                        <div class="radio">
+                            <input type="radio" id="radio2" name="radio" class="radio__input" />
+                            <label for="radio2" class="radio__label">Card Payment</label>
+                        </div>
 
-								<svg class="order__arr-menu" width="10" height="10">
-									<use xlink:href="#arr-menu"></use>
-								</svg>
-							</button>
-							<span class="form-registration__error"
-								id="region_message_err"></span>
-						</div>
+                        <div class="radio">
+                            <input type="radio" id="radio3" name="radio" class="radio__input" checked />
+                            <label for="radio3" class="radio__label">Online Card Payment</label>
+                        </div>
+                    </fieldset>
+                </div>
+            </form>
 
-						<div class="form-registration__fild">
-							<input class="form-registration__input city" name="city"
-								id="city" type="text" placeholder="City" required=""
-								minlength="2" maxlength="50" spellcheck="false"
-								title="City">
-							<span class="form-registration__error"
-								id="sity_message_err"></span>
-						</div>
-
-						<div class="form-registration__fild">
-							<input class="form-registration__input department"
-								id="department" name="department" type="text"
-								placeholder="Department" required="" spellcheck="false"
-								title="Department">
-							<span class="form-registration__error"
-								id="department_message_err"></span>
-						</div>
-
-						<div class="form-registration__fild">
-							<input class="form-registration__input index" name="index"
-								id="index" type="text" placeholder="Index" required=""
-								minlength="5" maxlength="20" spellcheck="false">
-							<span class="form-registration__error"
-								id="index_message_err"></span>
-						</div>
-
-					</fieldset>
-				</div>
-				<div>
-					<h2 class="text_strong make-an-order__title-2">Payment</h2>
-					<fieldset class="make-an-order__payment">
-
-						<legend class="visually-hidden">Delivery</legend>
-						@@include('../../components/radio/radio.html')
-
-					</fieldset>
-				</div>
-			</form>
-
-			<div class="cart-items">
-
-			</div>
-
-
-		</div>
-
-	</div>
-	<!-- department -->
-	<!-- Your Contacts -->
-	<!-- First Name -->
-	<!-- Last Name -->
-	<!-- Items in the Cart -->
-	<!-- Herbicide Command®, FMC UKRAINE -->
-	<!-- Phone -->
-	<!-- E-mail -->
-	<!-- 7814.63 UAH -->
-	<!-- x1 -->
-	<!-- Comment -->
-	<!-- Herbicide Command®, FMC UKRAINE -->
-	<!-- 7814.63 UAH -->
-	<!-- x1 -->
-	<!-- Total: 2 items -->
-	<!-- For the amount of: 15629.26 UAH -->
-	<!-- Delivery -->
-	<!-- Region -->
-	<!-- City -->
-	<!-- Confirm Order -->
-	<!-- Branch -->
-	<!-- Postal Code -->
-	<!-- Payment -->
-	<!-- Cash -->
-	<!-- Card Payment -->
-	<!-- Online Card Payment -->
+            <div class="cart-items"></div>
+        </div>
+    </div>
+    <!-- department -->
+    <!-- Your Contacts -->
+    <!-- First Name -->
+    <!-- Last Name -->
+    <!-- Items in the Cart -->
+    <!-- Herbicide Command®, FMC UKRAINE -->
+    <!-- Phone -->
+    <!-- E-mail -->
+    <!-- 7814.63 UAH -->
+    <!-- x1 -->
+    <!-- Comment -->
+    <!-- Herbicide Command®, FMC UKRAINE -->
+    <!-- 7814.63 UAH -->
+    <!-- x1 -->
+    <!-- Total: 2 items -->
+    <!-- For the amount of: 15629.26 UAH -->
+    <!-- Delivery -->
+    <!-- Region -->
+    <!-- City -->
+    <!-- Confirm Order -->
+    <!-- Branch -->
+    <!-- Postal Code -->
+    <!-- Payment -->
+    <!-- Cash -->
+    <!-- Card Payment -->
+    <!-- Online Card Payment -->
 </section>
