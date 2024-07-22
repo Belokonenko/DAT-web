@@ -1,7 +1,10 @@
-Вот пример структуры объекта Map на JavaScript, где ключами являются области Украины, а значениями - массивы городов на английском языке:
+Вот пример структуры объекта Map на JavaScript, 
+где ключами являются области Украины, 
+а значениями - массивы городов на английском языке:
 
 javascript
 Copy code
+
 const ukraineRegions = new Map([
   ["Kyiv Oblast", ["Kyiv", "Bila Tserkva", "Brovary"]],
   ["Kharkiv Oblast", ["Kharkiv", "Chuhuiv", "Izium"]],
@@ -10,11 +13,18 @@ const ukraineRegions = new Map([
   ["Dnipropetrovsk Oblast", ["Dnipro", "Kryvyi Rih", "Nikopol"]]
 ]);
 
+
+
 // Example usage
+
 ukraineRegions.forEach((cities, region) => {
   console.log(`Region: ${region}, Cities: ${cities.join(", ")}`);
 });
-Этот код создает объект Map, где ключами являются названия областей Украины на английском языке, а значениями - массивы городов на английском языке. Затем он проходит по каждому элементу карты и выводит название области и соответствующие города.
+
+Этот код создает объект Map, 
+где ключами являются названия областей Украины на английском языке, 
+а значениями - массивы городов на английском языке. 
+Затем он проходит по каждому элементу карты и выводит название области и соответствующие города.
 
 
 убери в стороке ключа под строку Oblast
@@ -105,6 +115,7 @@ ChatGPT
 
 javascript
 Copy code
+
 function getKeyByValue(map, searchValue) {
   for (let [key, value] of map) {
     if (value.includes(searchValue)) {

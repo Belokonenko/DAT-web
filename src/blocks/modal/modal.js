@@ -1,5 +1,4 @@
 export default function modal(nameModal, classBtnOpen, btnClose) {
-    console.log("modal")    
     const modal = document.querySelector(nameModal);
     const btnOpenModal = document.querySelector(classBtnOpen);
     const closeModalButton = document.querySelector(btnClose);
