@@ -7,8 +7,10 @@ export default function delivery() {
         try {
             const response = await fetch('http://localhost:3002/regions');
             const data = await response.json();
+            console.log(data)
             console.log(Object.keys(data));
-            populateDropdown(Object.keys(data));
+            console.log(Object.values(data))
+            // populateDropdown(Object.keys(data));
         } catch (error) {
             console.error('Error fetching regions:', error);
         }
