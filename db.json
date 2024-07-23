@@ -1,0 +1,29 @@
+{
+    "regions": {
+        "Cherkasy": ["Cherkasy", "Smila", "Uman", "Zolotonosha", "Kamianets", "Shpola", "Talne", "Korystivka"],
+        "Chernihiv": ["Chernihiv", "Nizhyn", "Pryluky", "Novhorod-Siverskyi", "Semenivka", "Kozelets", "Bakhmach", "Ichnia"],
+        "Chernivtsi": ["Chernivtsi", "Novodnistrovsk", "Storozhynets", "Khotyn", "Kitsman", "Hlyboka", "Zastavna", "Delyatyn"],
+        "Crimea": ["Simferopol", "Sevastopol", "Yalta", "Alushta", "Kerch", "Evpatoria", "Saky", "Feodosia"],
+        "Dnipropetrovsk": ["Dnipro", "Kryvyi Rih", "Nikopol", "Pavlohrad", "Dniprodzerzhynsk", "Kamianets-Podilskyi", "Synelnykove", "Vilnohirsk"],
+        "Donetsk": ["Donetsk", "Mariupol", "Makiivka", "Horlivka", "Kramatorsk", "Bakhmut", "Yenakiieve", "Kostiantynivka"],
+        "Ivano-Frankivsk": ["Ivano-Frankivsk", "Kalush", "Kolomyia", "Burshtyn", "Rohatyn", "Yaremche", "Tysmenytsia", "Halych"],
+        "Kharkiv": ["Kharkiv", "Chuhuiv", "Izium", "Luhansk", "Kupiansk", "Pervomaiskyi", "Balakliia", "Lyubotyn"],
+        "Kherson": ["Kherson", "Nova Kakhovka", "Kakhovka", "Berislav", "Skadovsk", "Oleshkiv", "Genichesk", "Tsukrova"],
+        "Khmelnytskyi": ["Khmelnytskyi", "Kamianets-Podilskyi", "Shepetivka", "Starokostiantyniv", "Netishyn", "Dunaivtsi", "Polonne", "Letychiv"],
+        "Kyiv": ["Kyiv", "Bila Tserkva", "Brovary", "Vasylkiv", "Irpin", "Fastiv", "Boryspil", "Obukhiv"],
+        "Kirovohrad": ["Kropyvnytskyi", "Oleksandriia", "Svitlovodsk", "Znamyanka", "Dolynska", "Novomyrhorod", "Blahojevich", "Holetska"],
+        "Luhansk": ["Luhansk", "Alchevsk", "Krasnyi Luch", "Antratsyt", "Sverdlovsk", "Pervomaisk", "Rovenky", "Krasnodon"],
+        "Lviv": ["Lviv", "Drohobych", "Chervonohrad", "Stryi", "Boryslav", "Belz", "Morshyn", "Kamianka-Buzka"],
+        "Mykolaiv": ["Mykolaiv", "Yuzhnoukrainsk", "Pervomaisk", "Voznesensk", "Bashtanka", "Domanevka", "Berezhany", "Arbuzynka"],
+        "Odessa": ["Odesa", "Illichivsk", "Yuzhne", "Bilhorod-Dnistrovskyi", "Izmail", "Tatarbunary", "Podilsk", "Zatoka"],
+        "Poltava": ["Poltava", "Kremenchuk", "Lubny", "Mirhorod", "Hlobyne", "Myrhorod", "Khorol", "Dykanka"],
+        "Rivne": ["Rivne", "Varash", "Dubno", "Sarny", "Klevan", "Radyvyliv", "Zdolbuniv", "Ostroh"],
+        "Sumy": ["Sumy", "Konotop", "Shostka", "Romny", "Trostianets", "Buryn", "Putivl", "Krolevets"],
+        "Ternopil": ["Ternopil", "Chortkiv", "Buchach", "Zboriv", "Terebovlia", "Pidhaitsi", "Husiatyn", "Skalat"],
+        "Vinnytsia": ["Vinnytsia", "Khmilnyk", "Zhmerynka", "Mohyliv-Podilskyi", "Bershad", "Bar", "Kalynivka", "Lityn"],
+        "Volyn": ["Lutsk", "Kovel", "Novovolynsk", "Manoiv", "Volodymyr", "Lyubeshiv", "Turiysk", "Kamian-Kashyrskyi"],
+        "Zakarpattia": ["Uzhhorod", "Mukachevo", "Khust", "Berehove", "Svaliava", "Rakhiv", "Tiachiv", "Vynohradiv"],
+        "Zaporizhzhia": ["Zaporizhzhia", "Berdyansk", "Melitopol", "Pology", "Vasylivka", "Tokmak", "Dniprorudne", "Orykhov"],
+        "Zhytomyr": ["Zhytomyr", "Berdychiv", "Novohrad-Volynskyi", "Korosten", "Malyn", "Olevsk", "Lugyn", "Andrushivka"]
+    }
+}

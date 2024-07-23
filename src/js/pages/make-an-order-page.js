@@ -11,7 +11,8 @@ import customSelect from '../../blocks/custom-select/customSelect';
 import quantity from '../../blocks/quantity/quantity';
 import modalLogin from '../../blocks/modal-login/modalLogin';
 import tabs from '../../blocks/tabs/tabs';
-import { makeAnOrder } from '../../blocks/make-an-order/make-an-order';
+import makeAnOrder from '../../blocks/make-an-order/make-an-order';
+import delivery from '../../blocks/delivery/delivery';
 
 document.addEventListener('DOMContentLoaded', () => {
     order();
@@ -29,4 +30,5 @@ document.addEventListener('DOMContentLoaded', () => {
     customSelect();
     tabs();
     makeAnOrder();
+    delivery();
 });

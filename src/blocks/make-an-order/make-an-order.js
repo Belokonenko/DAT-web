@@ -1,4 +1,4 @@
-export const makeAnOrder = () => {
+export default function makeAnOrde() {
     // --- back to hisotory
     const btnBackHistory = document.querySelector('.make-an-order__back-history-btn');
 
@@ -68,6 +68,6 @@ export const makeAnOrder = () => {
         return null; // Если значение не найдено
     }
     
-    console.log(getKeyByValue(ukraineRegions,"Drohobych"))
+    console.log(getKeyByValue(ukraineRegions,"Kharkiv"))
 
 };
