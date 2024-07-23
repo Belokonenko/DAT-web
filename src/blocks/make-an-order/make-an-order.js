@@ -29,45 +29,45 @@ export default function makeAnOrde() {
     // input region
     //
 
-    const blockDelivery = document.querySelector('.make-an-order__delivery');
-
-    if (blockDelivery) {
-        blockDelivery.addEventListener('input', e => {
-            const target = e.target;
-
-            if (target && target.classList.contains('region')) {
-            }
-        });
-    }
-
-    const ukraineRegions = new Map([
-        ['Kyiv', ['Kyiv', 'Bila Tserkva', 'Brovary']],
-        ['Kharkiv', ['Kharkiv', 'Chuhuiv', 'Izium']],
-        ['Odesa', ['Odesa', 'Illichivsk', 'Yuzhne']],
-        ['Lviv', ['Lviv', 'Drohobych', 'Chervonohrad']],
-        ['Dnipropetrovsk', ['Dnipro', 'Kryvyi Rih', 'Nikopol']],
-    ]);
-
-    // get array regions
-    const getRegions = regions => {
-        return Array.from(regions.keys());
-    };
-
-    console.log(getRegions(ukraineRegions));
-
-    const cities = Array.from(ukraineRegions.values()).flat();
-
-    console.log(cities);
-
-    const getKeyByValue = (map, searchValue) =>  {
-        for (let [key, value] of map) {
-            if (value.includes(searchValue)) {
-                return key;
-            }
-        }
-        return null; // Если значение не найдено
-    }
-    
-    console.log(getKeyByValue(ukraineRegions,"Kharkiv"))
+    // const blockDelivery = document.querySelector('.make-an-order__delivery');
+    //
+    // if (blockDelivery) {
+    //     blockDelivery.addEventListener('input', e => {
+    //         const target = e.target;
+    //
+    //         if (target && target.classList.contains('region')) {
+    //         }
+    //     });
+    // }
+    //
+    // const ukraineRegions = new Map([
+    //     ['Kyiv', ['Kyiv', 'Bila Tserkva', 'Brovary']],
+    //     ['Kharkiv', ['Kharkiv', 'Chuhuiv', 'Izium']],
+    //     ['Odesa', ['Odesa', 'Illichivsk', 'Yuzhne']],
+    //     ['Lviv', ['Lviv', 'Drohobych', 'Chervonohrad']],
+    //     ['Dnipropetrovsk', ['Dnipro', 'Kryvyi Rih', 'Nikopol']],
+    // ]);
+    //
+    // // get array regions
+    // const getRegions = regions => {
+    //     return Array.from(regions.keys());
+    // };
+    //
+    // console.log(getRegions(ukraineRegions));
+    //
+    // const cities = Array.from(ukraineRegions.values()).flat();
+    //
+    // console.log(cities);
+    //
+    // const getKeyByValue = (map, searchValue) =>  {
+    //     for (let [key, value] of map) {
+    //         if (value.includes(searchValue)) {
+    //             return key;
+    //         }
+    //     }
+    //     return null; // Если значение не найдено
+    // }
+    // 
+    // console.log(getKeyByValue(ukraineRegions,"Kharkiv"))
 
 };

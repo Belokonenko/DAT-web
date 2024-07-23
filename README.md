@@ -1,3 +1,21 @@
+# DAT-web
+
+-------------------------------------------------------------
+##JSON REST API
+
+- Для работы с базой данных использоаван json-server
+
+- Установка.
+    ```bach
+        json-server --watch db.json --port 3002
+    ```
+- Запуск. 3000 порт занят gulp.
+
+    ```bach
+        json-server --watch db.json --port 3002
+    ```
+-------------------------------------------------------------
+
 # Start Template: Gulp + WebPack + Babel
 
 ## Для работы используйте такие команды
@@ -95,7 +113,7 @@ import * as flsFunctions from './modules' // './modules/index.js'
 По любым вопросам касающихся сборки пишите мне в [Telegram](https://t.me/StarkElessar).
 
 ---------------------------------------
-file stucture
+file structure
 .
 ├─ /dist
 │   ├─ /css
@@ -104,7 +122,7 @@ file stucture
 │   ├─ index.html
 │   └─ order.html
 ├─ /src
-│   ├─ /components
+│   ├─ /blocks
 │   │   ├─ /header
 │   │   │   ├─ header.html
 │   │   │   └─ header.scss
@@ -175,4 +193,4 @@ keywords: Обновите ключевые слова, чтобы они луч
 DevDependencies и Dependencies
 
 Возможно, вам не потребуется изменять этот раздел, если используемые пакеты вас устраивают. Но если вы используете другие пакеты, добавьте или удалите их здесь.
-# DAT-web
+
