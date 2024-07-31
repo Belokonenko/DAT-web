@@ -1,6 +1,6 @@
-import { getResource } from '../../js/services/services';
+import { getResource } from "./services";
 
-export default function cardd() {
+export default function creatCard() {
 
     class CreatCard {
         constructor(src, alt, state, price, unit, parentBlock) {
