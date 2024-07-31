@@ -11,6 +11,7 @@ import customSelect from '../../blocks/custom-select/customSelect';
 import quantity from '../../blocks/quantity/quantity';
 import modalLogin from '../../blocks/modal-login/modalLogin';
 import tabs from '../../blocks/tabs/tabs';
+import cardd from '../../blocks/cardd/cardd';
 
 document.addEventListener('DOMContentLoaded', () => {
     order();
@@ -27,4 +28,5 @@ document.addEventListener('DOMContentLoaded', () => {
     //---
     customSelect();
     tabs();
+    cardd();
 });

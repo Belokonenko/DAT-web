@@ -1,0 +1,610 @@
+{
+    "regions": {
+        "Cherkasy": {
+            "cities": ["Cherkasy", "Smila", "Uman", "Zolotonosha", "Kamianets", "Shpola", "Talne", "Korystivka"],
+            "departments": {
+                "Cherkasy": [
+                    {"department": "1", "street": "Shevchenko", "number": "20"},
+                    {"department": "2", "street": "Gagarina", "number": "15"},
+                    {"department": "3", "street": "Mikhailovskaya", "number": "8"}
+                ],
+                "Smila": [
+                    {"department": "1", "street": "Centralna", "number": "12"},
+                    {"department": "2", "street": "Vokzalna", "number": "5"}
+                ],
+                "Uman": [
+                    {"department": "1", "street": "Zemlyachki", "number": "30"},
+                    {"department": "2", "street": "Maidan", "number": "8"}
+                ],
+                "Zolotonosha": [
+                    {"department": "1", "street": "Lenina", "number": "18"},
+                    {"department": "2", "street": "Frunze", "number": "9"}
+                ],
+                "Kamianets": [
+                    {"department": "1", "street": "Gorodetska", "number": "3"},
+                    {"department": "2", "street": "Moldavska", "number": "16"}
+                ],
+                "Shpola": [
+                    {"department": "1", "street": "Shovkovychna", "number": "5"},
+                    {"department": "2", "street": "Kievska", "number": "12"}
+                ],
+                "Talne": [
+                    {"department": "1", "street": "Kalynova", "number": "11"},
+                    {"department": "2", "street": "Komsomolska", "number": "4"}
+                ],
+                "Korystivka": [
+                    {"department": "1", "street": "Kirova", "number": "7"},
+                    {"department": "2", "street": "Maydan", "number": "22"}
+                ]
+            }
+        },
+        "Chernihiv": {
+            "cities": ["Chernihiv", "Nizhyn", "Pryluky", "Novhorod-Siverskyi", "Semenivka", "Kozelets", "Bakhmach", "Ichnia"],
+            "departments": {
+                "Chernihiv": [
+                    {"department": "1", "street": "Liberty", "number": "10"},
+                    {"department": "2", "street": "Siverska", "number": "3"}
+                ],
+                "Nizhyn": [
+                    {"department": "1", "street": "Sovietska", "number": "22"},
+                    {"department": "2", "street": "Khreshchatyk", "number": "14"}
+                ],
+                "Pryluky": [
+                    {"department": "1", "street": "Pobedy", "number": "5"},
+                    {"department": "2", "street": "Tsentralna", "number": "8"}
+                ],
+                "Novhorod-Siverskyi": [
+                    {"department": "1", "street": "Komsomolska", "number": "12"},
+                    {"department": "2", "street": "Budivelnykiv", "number": "6"}
+                ],
+                "Semenivka": [
+                    {"department": "1", "street": "Centralna", "number": "7"},
+                    {"department": "2", "street": "Sukhomlyn", "number": "3"}
+                ],
+                "Kozelets": [
+                    {"department": "1", "street": "Myrna", "number": "15"},
+                    {"department": "2", "street": "Vulytsia", "number": "22"}
+                ],
+                "Bakhmach": [
+                    {"department": "1", "street": "Velyka", "number": "5"},
+                    {"department": "2", "street": "Kozatska", "number": "8"}
+                ],
+                "Ichnia": [
+                    {"department": "1", "street": "Staroselska", "number": "9"},
+                    {"department": "2", "street": "Maidan", "number": "14"}
+                ]
+            }
+        },
+        "Chernivtsi": {
+            "cities": ["Chernivtsi", "Novodnistrovsk", "Storozhynets", "Khotyn", "Kitsman", "Hlyboka", "Zastavna", "Delyatyn"],
+            "departments": {
+                "Chernivtsi": [
+                    {"department": "1", "street": "Vul. Gagarina", "number": "6"},
+                    {"department": "2", "street": "Vul. Pirohova", "number": "2"}
+                ],
+                "Novodnistrovsk": [
+                    {"department": "1", "street": "Vul. Centralna", "number": "8"},
+                    {"department": "2", "street": "Vul. Starosel'ska", "number": "16"}
+                ],
+                "Storozhynets": [
+                    {"department": "1", "street": "Vul. Stepanivska", "number": "11"},
+                    {"department": "2", "street": "Vul. Krylova", "number": "13"}
+                ],
+                "Khotyn": [
+                    {"department": "1", "street": "Vul. Komsomolska", "number": "14"},
+                    {"department": "2", "street": "Vul. Tsentralna", "number": "7"}
+                ],
+                "Kitsman": [
+                    {"department": "1", "street": "Vul. Svitlova", "number": "6"},
+                    {"department": "2", "street": "Vul. Hrushevs'koho", "number": "9"}
+                ],
+                "Hlyboka": [
+                    {"department": "1", "street": "Vul. Hryhorivka", "number": "12"},
+                    {"department": "2", "street": "Vul. Myru", "number": "4"}
+                ],
+                "Zastavna": [
+                    {"department": "1", "street": "Vul. Surska", "number": "8"},
+                    {"department": "2", "street": "Vul. Kozatska", "number": "14"}
+                ],
+                "Delyatyn": [
+                    {"department": "1", "street": "Vul. Shvydko", "number": "5"},
+                    {"department": "2", "street": "Vul. Halytska", "number": "6"}
+                ]
+            }
+        },
+        "Crimea": {
+            "cities": ["Simferopol", "Sevastopol", "Yalta", "Alushta", "Kerch", "Evpatoria", "Saky", "Feodosia"],
+            "departments": {
+                "Simferopol": [
+                    {"department": "1", "street": "Pushkina", "number": "5"},
+                    {"department": "2", "street": "Lenina", "number": "25"}
+                ],
+                "Sevastopol": [
+                    {"department": "1", "street": "Nakhimov", "number": "45"},
+                    {"department": "2", "street": "Oktyabr'skaya", "number": "10"}
+                ],
+                "Yalta": [
+                    {"department": "1", "street": "Sovetskaya", "number": "7"},
+                    {"department": "2", "street": "Tsentralna", "number": "11"}
+                ],
+                "Alushta": [
+                    {"department": "1", "street": "Morskaya", "number": "9"},
+                    {"department": "2", "street": "Krasnoarmeyskaya", "number": "12"}
+                ],
+                "Kerch": [
+                    {"department": "1", "street": "Pervomaiskaya", "number": "13"},
+                    {"department": "2", "street": "Revolyutsionnaya", "number": "6"}
+                ],
+                "Evpatoria": [
+                    {"department": "1", "street": "Sovetskaya", "number": "10"},
+                    {"department": "2", "street": "Gorkogo", "number": "8"}
+                ],
+                "Saky": [
+                    {"department": "1", "street": "Gagarina", "number": "12"},
+                    {"department": "2", "street": "Mikhailovskaya", "number": "9"}
+                ],
+                "Feodosia": [
+                    {"department": "1", "street": "Pushkina", "number": "8"},
+                    {"department": "2", "street": "Vokzalna", "number": "11"}
+                ]
+            }
+        },
+        "Dnipropetrovsk": {
+            "cities": ["Dnipro", "Kryvyi Rih", "Nikopol", "Pavlohrad", "Dniprodzerzhynsk", "Kamianets-Podilskyi", "Synelnykove", "Vilnohirsk"],
+            "departments": {
+                "Dnipro": [
+                    {"department": "1", "street": "Krasnoarmiiska", "number": "22"},
+                    {"department": "2", "street": "Naberezhna", "number": "8"}
+                ],
+                "Kryvyi Rih": [
+                    {"department": "1", "street": "Dzerzhynska", "number": "10"},
+                    {"department": "2", "street": "Budivelnykiv", "number": "12"}
+                ],
+                "Nikopol": [
+                    {"department": "1", "street": "Zavodska", "number": "4"},
+                    {"department": "2", "street": "Centralna", "number": "15"}
+                ],
+                "Pavlohrad": [
+                    {"department": "1", "street": "Gagarina", "number": "6"},
+                    {"department": "2", "street": "Frunze", "number": "9"}
+                ],
+                "Dniprodzerzhynsk": [
+                    {"department": "1", "street": "Vulytsia", "number": "10"},
+                    {"department": "2", "street": "Vyzvolyteliv", "number": "7"}
+                ],
+                "Kamianets-Podilskyi": [
+                    {"department": "1", "street": "Stepana Bandery", "number": "9"},
+                    {"department": "2", "street": "Tsentralna", "number": "14"}
+                ],
+                "Synelnykove": [
+                    {"department": "1", "street": "Lenina", "number": "6"},
+                    {"department": "2", "street": "Budivelnykiv", "number": "11"}
+                ],
+                "Vilnohirsk": [
+                    {"department": "1", "street": "Vulytsia", "number": "8"},
+                    {"department": "2", "street": "Frunze", "number": "12"}
+                ]
+            }
+        },
+        "Donetsk": {
+            "cities": ["Donetsk", "Mariupol", "Makiivka", "Horlivka", "Kramatorsk", "Bakhmut", "Yenakiieve", "Kostiantynivka"],
+            "departments": {
+                "Donetsk": [
+                    {"department": "1", "street": "Artyoma", "number": "5"},
+                    {"department": "2", "street": "Pushkina", "number": "14"}
+                ],
+                "Mariupol": [
+                    {"department": "1", "street": "Gorkogo", "number": "10"},
+                    {"department": "2", "street": "Sovetskaya", "number": "8"}
+                ],
+                "Makiivka": [
+                    {"department": "1", "street": "Lenina", "number": "7"},
+                    {"department": "2", "street": "Budivelnykiv", "number": "5"}
+                ],
+                "Horlivka": [
+                    {"department": "1", "street": "Shakhtarska", "number": "9"},
+                    {"department": "2", "street": "Tsentralna", "number": "11"}
+                ],
+                "Kramatorsk": [
+                    {"department": "1", "street": "Pobedy", "number": "12"},
+                    {"department": "2", "street": "Oktiabr'ska", "number": "7"}
+                ],
+                "Bakhmut": [
+                    {"department": "1", "street": "Kirova", "number": "8"},
+                    {"department": "2", "street": "Vul. Tsentralna", "number": "16"}
+                ],
+                "Yenakiieve": [
+                    {"department": "1", "street": "Shovkovychna", "number": "5"},
+                    {"department": "2", "street": "Myrna", "number": "12"}
+                ],
+                "Kostiantynivka": [
+                    {"department": "1", "street": "Vulytsia", "number": "15"},
+                    {"department": "2", "street": "Dzerzhynska", "number": "8"}
+                ]
+            }
+        },
+        "Ivano-Frankivsk": {
+            "cities": ["Ivano-Frankivsk", "Kalush", "Kolomyia", "Burshtyn", "Rohatyn", "Yaremche", "Tysmenytsia", "Halych"],
+            "departments": {
+                "Ivano-Frankivsk": [
+                    {"department": "1", "street": "Myrna", "number": "7"},
+                    {"department": "2", "street": "Vulytsia", "number": "13"}
+                ],
+                "Kalush": [
+                    {"department": "1", "street": "Vul. Centralna", "number": "6"},
+                    {"department": "2", "street": "Vul. Nezalezhnosti", "number": "8"}
+                ],
+                "Kolomyia": [
+                    {"department": "1", "street": "Vul. Hrushevs'koho", "number": "12"},
+                    {"department": "2", "street": "Vul. Mazepy", "number": "15"}
+                ],
+                "Burshtyn": [
+                    {"department": "1", "street": "Vul. Pivdenna", "number": "9"},
+                    {"department": "2", "street": "Vul. Iuriia", "number": "7"}
+                ],
+                "Rohatyn": [
+                    {"department": "1", "street": "Vul. Khmel'nyts'koho", "number": "10"},
+                    {"department": "2", "street": "Vul. Kalinova", "number": "12"}
+                ],
+                "Yaremche": [
+                    {"department": "1", "street": "Vul. Svislach", "number": "8"},
+                    {"department": "2", "street": "Vul. Myru", "number": "11"}
+                ],
+                "Tysmenytsia": [
+                    {"department": "1", "street": "Vul. Tsentralna", "number": "6"},
+                    {"department": "2", "street": "Vul. Dzerzhynska", "number": "7"}
+                ],
+                "Halych": [
+                    {"department": "1", "street": "Vul. Ivana Franka", "number": "9"},
+                    {"department": "2", "street": "Vul. Shevchenka", "number": "14"}
+                ]
+            }
+        },
+        "Kharkiv": {
+            "cities": ["Kharkiv", "Chuhuiv", "Izium", "Luhansk", "Kupiansk", "Pervomaiskyi", "Balakliia", "Lyubotyn"],
+            "departments": {
+                "Kharkiv": [
+                    {"department": "1", "street": "Sumska", "number": "45"},
+                    {"department": "2", "street": "Gagarina", "number": "32"}
+                ],
+                "Chuhuiv": [
+                    {"department": "1", "street": "Vul. Buzova", "number": "6"},
+                    {"department": "2", "street": "Vul. Lenin", "number": "10"}
+                ],
+                "Izium": [
+                    {"department": "1", "street": "Vul. Hrushevs'koho", "number": "8"},
+                    {"department": "2", "street": "Vul. Pershotravneva", "number": "11"}
+                ],
+                "Luhansk": [
+                    {"department": "1", "street": "Sovetska", "number": "7"},
+                    {"department": "2", "street": "Centralna", "number": "13"}
+                ],
+                "Kupiansk": [
+                    {"department": "1", "street": "Vul. Tsentralna", "number": "9"},
+                    {"department": "2", "street": "Vul. Frunze", "number": "8"}
+                ],
+                "Pervomaiskyi": [
+                    {"department": "1", "street": "Gorkogo", "number": "5"},
+                    {"department": "2", "street": "Vul. Mayakovskogo", "number": "6"}
+                ],
+                "Balakliia": [
+                    {"department": "1", "street": "Vul. Shevchenka", "number": "10"},
+                    {"department": "2", "street": "Vul. Lomonosova", "number": "12"}
+                ],
+                "Lyubotyn": [
+                    {"department": "1", "street": "Vul. Kirova", "number": "8"},
+                    {"department": "2", "street": "Vul. Komsomolska", "number": "9"}
+                ]
+            }
+        },
+        "Kherson": {
+            "cities": ["Kherson", "Mykolaiv", "Nova Kakhovka", "Oleshky", "Kakhovka", "Beryslav", "Skadovsk", "Sniatyn"],
+            "departments": {
+                "Kherson": [
+                    {"department": "1", "street": "Perekopskaya", "number": "10"},
+                    {"department": "2", "street": "Pushkina", "number": "12"}
+                ],
+                "Mykolaiv": [
+                    {"department": "1", "street": "Admirala Makarova", "number": "8"},
+                    {"department": "2", "street": "Lenina", "number": "6"}
+                ],
+                "Nova Kakhovka": [
+                    {"department": "1", "street": "Vul. Centralna", "number": "9"},
+                    {"department": "2", "street": "Vul. Krymska", "number": "14"}
+                ],
+                "Oleshky": [
+                    {"department": "1", "street": "Komsomolska", "number": "10"},
+                    {"department": "2", "street": "Budivelnykiv", "number": "8"}
+                ],
+                "Kakhovka": [
+                    {"department": "1", "street": "Sovetska", "number": "6"},
+                    {"department": "2", "street": "Frunze", "number": "7"}
+                ],
+                "Beryslav": [
+                    {"department": "1", "street": "Lenina", "number": "5"},
+                    {"department": "2", "street": "Moskalenka", "number": "12"}
+                ],
+                "Skadovsk": [
+                    {"department": "1", "street": "Vul. Pivdenna", "number": "8"},
+                    {"department": "2", "street": "Vul. Orlova", "number": "11"}
+                ],
+                "Sniatyn": [
+                    {"department": "1", "street": "Vul. Shevchenka", "number": "12"},
+                    {"department": "2", "street": "Vul. Oktiabr'ska", "number": "9"}
+                ]
+            }
+        },
+        "Lviv": {
+            "cities": ["Lviv", "Drohobych", "Truskavets", "Boryslav", "Rudky", "Zolochiv", "Sambir", "Mostyska"],
+            "departments": {
+                "Lviv": [
+                    {"department": "1", "street": "Lychakivska", "number": "16"},
+                    {"department": "2", "street": "Shevchenka", "number": "25"}
+                ],
+                "Drohobych": [
+                    {"department": "1", "street": "Vul. Naukova", "number": "12"},
+                    {"department": "2", "street": "Vul. Ryabikova", "number": "14"}
+                ],
+                "Truskavets": [
+                    {"department": "1", "street": "Centralna", "number": "7"},
+                    {"department": "2", "street": "Vul. Vatutina", "number": "9"}
+                ],
+                "Boryslav": [
+                    {"department": "1", "street": "Vul. Grygorivka", "number": "11"},
+                    {"department": "2", "street": "Vul. Tsentralna", "number": "6"}
+                ],
+                "Rudky": [
+                    {"department": "1", "street": "Vul. Hrushevs'koho", "number": "10"},
+                    {"department": "2", "street": "Vul. Pidhorna", "number": "7"}
+                ],
+                "Zolochiv": [
+                    {"department": "1", "street": "Vul. Starosel'ska", "number": "8"},
+                    {"department": "2", "street": "Vul. Fedorivska", "number": "11"}
+                ],
+                "Sambir": [
+                    {"department": "1", "street": "Vul. Kostiukivka", "number": "10"},
+                    {"department": "2", "street": "Vul. Dzerzhynska", "number": "6"}
+                ],
+                "Mostyska": [
+                    {"department": "1", "street": "Vul. Khmel'nyts'koho", "number": "7"},
+                    {"department": "2", "street": "Vul. Chervona", "number": "12"}
+                ]
+            }
+        },
+        "Mykolaiv": {
+            "cities": ["Mykolaiv", "Pervomaisk", "Voznesensk", "Yuzhnoukrainsk", "Snihurivka", "Ochakiv", "Bashtanka", "Varvarivka"],
+            "departments": {
+                "Mykolaiv": [
+                    {"department": "1", "street": "Vul. Rabochaya", "number": "14"},
+                    {"department": "2", "street": "Vul. Sovetska", "number": "12"}
+                ],
+                "Pervomaisk": [
+                    {"department": "1", "street": "Vul. Centralna", "number": "8"},
+                    {"department": "2", "street": "Vul. Komsomolska", "number": "5"}
+                ],
+                "Voznesensk": [
+                    {"department": "1", "street": "Vul. Kirova", "number": "10"},
+                    {"department": "2", "street": "Vul. Gorkogo", "number": "7"}
+                ],
+                "Yuzhnoukrainsk": [
+                    {"department": "1", "street": "Vul. Peremohy", "number": "6"},
+                    {"department": "2", "street": "Vul. Ukrainy", "number": "9"}
+                ],
+                "Snihurivka": [
+                    {"department": "1", "street": "Vul. Shevchenka", "number": "7"},
+                    {"department": "2", "street": "Vul. Dzerzhynska", "number": "12"}
+                ],
+                "Ochakiv": [
+                    {"department": "1", "street": "Vul. Krymska", "number": "5"},
+                    {"department": "2", "street": "Vul. Tsentralna", "number": "8"}
+                ],
+                "Bashtanka": [
+                    {"department": "1", "street": "Vul. Chervona", "number": "6"},
+                    {"department": "2", "street": "Vul. Hrushevs'koho", "number": "9"}
+                ],
+                "Varvarivka": [
+                    {"department": "1", "street": "Vul. Fedorivska", "number": "8"},
+                    {"department": "2", "street": "Vul. Shevchenka", "number": "10"}
+                ]
+            }
+        },
+        "Odesa": {
+            "cities": ["Odesa", "Bilhorod-Dnistrovskyi", "Izmail", "Kiliya", "Yuzhne", "Ananyiv", "Artsyz", "Shabo"],
+            "departments": {
+                "Odesa": [
+                    {"department": "1", "street": "Derybasivska", "number": "22"},
+                    {"department": "2", "street": "Pushkinska", "number": "8"}
+                ],
+                "Bilhorod-Dnistrovskyi": [
+                    {"department": "1", "street": "Vul. Chornomorska", "number": "10"},
+                    {"department": "2", "street": "Vul. Frunze", "number": "12"}
+                ],
+                "Izmail": [
+                    {"department": "1", "street": "Vul. Shevchenka", "number": "6"},
+                    {"department": "2", "street": "Vul. Mayakiv", "number": "9"}
+                ],
+                "Kiliya": [
+                    {"department": "1", "street": "Vul. Pivdenna", "number": "7"},
+                    {"department": "2", "street": "Vul. Zolotova", "number": "10"}
+                ],
+                "Yuzhne": [
+                    {"department": "1", "street": "Vul. Morskaya", "number": "8"},
+                    {"department": "2", "street": "Vul. Sovetskaya", "number": "12"}
+                ],
+                "Ananyiv": [
+                    {"department": "1", "street": "Vul. Tsentralna", "number": "5"},
+                    {"department": "2", "street": "Vul. Kirova", "number": "7"}
+                ],
+                "Artsyz": [
+                    {"department": "1", "street": "Vul. Shkilna", "number": "8"},
+                    {"department": "2", "street": "Vul. Dzerzhynska", "number": "11"}
+                ],
+                "Shabo": [
+                    {"department": "1", "street": "Vul. Tsentralna", "number": "9"},
+                    {"department": "2", "street": "Vul. Frunze", "number": "10"}
+                ]
+            }
+        },
+        "Poltava": {
+            "cities": ["Poltava", "Kremenchuk", "Mirgorod", "Lubny", "Hadiache", "Poltavske", "Chutove", "Komsomolsk"],
+            "departments": {
+                "Poltava": [
+                    {"department": "1", "street": "Komsomolska", "number": "16"},
+                    {"department": "2", "street": "Vulytsia", "number": "9"}
+                ],
+                "Kremenchuk": [
+                    {"department": "1", "street": "Vul. Lenin", "number": "12"},
+                    {"department": "2", "street": "Vul. Tsentralna", "number": "7"}
+                ],
+                "Mirgorod": [
+                    {"department": "1", "street": "Vul. Gogolya", "number": "8"},
+                    {"department": "2", "street": "Vul. Mayakovskogo", "number": "5"}
+                ],
+                "Lubny": [
+                    {"department": "1", "street": "Vul. Pushkina", "number": "9"},
+                    {"department": "2", "street": "Vul. Korolenka", "number": "11"}
+                ],
+                "Hadiache": [
+                    {"department": "1", "street": "Vul. Khmel'nyts'koho", "number": "10"},
+                    {"department": "2", "street": "Vul. Sholom-Aleikhema", "number": "8"}
+                ],
+                "Poltavske": [
+                    {"department": "1", "street": "Vul. Shevchenka", "number": "12"},
+                    {"department": "2", "street": "Vul. Kyrylivska", "number": "6"}
+                ],
+                "Chutove": [
+                    {"department": "1", "street": "Vul. Kharkivska", "number": "14"},
+                    {"department": "2", "street": "Vul. Yurchenko", "number": "8"}
+                ],
+                "Komsomolsk": [
+                    {"department": "1", "street": "Vul. Vatutina", "number": "9"},
+                    {"department": "2", "street": "Vul. Peremohy", "number": "7"}
+                ]
+            }
+        },
+        "Rivne": {
+            "cities": ["Rivne", "Sarny", "Dubno", "Kostopil", "Volodymyr-Volynskyi", "Zdolbuniv", "Klesiv", "Ostroh"],
+            "departments": {
+                "Rivne": [
+                    {"department": "1", "street": "Kotsyubynskoho", "number": "13"},
+                    {"department": "2", "street": "Vulytsia", "number": "7"}
+                ],
+                "Sarny": [
+                    {"department": "1", "street": "Vul. Dzerzhynska", "number": "10"},
+                    {"department": "2", "street": "Vul. Kalinina", "number": "12"}
+                ],
+                "Dubno": [
+                    {"department": "1", "street": "Vul. Korolenka", "number": "8"},
+                    {"department": "2", "street": "Vul. Shevchenka", "number": "11"}
+                ],
+                "Kostopil": [
+                    {"department": "1", "street": "Vul. Centralna", "number": "7"},
+                    {"department": "2", "street": "Vul. Budivelnykiv", "number": "10"}
+                ],
+                "Volodymyr-Volynskyi": [
+                    {"department": "1", "street": "Vul. Lomonosova", "number": "9"},
+                    {"department": "2", "street": "Vul. Tsentralna", "number": "12"}
+                ],
+                "Zdolbuniv": [
+                    {"department": "1", "street": "Vul. Krymska", "number": "8"},
+                    {"department": "2", "street": "Vul. Shevchenka", "number": "10"}
+                ],
+                "Klesiv": [
+                    {"department": "1", "street": "Vul. Frunze", "number": "11"},
+                    {"department": "2", "street": "Vul. Kirova", "number": "8"}
+                ],
+                "Ostroh": [
+                    {"department": "1", "street": "Vul. Pushkina", "number": "12"},
+                    {"department": "2", "street": "Vul. Tsentralna", "number": "7"}
+                ]
+            }
+        },
+        "Sumy": {
+            "cities": ["Sumy", "Konotop", "Shostka", "Romny", "Trostianets", "Velyka Pysarivka", "Putyvl", "Hlukhiv"],
+            "departments": {
+                "Sumy": [
+                    {"department": "1", "street": "Vul. Troitska", "number": "9"},
+                    {"department": "2", "street": "Vul. Shevchenka", "number": "6"}
+                ],
+                "Konotop": [
+                    {"department": "1", "street": "Vul. Centralna", "number": "8"},
+                    {"department": "2", "street": "Vul. Mayakovskogo", "number": "10"}
+                ],
+                "Shostka": [
+                    {"department": "1", "street": "Vul. Chervona", "number": "12"},
+                    {"department": "2", "street": "Vul. Shevchenka", "number": "7"}
+                ],
+                "Romny": [
+                    {"department": "1", "street": "Vul. Kalinina", "number": "6"},
+                    {"department": "2", "street": "Vul. Pobedy", "number": "10"}
+                ],
+                "Trostianets": [
+                    {"department": "1", "street": "Vul. Kharkivska", "number": "8"},
+                    {"department": "2", "street": "Vul. Tsentralna", "number": "11"}
+                ],
+                "Velyka Pysarivka": [
+                    {"department": "1", "street": "Vul. Kirova", "number": "7"},
+                    {"department": "2", "street": "Vul. Dzerzhynska", "number": "9"}
+                ],
+                "Putyvl": [
+                    {"department": "1", "street": "Vul. Volodymyrska", "number": "8"},
+                    {"department": "2", "street": "Vul. Chervona", "number": "6"}
+                ],
+                "Hlukhiv": [
+                    {"department": "1", "street": "Vul. Tsentralna", "number": "12"},
+                    {"department": "2", "street": "Vul. Zhovtneva", "number": "9"}
+                ]
+            }
+        },
+        "Ternopil": {
+            "cities": ["Ternopil", "Chortkiv", "Berezhany", "Kremenchuk", "Pochayiv", "Husiatyn", "Zboriv", "Borshchiv"],
+            "departments": {
+                "Ternopil": [
+                    {"department": "1", "street": "Vul. Knyaziv Konstantyniv", "number": "10"},
+                    {"department": "2", "street": "Vul. Tsentralna", "number": "7"}
+                ],
+                "Chortkiv": [
+                    {"department": "1", "street": "Vul. Frunze", "number": "5"},
+                    {"department": "2", "street": "Vul. Naukova", "number": "8"}
+                ],
+                "Berezhany": [
+                    {"department": "1", "street": "Vul. Shevchenka", "number": "12"},
+                    {"department": "2", "street": "Vul. Lonskogo", "number": "10"}
+                ],
+                "Kremenchuk": [
+                    {"department": "1", "street": "Vul. Vulytsia", "number": "11"},
+                    {"department": "2", "street": "Vul. Krymska", "number": "14"}
+                ],
+                "Pochayiv": [
+                    {"department": "1", "street": "Vul. Dzerzhynska", "number": "6"},
+                    {"department": "2", "street": "Vul. Myru", "number": "8"}
+                ],
+                "Husiatyn": [
+                    {"department": "1", "street": "Vul. Kalinina", "number": "9"},
+                    {"department": "2", "street": "Vul. Shchorsya", "number": "11"}
+                ],
+                "Zboriv": [
+                    {"department": "1", "street": "Vul. Shevchenka", "number": "8"},
+                    {"department": "2", "street": "Vul. Dzerzhynska", "number": "7"}
+                ],
+                "Borshchiv": [
+                    {"department": "1", "street": "Vul. Tsentralna", "number": "12"},
+                    {"department": "2", "street": "Vul. Krymska", "number": "6"}
+                ]
+            }
+        }
+    },
+    {
+        "cards" : [ {
+            "img":""images/prod-crorpp/cro"",
+            "alt":"image",
+            "state": "",
+            "price ": "",
+            "unit" :""
+            }
+        
+    ]
+    }
+
+}
+
