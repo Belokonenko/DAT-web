@@ -7,12 +7,12 @@
 
 - Установка.
     ```bach
-        json-server --watch db.json --port 3002
+        npm install json-server --save-dev
     ```
 - Запуск. 3000 порт занят gulp.
 
     ```bach
-        json-server --watch db.json --port 3002
+        json-server --watch db.json --port 4000
     ```
 -------------------------------------------------------------
 

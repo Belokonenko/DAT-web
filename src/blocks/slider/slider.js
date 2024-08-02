@@ -39,9 +39,9 @@ export default function sliders() {
             right();
         });
 
-        sliderItems.forEach((item) => {
-            item.addEventListener('click', () => {});
-        });
+        // sliderItems.forEach((item) => {
+        //     item.addEventListener('click', () => {});
+        // });
 
         // --- main ---
 
