@@ -24,7 +24,7 @@ export default function creatCard() {
             element.classList.add('slider__item');
 
             element.innerHTML = `
-                <article class="card">
+                <article class="card" draggable="false">
                     <hr />
                     <a href="product-page.html">
                         <div class="card__img-wrap">

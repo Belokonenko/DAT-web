@@ -18,7 +18,7 @@ $max-width-container: 4;
 .slider__viewport {
     min-height: 50px;
     border: $transparent-padding-vp solid transparent;
-    
+
     @include tablet {
         border: 33px solid transparent;
     }
@@ -30,7 +30,6 @@ $max-width-container: 4;
     grid-auto-flow: column;
     height: 100%;
     transition: all 0.7s ease;
-
 }
 
 .slider__item {
@@ -38,8 +37,11 @@ $max-width-container: 4;
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
-    user-select: none;
     // border: 1px solid blue;
+    
+    & * {
+        user-select: none;
+    }
 }
 
 .slider__btn-svg {

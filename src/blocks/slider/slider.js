@@ -19,7 +19,7 @@ export default function sliders() {
         const dotsList = sliderblock.querySelector('.slider__dot-list');
         //------------------------------------------------------------
         const debouncedResizeHandler = debounce(resetSize, 300);
-        
+
         let counnt = Math.round(getCounntItems() / 2);
 
         // --- main ---
@@ -28,7 +28,6 @@ export default function sliders() {
 
         resetSize();
 
-       
         window.addEventListener('resize', debouncedResizeHandler);
 
         bntLeft.addEventListener('click', () => {
@@ -38,10 +37,6 @@ export default function sliders() {
         bntRight.addEventListener('click', () => {
             right();
         });
-
-        // sliderItems.forEach((item) => {
-        //     item.addEventListener('click', () => {});
-        // });
 
         // --- main ---
 
@@ -61,7 +56,6 @@ export default function sliders() {
                 }, delay);
             };
         }
-
 
         function getWidthSlider() {
             return slider.clientWidth;
@@ -86,11 +80,9 @@ export default function sliders() {
         }
 
         function setWidthItems() {
-            const slideWidth = `${
-                getWidthSlider() / getCounntVisebleItem() - calcGap()
-            }px`;
+            const slideWidth = `${getWidthSlider() / getCounntVisebleItem() - calcGap()}px`;
 
-            sliderItems.forEach((item) => {
+            sliderItems.forEach(item => {
                 // mouve all slids and set size
                 item.style.width = slideWidth;
             });
@@ -102,9 +94,7 @@ export default function sliders() {
 
         function calcGap() {
             let gap = parseInt(window.getComputedStyle(sliderLine).gap);
-            return (
-                (gap * (getCounntVisebleItem() - 1)) / getCounntVisebleItem()
-            );
+            return (gap * (getCounntVisebleItem() - 1)) / getCounntVisebleItem();
         }
 
         function getCounntVisebleItem() {
@@ -152,9 +142,7 @@ export default function sliders() {
 
             //------- /no break point mouve -----------
 
-            sliderLine.style.transform = `translateX(-${
-                (getWidthItem() + getGap() / getCounntVisebleItem()) * num
-            }px)`;
+            sliderLine.style.transform = `translateX(-${(getWidthItem() + getGap() / getCounntVisebleItem()) * num}px)`;
 
             activeDot(num);
             counnt = num;
@@ -278,7 +266,7 @@ export default function sliders() {
         function activeDot(num) {
             const dots = getDots();
 
-            dots.forEach((item) => {
+            dots.forEach(item => {
                 item.classList.remove('slider__dot--active');
             });
 
