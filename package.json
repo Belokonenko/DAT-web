@@ -12,7 +12,8 @@
         "sprite": "gulp createSvgSprite",
         "deploy": "gh-pages -d dist",
         "prettier": "prettier --write \"**/*.{js,jsx,ts,tsx,json,html,css,md,yaml,yml}\"",
-        "predeploy": "npm run build"
+        "predeploy": "npm run build",
+        "json": "npx json-server --watch db.json --port 4000"
     },
     "repository": {
         "type": "git",
