@@ -1,7 +1,8 @@
 .dropdown-panel {
     position:fixed;
     z-index: 2;
-    top:-250%;
+    top:0;
+    translate: 0 -100%;
     display: block;
     width: 100%;
     min-height: 600px;
@@ -13,7 +14,7 @@
 }
 
 .dropdown-panel_active {
-    top: 0;
+    translate: 0 0;
 }
 // .dropdown-panel__btn-arr {
 //     width: 35px;
