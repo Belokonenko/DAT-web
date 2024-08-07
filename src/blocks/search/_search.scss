@@ -14,22 +14,20 @@
 
     &__input {
         border: 3px solid #fff;
-        border-right: none;
+        border: none;
         height: 20px;
         min-width: 20px;
         height: 100%;
         border-radius: 5px 0 0 5px;
         margin-left: 10px;
-        color: var(--color-text-dark);
         outline: none;
         
         font-weight: 400;
-        color: #484848;
+        /* color: #484848; */
         background-color: transparent;
     }
 
     &__input:focus {
-        color: var(--color-text-dark);
         background-color: transparent;
     }
 
