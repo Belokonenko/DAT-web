@@ -4,9 +4,9 @@
 @import "config/fonts";
 
 /** Обнуление */
-/* @import "config/reset"; */
+@import "config/reset";
 
-@import "config/normalize";
+/* @import "config/normalize"; */
 
 /**
 * Подключение sass function и mixins и extends стилей
