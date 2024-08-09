@@ -12,6 +12,7 @@ import quantity from '../../blocks/quantity/quantity';
 import modalLogin from '../../blocks/modal-login/modalLogin';
 import tabs from '../../blocks/tabs/tabs';
 import creatCard from '../services/creatCard';
+import SliderProd from '../../blocks/sliderProd/sliderProd';
 
 document.addEventListener('DOMContentLoaded', () => {
     order();
@@ -29,4 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
     customSelect();
     tabs();
     creatCard();
+    new SliderProd('.novelties').creatSlider();
+    new SliderProd('.novelties').initSlider();
 });
