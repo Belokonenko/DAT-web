@@ -1,23 +1,18 @@
 <!DOCTYPE html>
 <html class="page-html" lang="en">
-    @@include('blocks/head/head.html', {"name" : "DAT", "pathicon" : "images/logo.svg"})
+  @@include('blocks/head/head.html', {"name" : "DAT", "pathicon" :
+  "images/logo.svg"})
 
-    <body class="page-body">
-        @@include('blocks/svg-sprites/svg-sprites.html')
+  <body class="page-body">
+    @@include('blocks/svg-sprites/sprite.html')
+    @@include('blocks/header/header.html')
 
-        @@include('blocks/header/header.html')
+    <main class="main">@@include('blocks/product/product.html')</main>
 
- 
-        <main class="main ">
-            @@include('blocks/product/product.html')        
-        </main>
-        
-        @@include('blocks/footer/footer.html')
-        @@include('blocks/scrollToTop/scrollToTop.html')
-
-        @@include('blocks/modal-login/modal-login.html')
-        @@include('blocks/modal-basket/modal-basket.html')
-        <script src="js/product.min.js"></script>
-    </body>
-
+    @@include('blocks/footer/footer.html')
+    @@include('blocks/scrollToTop/scrollToTop.html')
+    @@include('blocks/modal-login/modal-login.html')
+    @@include('blocks/modal-basket/modal-basket.html')
+    <script src="js/product.min.js"></script>
+  </body>
 </html>

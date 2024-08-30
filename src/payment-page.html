@@ -1,23 +1,19 @@
-
 <!DOCTYPE html>
 <html class="page-html" lang="en">
-    @@include('blocks/head/head.html', {"name" : "Payment and delivery", "pathicon" : "images/logo.svg"})
+  @@include('blocks/head/head.html', {"name" : "Payment and delivery",
+  "pathicon" : "images/logo.svg"})
 
-    <body class="page-body">
-        @@include('blocks/svg-sprites/svg-sprites.html')
+  <body class="page-body">
+    @@include('blocks/svg-sprites/sprite.html')
+    @@include('blocks/header/header.html')
 
-        @@include('blocks/header/header.html')
+    <main class="main main-padding">
+      @@include('blocks/payment/payment.html')
+    </main>
 
+    @@include('blocks/footer/footer.html')
+    @@include('blocks/scrollToTop/scrollToTop.html')
 
- 
-        <main class="main main-padding">
-            @@include('blocks/payment/payment.html')
-        </main>
-        
-        @@include('blocks/footer/footer.html')
-        @@include('blocks/scrollToTop/scrollToTop.html')
-
-        
-        <script src="js/index.min.js"></script>
-    </body>
+    <script src="js/index.min.js"></script>
+  </body>
 </html>

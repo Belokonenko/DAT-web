@@ -1,19 +1,16 @@
 <!DOCTYPE html>
 <html class="page-html" lang="en">
-    @@include('blocks/head/head.html', {"name" : "Product categories", "pathicon" : "../images/Svg/Logo.svg"})
+  @@include('blocks/head/head.html', {"name" : "Product categories", "pathicon"
+  : "../images/Svg/Logo.svg"})
 
-    <body class="page-body">
-        @@include('blocks/svg-sprites/svg-sprites.html') 
-        
-        @@include('blocks/header/header.html')
+  <body class="page-body">
+    @@include('blocks/svg-sprites/sprite.html')
+    @@include('blocks/header/header.html')
 
-        
-        <main class="main">
-            @@include('blocks/categories/categories.html')
-            @@include('blocks/description/description.html')
-        
-        </main>
-        @@include('blocks/footer/footer.html')
-   
-    </body>
+    <main class="main">
+      @@include('blocks/categories/categories.html')
+      @@include('blocks/description/description.html')
+    </main>
+    @@include('blocks/footer/footer.html')
+  </body>
 </html>
