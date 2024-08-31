@@ -32,6 +32,7 @@ function watcher() {
   gulp.watch(filePaths.watch.scss, handleSCSS);
   gulp.watch(filePaths.watch.js, handleJS);
   gulp.watch(filePaths.watch.images, handleImages);
+  gulp.watch(filePaths.watch.svgIcons, createSvgSprite); // Добавляем наблюдение за иконками
 }
 
 /**
@@ -42,7 +43,15 @@ const fonts = gulp.series(otfToTtf, ttfToWoff, fontStyle);
 /**
  * Параллельные задачи в режиме разработки
  * */
-const devTasks = gulp.parallel(copy, copyRootFiles, createSvgSprite, handleHTML, handleSCSS, handleJS, handleImages);
+const devTasks = gulp.parallel(
+  copy,
+  copyRootFiles,
+  createSvgSprite,
+  handleHTML,
+  handleSCSS,
+  handleJS,
+  handleImages
+);
 
 /**
  * Основные задачи
