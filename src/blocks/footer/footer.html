@@ -1,149 +1,126 @@
 <footer class="footer">
-    <div class="foorer__container container">
-        <div class="footer__info">
-            <div class="footer__col-logo footer__col">
-                <!-- @@include('../../blocks//logo/logo.html', {"path": "./images/logo.svg"}) -->
-                @@include('../logo/logo.html', {"path":"images/Svg/Logo.svg"})
-                <p class="footer__text-offer">
-                    We offer our customers a wide range of vegetable seeds.
-                </p>
+  <div class="foorer__container container">
+    <div class="footer__info">
+      <div class="footer__col-logo footer__col">
+        <!-- @@include('../../blocks//logo/logo.html', {"path": "./images/logo.svg"}) -->
+        @@include('../logo/logo.html', {"path":"images/Svg/Logo.svg"})
+        <p class="footer__text-offer">
+          We offer our customers a wide range of vegetable seeds.
+        </p>
+      </div>
+      <div class="footer__col-info col">
+        <h3 class="footer__title">information</h3>
+        <ul>
+          <li>
+            <a class="footer__ref" href="#">About company</a>
+          </li>
+          <li>
+            <a class="footer__ref" href="#">Payment and delivery</a>
+          </li>
+          <li>
+            <a class="footer__ref" href="#">Partners</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer__col-goods footer__col">
+        <h3 class="footer__title">Goods</h3>
+        <ul>
+          <li>
+            <a class="footer__ref" href="#">Product catalog</a>
+          </li>
+          <li>
+            <a class="footer__ref" href="#">Plant protection products</a>
+          </li>
+          <li>
+            <a class="footer__ref" href="#">Seeds</a>
+          </li>
+          <li>
+            <a class="footer__ref" href="#">Fertilizers</a>
+          </li>
+          <li>
+            <a class="footer__ref" href="#">Agronomist to help</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer__col-contacts footer__col">
+        <h3 class="footer__title">Contacts</h3>
+
+        <!-- order -->
+
+        <div class="order order_theme_lihgt footer__order">
+          <div class="order__inner">
+            <a class="order__btn-wrap" href="tel:+380671150058">
+              <button
+                class="button button_round button-round button_theme_dark"
+                title="Call us now"
+              >
+                <span class="visually-hidden">Call us now</span>
+                <svg
+                  class="button-round__img phone"
+                  width="16"
+                  height="16"
+                  aria-hidden="true"
+                  alt=""
+                >
+                  <use xlink:href="#call"></use>
+                </svg>
+              </button>
+            </a>
+
+            <div>
+              <a class="button order__tel" href="tel:+380671150058"
+                >+38 (067) 115 00 58
+              </a>
+
+              <button class="button order__btn" type="button ">
+                <svg
+                  class="order__arr-menu"
+                  width="10"
+                  height="10"
+                  aria-hidden="true"
+                  alt=""
+                >
+                  <use xlink:href="#arr-menu"></use>
+                </svg>
+              </button>
             </div>
-            <div class="footer__col-info col">
-                <h3 class="footer__title">information</h3>
-                <ul>
-                    <li>
-                        <a class="footer__ref" href="#">About company</a>
-                    </li>
-                    <li>
-                        <a class="footer__ref" href="#">Payment and delivery</a>
-                    </li>
-                    <li>
-                        <a class="footer__ref" href="#">Partners</a>
-                    </li>
-                </ul>
-            </div>
 
-            <div class="footer__col-goods footer__col">
-                <h3 class="footer__title">Goods</h3>
-                <ul>
-                    <li>
-                        <a class="footer__ref" href="#">Product catalog</a>
-                    </li>
-                    <li>
-                        <a class="footer__ref" href="#"
-                            >Plant protection products</a
-                        >
-                    </li>
-                    <li>
-                        <a class="footer__ref" href="#">Seeds</a>
-                    </li>
-                    <li>
-                        <a class="footer__ref" href="#">Fertilizers</a>
-                    </li>
-                    <li>
-                        <a class="footer__ref" href="#">Agronomist to help</a>
-                    </li>
-                </ul>
-            </div>
+            <a class="order__text" href="#">Order a call back</a>
 
-            <div class="footer__col-contacts footer__col">
-                <h3 class="footer__title">Contacts</h3>
+            <ul class="order__list">
+              <li class="order__item">
+                <a class="button order__tel" href="tel:+380671150057"
+                  >+38 (067) 115 00 57
+                </a>
+              </li>
 
-                <!-- order -->
-
-                <div class="order order_theme_lihgt footer__order">
-                    <div class="order__inner ">
-                        <a class="order__btn-wrap" href="tel:+380671150058">
-                            <button
-                                class="
-                                    button
-                                    button_round
-                                    button-round
-                                    button_theme_dark
-                                "
-                                title="Call us now"
-                            >
-                                <span class="visually-hidden">Call us now</span>
-                                <svg
-                                    class="button-round__img phone"
-                                    width="16"
-                                    height="16"
-                                    aria-hidden="true"
-                                    alt=""
-                                >
-                                    <use xlink:href="#phone"></use>
-                                </svg>
-                            </button>
-                        </a>
-
-                        <div>
-                            <a
-                                class="button order__tel"
-                                href="tel:+380671150058"
-                                >+38 (067) 115 00 58
-                            </a>
-
-                            <button class="button order__btn" type="button ">
-                                <svg
-                                    class="order__arr-menu"
-                                    width="10"
-                                    height="10"
-                                    aria-hidden="true"
-                                    alt=""
-                                >
-                                    <use xlink:href="#arr-menu"></use>
-                                </svg>
-                            </button>
-                        </div>
-
-                        <a class="order__text" href="#">Order a call back</a>
-
-                        <ul class="order__list">
-                            <li class="order__item">
-                                <a
-                                    class="button order__tel"
-                                    href="tel:+380671150057"
-                                    >+38 (067) 115 00 57
-                                </a>
-                            </li>
-
-                            <li class="order__item">
-                                <a
-                                    class="button order__tel"
-                                    href="tel:+380671150056"
-                                    >+38 (067) 115 00 56
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- order -->
-
-                <div class="footer__mail-wrap">
-                    <button
-                        class="
-                            button button_round button-round button_theme_dark
-                        "
-                    >
-                        <svg
-                            class="button-round__img mail"
-                            width="16"
-                            height="16"
-                        >
-                            <use xlink:href="#mail"></use>
-                        </svg>
-                    </button>
-
-                    <a class="footer__mail" href="mailto:DAT@gmail.com"
-                        >DAT@gmail.com</a
-                    >
-                </div>
-            </div>
+              <li class="order__item">
+                <a class="button order__tel" href="tel:+380671150056"
+                  >+38 (067) 115 00 56
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
-    </div>
+        <!-- order -->
 
-    <div class="footer__c container">
-        <div class="footer__c-line container"></div>
-        <p class="footer__c-text">© 2022 DAT</p>
+        <div class="footer__mail-wrap">
+          <button class="button button_round button-round button_theme_dark">
+            <svg class="button-round__img mail" width="16" height="16">
+              <use xlink:href="#mail"></use>
+            </svg>
+          </button>
+
+          <a class="footer__mail" href="mailto:DAT@gmail.com">DAT@gmail.com</a>
+        </div>
+      </div>
     </div>
+  </div>
+
+  <div class="footer__c container">
+    <div class="footer__c-line container"></div>
+    <p class="footer__c-text">© 2022 DAT</p>
+  </div>
 </footer>

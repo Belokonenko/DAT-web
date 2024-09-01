@@ -64,7 +64,7 @@ export default function creatCard() {
                     </a>
                     <button class="card__btn-compare button button-round button_round button_theme_dark">
                         <svg class="button-round__img" width="16" height="16">
-                            <use xlink:href="#scale"></use>
+                            <use xlink:href="#comparison"></use>
                         </svg>
                     </button>
 
