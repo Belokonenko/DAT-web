@@ -2,24 +2,42 @@
   @@include('../top/top.html')
 
   <div class="header__sub container">
-    @@include('../logo/logo.html',{"path":"images/Svg/Logo.svg"}) 
+    @@include('../logo/logo.html',{"path":"images/Svg/Logo.svg"})
     @@include('../search/search.html')
 
     <!-- order -->
     <div class="order hidden-mobile header__order order_theme_lihgt">
       <div class="order__inner">
-        <a href="tel:+380671150058" class="order__btn-wrap button button_round button-round button_theme_dark" title="Call us now">
+        <a
+          href="tel:+380671150058"
+          class="order__btn-wrap button button_round button-round button_theme_dark"
+          title="Call us now"
+        >
           <span class="visually-hidden">Call us now</span>
-          <svg class="button-round__img phone" width="16" height="16" aria-hidden="true" alt="">
+          <svg
+            class="button-round__img phone"
+            width="16"
+            height="16"
+            aria-hidden="true"
+            alt=""
+          >
             <use xlink:href="#phone"></use>
           </svg>
         </a>
 
         <div>
-          <a class="button order__tel" href="tel:+380671150058">+38 (067) 115 00 58 </a>
+          <a class="button order__tel" href="tel:+380671150058"
+            >+38 (067) 115 00 58
+          </a>
 
           <button class="button order__btn" type="button ">
-            <svg class="order__arr-menu" width="10" height="10" aria-hidden="true" alt="">
+            <svg
+              class="order__arr-menu"
+              width="10"
+              height="10"
+              aria-hidden="true"
+              alt=""
+            >
               <use xlink:href="#arr-menu"></use>
             </svg>
           </button>
@@ -29,35 +47,60 @@
 
         <ul class="order__list">
           <li class="order__item">
-            <a class="button order__tel" href="tel:+380671150057">+38 (067) 115 00 57 </a>
+            <a class="button order__tel" href="tel:+380671150057"
+              >+38 (067) 115 00 57
+            </a>
           </li>
 
           <li class="order__item">
-            <a class="button order__tel" href="tel:+380671150056">+38 (067) 115 00 56 </a>
+            <a class="button order__tel" href="tel:+380671150056"
+              >+38 (067) 115 00 56
+            </a>
           </li>
         </ul>
       </div>
     </div>
 
-    <button class="button button_round button-round button_theme_dark" title="View comparison list">
+    <button
+      class="button button_round button-round button_theme_dark"
+      title="View comparison list"
+    >
       <span class="visually-hidden"> View comparison list</span>
-      <svg class="button-round__img phone" width="16" height="16" aria-hidden="true" alt="">
+      <svg
+        class="button-round__img phone"
+        width="16"
+        height="16"
+        aria-hidden="true"
+        alt=""
+      >
         <use xlink:href="#comparison"></use>
       </svg>
     </button>
 
-    <button class="button button_round button-round button_theme_dark hidden-mobile " title="View favorite items">
+    <button
+      class="button button_round button-round button_theme_dark hidden-mobile"
+      title="View favorite items"
+    >
       <span class="visually-hidden">View favorite items</span>
-      <svg class="button-round__img header__heart" width="18.4" height="16" aria-hidden="true">
+      <svg class="button-round__img header__heart" aria-hidden="true">
         <use xlink:href="#heart"></use>
       </svg>
     </button>
 
     <div class="basket">
-      <button class="button button_round basket__btn button-round button_theme_dark  btn-modal-basket " title="View items in cart">
+      <button
+        class="button button_round basket__btn button-round button_theme_dark btn-modal-basket"
+        title="View items in cart"
+      >
         <span class="visually-hidden">View items in cart</span>
 
-        <svg class="button-round__img" width="16" height="16" aria-hidden="true" alt="">
+        <svg
+          class="button-round__img"
+          width="16"
+          height="16"
+          aria-hidden="true"
+          alt=""
+        >
           <use xlink:href="#basket"></use>
         </svg>
       </button>
@@ -66,6 +109,6 @@
     </div>
   </div>
 
-  @@include('../nav-prod/nav-prod.html') 
+  @@include('../nav-prod/nav-prod.html')
   @@include('../dropdown-panel/dropdown-panel.html')
 </header>
