@@ -1,65 +1,61 @@
 .search {
-    &__form {
-        display: grid;
-        grid-template-columns: 1fr 50px;
-        height: 40px;
-        border-radius: 90px;
-        border: 1px solid rgba(0, 0, 0, 0.2);
-        justify-content: space-between;
-        align-items: center;
-        background: #fff;
-        margin-right: 10px;
-        margin-left: 10px;
-    }
+  &__form {
+    display: grid;
+    grid-template-columns: 1fr 50px;
+    height: 40px;
+    border-radius: 90px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
 
-    &__input {
-        border: 3px solid #fff;
-        border: none;
-        height: 20px;
-        min-width: 20px;
-        height: 100%;
-        border-radius: 5px 0 0 5px;
-        margin-left: 10px;
-        outline: none;
-        
-        font-weight: 400;
-        /* color: #484848; */
-        background-color: transparent;
-    }
+  &__input {
+    border: 3px solid #fff;
+    border: none;
+    height: 20px;
+    min-width: 20px;
+    height: 100%;
+    border-radius: 5px 0 0 5px;
+    margin-left: 10px;
+    outline: none;
 
-    &__input:focus {
-        background-color: transparent;
-    }
+    font-weight: 400;
+    /* color: #484848; */
+    background-color: transparent;
+  }
 
-    &__button {
-        position: relative;
-        cursor: pointer;
-        height: 35px;
-        border-radius: 0 90px 90px 0;
-        text-align: center;
-        color: #fff;
-        font-size: 20px;
-        background-image: url('../../images/Svg/search.svg');
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: 30%;
-        &::before {
-            content: "";
-            position: absolute;
-            left: -1px;
-            top: 50%;
-            translate: 0 -50%;
-            height: 25px;
-            width: 1px;
-            background-color: rgba(0, 0, 0, 0.2);
+  &__input:focus {
+    background-color: transparent;
+  }
 
-        }
+  &__button {
+    position: relative;
+    cursor: pointer;
+    height: 35px;
+    border-radius: 0 90px 90px 0;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+   
+    &::before {
+      content: "";
+      position: absolute;
+      left: -1px;
+      top: 50%;
+      translate: 0 -50%;
+      height: 25px;
+      width: 1px;
+      background-color: rgba(0, 0, 0, 0.2);
     }
+  }
 
-    &__img {
-        fill: var(--color-main-light);
-        height: 15px;
-        width: 15px;
-        translate: -3px 1px;
-    }
+  &__img {
+    fill: var(--color-main-light);
+    height: 15px;
+    width: 15px;
+    translate: -3px 1px;
+  }
 }

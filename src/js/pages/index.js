@@ -15,21 +15,21 @@ import creatCard from '../services/creatCard';
 import SliderProd from '../../blocks/sliderProd/sliderProd';
 
 document.addEventListener('DOMContentLoaded', () => {
-    order();
-    buttonBurger('dropdown-panel');
-    sliders();
-    seeds();
-    navProd();
-    scrollToTop();
-    modal('.modal-login', '.btn-open-modal', '.modal-login__btn-close');
-    modal('.modal-basket', '.btn-modal-basket', '.modal-basket__btn-close');
-    modalBasket();
-    quantity();
-    modalLogin();
-    //---
-    customSelect();
-    tabs();
-    creatCard();
-    new SliderProd('.novelties').creatSlider();
-    new SliderProd('.novelties').initSlider();
+  order();
+  buttonBurger('dropdown-panel');
+  sliders();
+  seeds();
+  navProd();
+  scrollToTop();
+  modal('.modal-login', '.btn-open-modal', '.modal-login__btn-close');
+  modal('.modal-basket', '.btn-modal-basket', '.modal-basket__btn-close');
+  modalBasket();
+  quantity();
+  modalLogin();
+  //---
+  customSelect();
+  tabs();
+  creatCard();
+  // new SliderProd('.novelties').creatSlider();
+  // new SliderProd('.novelties').initSlider();
 });
