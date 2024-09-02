@@ -29,3 +29,17 @@
     transform: rotate(359deg);
   }
 }
+
+.fade-one {
+  animation-name: fade-one;
+  animation-duration: 1.5s;
+}
+@keyframes fade-one {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
