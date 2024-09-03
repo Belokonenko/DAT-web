@@ -12,7 +12,7 @@
 //             svgSprite({
 //                 mode: {
 //                     symbol: {
-//                         sprite: '../sprite.html',
+//                         sprite: '../sprite.svg',
 //
 //                         /** Создавать страницу с перечнем иконок */
 //                         example: true,
@@ -43,7 +43,7 @@ const createSvgSprite = () => {
             svgSprite({
                 mode: {
                     symbol: {
-                        sprite: '../sprite.html', // Путь к создаваемому спрайту
+                        sprite: '../sprite.svg', // Путь к создаваемому спрайту
 
                         /** Создавать страницу с перечнем иконок */
                         example: true, // Создаём HTML-страницу с перечнем иконок
