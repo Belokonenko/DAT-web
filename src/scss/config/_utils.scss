@@ -1,8 +1,12 @@
 .container {
-    max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
+    // max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
+    // margin-inline: auto;
+    // padding-inline: var(--container-padding-x);
+    max-width:var(--container-max-width);
+    width: var(--container-width) ;
     margin-inline: auto;
-    padding-inline: var(--container-padding-x);
-    outline: 1px solid red;
+
+    outline: 1px solid gold;
     outline-offset: 1px;
 
 }

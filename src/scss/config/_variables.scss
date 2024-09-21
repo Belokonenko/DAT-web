@@ -1,36 +1,39 @@
 :root {
 
---color-bg-light: #F8F8F8;
---color-bg-alpha: #ffffff;
+    --color-bg-light: #F8F8F8;
+    --color-bg-alpha: #ffffff;
 
---color-text-dark: #000000;
---color-text-dark-alt: #484848;
---color-text-light: #ffffff;
+    --color-text-dark: #000000;
+    --color-text-dark-alt: #484848;
+    --color-text-light: #ffffff;
 
---color-main: #1e6140;
---color-main-light:#84C551;
---color-accent: #e74e13;
---color-accent-dark: #8c3213;
+    --color-main: #1e6140;
+    --color-main-light: #84C551;
+    --color-accent: #e74e13;
+    --color-accent-dark: #8c3213;
 
---color-epsilon:#347153;
+    --color-epsilon: #347153;
 
---top-min-height: 50px;
---header-min-height: 200px;
---shadow : 0px 0px 8px 0px rgba(0, 0, 0, 0.15);
---font-family:  "Montserrat", sans-serif;
+    --top-min-height: 50px;
+    --header-min-height: 200px;
+    --shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.15);
+    --font-family: "Montserrat", sans-serif;
 
     --transition-duration: 0.2s ease-in-out;
-    
+
     // container 
-    --container-width: 1110px;
-    --container-padding-x: 40px;
-    
-    @include tablet {
-        --container-padding-x: 25px;
+    --container-max-width: 1110px;
+    --container-width: 90%;
+
+    @include desktop {
+        --container-width: 95%;
     }
-    
+
+    @include tablet {}
+    --container-width: 98%;
+
     @include phone-l {
-        --container-padding-x: 15px;
+        --container-width: 98%;
     }
-    
+
 }
