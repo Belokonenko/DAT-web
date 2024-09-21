@@ -12,7 +12,6 @@ import quantity from '../../blocks/quantity/quantity';
 import modalLogin from '../../blocks/modal-login/modalLogin';
 import tabs from '../../blocks/tabs/tabs';
 import creatCard from '../services/creatCard';
-import SliderProd from '../../blocks/sliderProd/sliderProd';
 import slider_1 from '../../blocks/slider_1/slider_1.mjs';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -31,7 +30,5 @@ document.addEventListener('DOMContentLoaded', () => {
   customSelect();
   tabs();
   creatCard();
-  // new SliderProd('.novelties').creatSlider();
-  // new SliderProd('.novelties').initSlider();
   slider_1();
 });
