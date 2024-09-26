@@ -12,7 +12,7 @@ import quantity from '../../blocks/quantity/quantity';
 import modalLogin from '../../blocks/modal-login/modalLogin';
 import tabs from '../../blocks/tabs/tabs';
 import creatCard from '../services/creatCard';
-import slider_1 from '../../blocks/slider_1/slider_1.mjs';
+import slider_1 from '../../blocks/slider_1/slider_1';
 
 document.addEventListener('DOMContentLoaded', () => {
   order();
@@ -29,6 +29,6 @@ document.addEventListener('DOMContentLoaded', () => {
   //---
   customSelect();
   tabs();
-  creatCard();
+  //creatCard();
   slider_1();
 });

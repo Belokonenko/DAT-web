@@ -1,15 +1,16 @@
+
 .carousel {
-    max-width: var(--container-width);
-    padding: var(--container-padding-x);
+    max-width: var(--container-max-width);
+    width:var(--container-width);
     margin-inline: auto;
+    background-color: transparent;
 
     @include tablet {
-        max-width: 100%;
-        padding: 0;
     }
 
     &__wrapper {
-        background-color: red;
+        background-color: transparent;
+        padding: 10px;
     }
 
     &__btn {
@@ -49,20 +50,21 @@
         gap: 30px;
         border-radius: 8px;
         scroll-behavior: smooth;
-        // scroll-padding: 5%;
+        // scroll-padding: 5px;
+
 
         @include desktop {
-            grid-auto-columns: calc((100% / 3) - 20px);
+            grid-auto-columns: calc((100% / 3) - 20.1px);
         }
 
         @include tablet {
-            grid-auto-columns: calc((90% / 2) - 15px);
-            scroll-padding: 5%;
+            grid-auto-columns: calc((100% / 2) - 15px);
+            // scroll-padding: 5%;
+            border-radius: 0px;
         }
 
         @include phone {
             grid-auto-columns: 80%;
-            scroll-padding: 10%;
 
         }
     }
@@ -100,7 +102,12 @@
         padding-bottom: 15px;
         flex-direction: column;
         border-radius: 8px;
+
+        &:hover {
+            box-shadow:var(--shadow);
+        }
     }
+    
 
     &__card .img {
         background: #8b53ff;

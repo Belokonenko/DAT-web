@@ -1,7 +1,8 @@
 export default function scrollToTop()  {
 
 const scrollToTopBtn = document.getElementById("scrollToTopBtn");
-
+if (scrollToTopBtn) {
+  
   window.addEventListener("scroll", function() {
     if (window.pageYOffset > 500) {
       scrollToTopBtn.style.display = "block";
@@ -17,5 +18,6 @@ const scrollToTopBtn = document.getElementById("scrollToTopBtn");
     });
   });
 
+}
 }
 

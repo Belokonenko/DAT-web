@@ -1,10 +1,13 @@
 export default function slider_1() {
+    console.log("slider_1 load")
 
     const wrapper = document.querySelector(".carousel__wrapper");
     const carousel = document.querySelector(".carousel__line");
     const firstCardWidth = carousel.querySelector(".carousel__card").offsetWidth;
     const arrowBtns = document.querySelectorAll(".carousel__btn");
     const carouselChildrens = [...carousel.children];
+
+    console.log(arrowBtns) ;
 
     let isDragging = false,
         isAutoPlay = true,

@@ -1,6 +1,8 @@
 export default function modalLogin() {
     const loginButton = document.querySelector('.modal-login__button');
-
+    
+    if (loginButton) {
+        
     loginButton.addEventListener('click', event => {
         event.preventDefault();
         console.log(event.target);
@@ -17,4 +19,6 @@ export default function modalLogin() {
         //     alert('Invalid username or password. Please try again.');
         // }
     });
+
+    }
 }
