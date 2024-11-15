@@ -30,5 +30,4 @@ document.addEventListener('DOMContentLoaded', () => {
   customSelect();
   tabs();
   creatCard();
-  slider_1();
 });

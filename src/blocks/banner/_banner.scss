@@ -1,8 +1,6 @@
 .banner {
     position: relative;
-
     min-height: min(100vh, 1000px );
-
     background-repeat: no-repeat;
     background-position: right top;
     background-size: cover;
@@ -13,11 +11,9 @@
 
     &__inner {
         display: grid;
-
         padding-top: 220px;
-
         min-height: 100%;
-
+        
         @include tablet {
             padding-bottom: 0;
         }
@@ -26,9 +22,7 @@
     // --- text_faded ---
     &__block-text {
         display: grid;
-
         align-content: start;
-
         padding-top: 15%;
 
         @include tablet {

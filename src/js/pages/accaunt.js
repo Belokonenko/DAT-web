@@ -15,7 +15,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     console.log('account');
-    
+
     //order();
     //buttonBurger('dropdown-panel');
     //sliders();
