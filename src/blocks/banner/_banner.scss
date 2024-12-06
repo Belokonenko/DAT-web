@@ -1,6 +1,6 @@
 .banner {
     position: relative;
-    min-height: min(100vh, 1000px );
+    min-height: 100vh;
     background-repeat: no-repeat;
     background-position: right top;
     background-size: cover;
@@ -12,7 +12,7 @@
     &__inner {
         display: grid;
         padding-top: 220px;
-        min-height: 100%;
+        min-height: 100vh;
         
         @include tablet {
             padding-bottom: 0;
