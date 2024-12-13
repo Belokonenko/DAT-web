@@ -9,6 +9,11 @@
     padding: 10px;
     transition: all 0.3s ease;
 
+    & *:not(button) {
+        user-select: none;
+        pointer-events: none;
+    }
+
     &:hover {
         box-shadow: 0px 0px 23px 0px rgba(0, 0, 0, 0.15);
     }
@@ -70,4 +75,3 @@
         box-shadow: 0px 0px 23px 0px rgba(0, 0, 0, 0.15);
     }
 }
-
