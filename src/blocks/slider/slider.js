@@ -2,10 +2,8 @@ export default function sliders() {
     const sliderBlocs = document.querySelectorAll('.slider');
 
     if (sliderBlocs) {
-        for (let index = 0; index < sliderBlocs.length; index++) {
-            const element = sliderBlocs[index];
-            initSlider(element);
-        }
+        sliderBlocs.forEach(element => { initSlider(element); })
+
     }
 
     function initSlider(sliderblock) {
@@ -45,7 +43,7 @@ export default function sliders() {
         function debounce(func, delay) {
             let timeoutId;
 
-            return function () {
+            return function() {
                 const context = this;
                 const args = arguments;
 
