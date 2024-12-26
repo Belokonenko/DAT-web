@@ -36,7 +36,7 @@ const scss = (isBuild) => {
       /** Группировка медиа-запросов только для production */
       .pipe(plugins.if(isBuild, groupMediaQueries()))
 
-      .pipe(plugins.if(isBuild, webpCss(webpConfig)))
+      //.pipe(plugins.if(isBuild, webpCss(webpConfig)))
       .pipe(plugins.if(isBuild, postcss([autoprefixer(), postcssPresetEnv()])))
 
       /** Раскомментировать если нужен не сжатый дубль файла стилей */
