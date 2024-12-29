@@ -1,8 +1,9 @@
 # DAT-web
+
 ## Demo
 
-![Anon Desktop Demo](./website-demo-image/desktop.png "Desktop Demo")
-![Anon Mobile Demo](./website-demo-image/mobile.png "Mobile Demo")
+![Desktop Demo](./website-demo-image/desktop.jpg 'Desktop Demo')
+![Mobile Demo](./website-demo-image/mobile.png 'Mobile Demo')
 
 ---
 
