@@ -122,50 +122,7 @@ import * as flsFunctions from './modules'; // './modules/index.js'
 
 ---
 
-file structure
-.
-├─ /dist
-│ ├─ /css
-│ ├─ /images
-│ ├─ /js
-│ ├─ index.html
-│ └─ order.html
-├─ /src
-│ ├─ /blocks
-│ │ ├─ /header
-│ │ │ ├─ header.html
-│ │ │ └─ header.scss
-│ │ ├─ /offer
-│ │ │ ├─ offer.html
-│ │ │ ├─ offer.js
-│ │ │ └─ offer.scss
-│ │ ├─ /order
-│ │ │ ├─ order.html
-│ │ │ ├─ order.js
-│ │ │ ├─ order.scss
-│ │ └─ /footer
-│ │ ├─ footer.html
-│ │ ├─ footer.js
-│ │ └─ footer.scss
-│ ├─ /fonts
-│ ├─ /images/Svg/
-│ ├─ /icons(code svg for svgsprite)(not transferred)
-│ ├─ /js
-│ │ └─ pages
-│ │ └─index.js
-│ │ └─order.js
-│ ├─ index.html
-│ │─ order.html
-│ └─ /scss
-│ └─config/
-│ │ └─ base.scss
-│ │ └─ fonts.scss
-│ └─libs/
-│ └─ main.scss
-├─ gulpfile.js
-└─ package.json
-
----
+## file structure . ├─ /dist │ ├─ /css │ ├─ /images │ ├─ /js │ ├─ index.html │ └─ order.html ├─ /src │ ├─ /blocks │ │ ├─ /header │ │ │ ├─ header.html │ │ │ └─ header.scss │ │ ├─ /offer │ │ │ ├─ offer.html │ │ │ ├─ offer.js │ │ │ └─ offer.scss │ │ ├─ /order │ │ │ ├─ order.html │ │ │ ├─ order.js │ │ │ ├─ order.scss │ │ └─ /footer │ │ ├─ footer.html │ │ ├─ footer.js │ │ └─ footer.scss │ ├─ /fonts │ ├─ /images/Svg/ │ ├─ /icons(code svg for svgsprite)(not transferred) │ ├─ /js │ │ └─ pages │ │ └─index.js │ │ └─order.js │ ├─ index.html │ │─ order.html │ └─ /scss │ └─config/ │ │ └─ base.scss │ │ └─ fonts.scss │ └─libs/ │ └─ main.scss ├─ gulpfile.js └─ package.json
 
 УДАЛИТЬ эту часть после настройки
 
