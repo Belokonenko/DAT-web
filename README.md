@@ -3,7 +3,7 @@
 ## Demo
 
 ![Desktop Demo](./website-demo-image/desktop.jpg 'Desktop Demo')
-![Mobile Demo](./website-demo-image/mobile.png 'Mobile Demo')
+![Mobile Demo](./website-demo-image/mobile.jpg 'Mobile Demo')
 
 ---
 
