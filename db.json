@@ -1,52 +1,129 @@
 {
     "regions": {
         "Cherkasy": {
-            "cities": ["Cherkasy", "Smila", "Uman", "Zolotonosha", "Kamianets", "Shpola", "Talne", "Korystivka"],
+            "cities": [
+                "Cherkasy",
+                "Smila",
+                "Uman",
+                "Zolotonosha",
+                "Kamianets",
+                "Shpola",
+                "Talne",
+                "Korystivka"
+            ],
             "departments": {
                 "Cherkasy": [
-                    {"department": "1", "street": "Shevchenko", "number": "20"},
-                    {"department": "2", "street": "Gagarina", "number": "15"},
-                    {"department": "3", "street": "Mikhailovskaya", "number": "8"}
+                    {
+                        "department": "1",
+                        "street": "Shevchenko",
+                        "number": "20"
+                    },
+                    {
+                        "department": "2",
+                        "street": "Gagarina",
+                        "number": "15"
+                    },
+                    {
+                        "department": "3",
+                        "street": "Mikhailovskaya",
+                        "number": "8"
+                    }
                 ],
                 "Smila": [
-                    {"department": "1", "street": "Centralna", "number": "12"},
-                    {"department": "2", "street": "Vokzalna", "number": "5"}
+                    {
+                        "department": "1",
+                        "street": "Centralna",
+                        "number": "12"
+                    },
+                    {
+                        "department": "2",
+                        "street": "Vokzalna",
+                        "number": "5"
+                    }
                 ],
                 "Uman": [
-                    {"department": "1", "street": "Zemlyachki", "number": "30"},
-                    {"department": "2", "street": "Maidan", "number": "8"}
+                    {
+                        "department": "1",
+                        "street": "Zemlyachki",
+                        "number": "30"
+                    },
+                    {
+                        "department": "2",
+                        "street": "Maidan",
+                        "number": "8"
+                    }
                 ],
                 "Zolotonosha": [
-                    {"department": "1", "street": "Lenina", "number": "18"},
-                    {"department": "2", "street": "Frunze", "number": "9"}
+                    {
+                        "department": "1",
+                        "street": "Lenina",
+                        "number": "18"
+                    },
+                    {
+                        "department": "2",
+                        "street": "Frunze",
+                        "number": "9"
+                    }
                 ],
                 "Kamianets": [
-                    {"department": "1", "street": "Gorodetska", "number": "3"},
-                    {"department": "2", "street": "Moldavska", "number": "16"}
+                    {
+                        "department": "1",
+                        "street": "Gorodetska",
+                        "number": "3"
+                    },
+                    {
+                        "department": "2",
+                        "street": "Moldavska",
+                        "number": "16"
+                    }
                 ],
                 "Shpola": [
-                    {"department": "1", "street": "Shovkovychna", "number": "5"},
-                    {"department": "2", "street": "Kievska", "number": "12"}
+                    {
+                        "department": "1",
+                        "street": "Shovkovychna",
+                        "number": "5"
+                    },
+                    {
+                        "department": "2",
+                        "street": "Kievska",
+                        "number": "12"
+                    }
                 ],
                 "Talne": [
-                    {"department": "1", "street": "Kalynova", "number": "11"},
-                    {"department": "2", "street": "Komsomolska", "number": "4"}
+                    {
+                        "department": "1",
+                        "street": "Kalynova",
+                        "number": "11"
+                    },
+                    {
+                        "department": "2",
+                        "street": "Komsomolska",
+                        "number": "4"
+                    }
                 ],
                 "Korystivka": [
-                    {"department": "1", "street": "Kirova", "number": "7"},
-                    {"department": "2", "street": "Maydan", "number": "22"}
+                    {
+                        "department": "1",
+                        "street": "Kirova",
+                        "number": "7"
+                    },
+                    {
+                        "department": "2",
+                        "street": "Maydan",
+                        "number": "22"
+                    }
                 ]
             }
         }
     },
-    "cards": [
+    "Novelties": [
         {
             "src": "images/prod-crorpp/cro",
             "alt": "image",
             "state": "1",
             "price": "3",
             "unit": "4",
-            "parentBlock":".slider__line"
+            "nameSlider": ".Novelties"
         },
         {
             "src": "images/prod-crorpp/cro",
@@ -54,7 +131,7 @@
             "state": "1",
             "price": "3",
             "unit": "4",
-            "parentBlock":".slider__line"
+            "nameSlider": ".Novelties"
         },
         {
             "src": "images/prod-crorpp/cro",
@@ -62,7 +139,7 @@
             "state": "1",
             "price": "3",
             "unit": "4",
-            "parentBlock":".slider__line"
+            "nameSlider": ".Novelties"
         },
         {
             "src": "images/prod-crorpp/cro",
@@ -70,8 +147,41 @@
             "state": "1",
             "price": "3",
             "unit": "4",
-            "parentBlock":".slider__line"
+            "classSlider": ".Novelties"
+        }
+    ],
+    "Stock": [
+        {
+            "src": "images/prod-crorpp/cro",
+            "alt": "image",
+            "state": "1",
+            "price": "3",
+            "unit": "4",
+            "parentBlock": ".slider__line"
+        },
+        {
+            "src": "images/prod-crorpp/cro",
+            "alt": "image",
+            "state": "1",
+            "price": "3",
+            "unit": "4",
+            "parentBlock": ".slider__line"
+        },
+        {
+            "src": "images/prod-crorpp/cro",
+            "alt": "image",
+            "state": "1",
+            "price": "3",
+            "unit": "4",
+            "parentBlock": ".slider__line"
+        },
+        {
+            "src": "images/prod-crorpp/cro",
+            "alt": "image",
+            "state": "1",
+            "price": "3",
+            "unit": "4",
+            "parentBlock": ".slider__line"
         }
     ]
 }
-

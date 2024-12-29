@@ -1,20 +1,20 @@
-import { getResource } from "./services";
-
 export default function creatCard() {
 
     class CreatCard {
-        constructor(src, alt, state, price, unit, parentBlock) {
-            this.src = src;
-            this.alt = alt;
-            this.state = state;
-            this.price = price;
-            this.unit = unit;
-            this.parentBlock = parentBlock;
+        constructor(data, section) {
+            this.src = data.src;
+            this.alt = data.alt;
+            this.state = data.state;
+            this.price = data.price;
+            this.unit = data.unit;
+            this.parentBlock = data.parentBlock;
+            this.section = section;
         }
 
         async render() {
+            const section = document.querySelector(this.section)
             const element = document.createElement('li');
-            const parent = document.querySelector(this.parentBlock);
+            const parent = section.querySelector(this.parentBlock );
 
             if (!parent) {
                 console.error(`element  ${this.parentBlock} not find.`);
@@ -80,13 +80,4 @@ export default function creatCard() {
         }
     }
 
-    getResource('http://localhost:4000/cards')
-        .then(data => {
-            data.forEach(({ src, alt, state, price, unit, parentBlock }) => {
-                new CreatCard(src, alt, state, price, unit, parentBlock).render();
-            });
-        })
-        .catch(error => {
-            console.error('error get data:', error);
-        });
 }

@@ -7,6 +7,8 @@ export default function sliders() {
     }
 
     function initSlider(sliderblock) {
+        const parent = sliderBlocs.parentElement;
+        console.log(parent )
         const slider = sliderblock.querySelector('.slider__viewport');
         const sliderLine = sliderblock.querySelector('.slider__line');
         const sliderItems = sliderblock.querySelectorAll('.slider__item');

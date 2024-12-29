@@ -13,6 +13,7 @@ import modalLogin from '../../blocks/modal-login/modalLogin';
 import tabs from '../../blocks/tabs/tabs';
 import creatCard from '../services/creatCard';
 import slider_1 from '../../blocks/slider_1/slider_1.mjs';
+import getDataCards from '../module/getDataCards';
 
 document.addEventListener('DOMContentLoaded', () => {
   order();
@@ -29,5 +30,5 @@ document.addEventListener('DOMContentLoaded', () => {
   //---
   customSelect();
   tabs();
-  creatCard();
+  creatCard(getDataCards('http://localhost:4000/Novelties'));
 });
