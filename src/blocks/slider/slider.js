@@ -1,14 +1,15 @@
-export default function sliders() {
-    const sliderBlocs = document.querySelectorAll('.slider');
+export default function sliders(nameClassSlider) {
+    const slider = document.querySelector(nameClassSlider);
 
-    if (sliderBlocs) {
-        sliderBlocs.forEach(element => { initSlider(element); })
-
+    if (slider) {
+        initSlider(slider)
     }
 
+
     function initSlider(sliderblock) {
-        const parent = sliderBlocs.parentElement;
-        console.log(parent )
+        console.log('init')
+        console.log(sliderblock);
+        
         const slider = sliderblock.querySelector('.slider__viewport');
         const sliderLine = sliderblock.querySelector('.slider__line');
         const sliderItems = sliderblock.querySelectorAll('.slider__item');
@@ -76,7 +77,6 @@ export default function sliders() {
         function resetSize() {
             setWidthItems();
             mouveLine(counnt);
-            console.log('Размер окна изменился');
         }
 
         function setWidthItems() {

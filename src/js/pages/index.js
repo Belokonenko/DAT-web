@@ -18,7 +18,8 @@ import getDataCards from '../module/getDataCards';
 document.addEventListener('DOMContentLoaded', () => {
   order();
   buttonBurger('dropdown-panel');
-  sliders();
+  sliders('.novelties__slider');
+  sliders('.stock__slider');
   seeds();
   navProd();
   scrollToTop();
@@ -30,5 +31,4 @@ document.addEventListener('DOMContentLoaded', () => {
   //---
   customSelect();
   tabs();
-  creatCard(getDataCards('http://localhost:4000/Novelties'));
 });
