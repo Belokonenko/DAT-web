@@ -116,72 +116,24 @@
             }
         }
     },
-    "Novelties": [
+    "novelties": [
         {
             "src": "images/prod-crorpp/cro",
             "alt": "image",
             "state": "1",
             "price": "3",
             "unit": "4",
-            "nameSlider": ".Novelties"
-        },
-        {
-            "src": "images/prod-crorpp/cro",
-            "alt": "image",
-            "state": "1",
-            "price": "3",
-            "unit": "4",
-            "nameSlider": ".Novelties"
-        },
-        {
-            "src": "images/prod-crorpp/cro",
-            "alt": "image",
-            "state": "1",
-            "price": "3",
-            "unit": "4",
-            "nameSlider": ".Novelties"
-        },
-        {
-            "src": "images/prod-crorpp/cro",
-            "alt": "image",
-            "state": "1",
-            "price": "3",
-            "unit": "4",
-            "classSlider": ".Novelties"
+            "nameProduct": "Scor"
         }
     ],
-    "Stock": [
+    "stock": [
         {
             "src": "images/prod-crorpp/cro",
             "alt": "image",
             "state": "1",
             "price": "3",
             "unit": "4",
-            "parentBlock": ".slider__line"
-        },
-        {
-            "src": "images/prod-crorpp/cro",
-            "alt": "image",
-            "state": "1",
-            "price": "3",
-            "unit": "4",
-            "parentBlock": ".slider__line"
-        },
-        {
-            "src": "images/prod-crorpp/cro",
-            "alt": "image",
-            "state": "1",
-            "price": "3",
-            "unit": "4",
-            "parentBlock": ".slider__line"
-        },
-        {
-            "src": "images/prod-crorpp/cro",
-            "alt": "image",
-            "state": "1",
-            "price": "3",
-            "unit": "4",
-            "parentBlock": ".slider__line"
+            "nameProduct": "Scor"
         }
     ]
 }

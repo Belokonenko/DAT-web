@@ -18,8 +18,8 @@ import getDataCards from '../module/getDataCards';
 document.addEventListener('DOMContentLoaded', () => {
   order();
   buttonBurger('dropdown-panel');
-  sliders('.novelties__slider');
-  sliders('.stock__slider');
+  sliders('novelties');
+  sliders('stock');
   seeds();
   navProd();
   scrollToTop();

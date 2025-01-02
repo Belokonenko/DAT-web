@@ -1,15 +1,102 @@
-export default function sliders(nameClassSlider) {
-    const slider = document.querySelector(nameClassSlider);
+export default function sliders(nameSlider) {
+
+
+    const slider = document.querySelector(`[data-name_slider="${nameSlider}"]`);
 
     if (slider) {
         initSlider(slider)
     }
 
-
     function initSlider(sliderblock) {
-        console.log('init')
-        console.log(sliderblock);
-        
+        const API_URL = `http://localhost:4000/${nameSlider}`;
+        const cardsContainer = sliderblock.querySelector('.slider__line');
+
+        function createCard(data) {
+            const element = document.createElement('li');
+
+            element.classList.add('slider__item');
+
+            element.innerHTML = `
+                <article class="card" draggable="false">
+                    <hr />
+                    <a href="product-page.html">
+                        <div class="card__img-wrap">
+                            <picture>
+                                <source
+                                    type="image/webp"
+                                    srcset="
+                                        ${data.src}.webp    1x,
+                                        ${data.src}@2x.webp 2x,
+                                        ${data.src}@3x.webp 3x,
+                                        ${data.src}@4x.webp 4x
+                                    "
+                                />
+                                <img
+                                    class="@@class-name"
+                                    width="@@width"
+                                    height="@@height"
+                                    src="${data.src}.png"
+                                    srcset="
+                                        ${data.src}@2x.png 2x,
+                                        ${data.src}@3x.png 3x,
+                                        ${data.src}@4x.png 4x
+                                    "
+                                    alt=${data.alt};
+                                />
+                            </picture>
+                        </div>
+
+                        <div class="card__block-text">
+                            <h3 class="card__prod-name">${data.nameProduct}</h3>
+                            <p class="card__prod-state">${data.state}</p>
+                            <div class="">
+                                <p class="card__prod-parce">${data.price} $</p>
+                                <p class="card__prod-quantity">${data.unit} unit</p>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <button class="card__btn-compare button button-round button_round button_theme_dark">
+                        <svg class="button-round__img" width="16" height="16">
+                            <use xlink:href="#comparison"></use>
+                        </svg>
+                    </button>
+
+                    <button class="button button-round button_round button_theme_dark card__btn" type="button">
+                        <svg class="button-round__img phone" width="16" height="16">
+                            <use xlink:href="#basket"></use>
+                        </svg>
+                    </button>
+                
+                </article>
+            `;
+
+            return element;
+        }
+
+        async function fetchAndRenderCards() {
+            try {
+                const response = await fetch(API_URL);
+                if (!response.ok) {
+                    throw new Error(`Error: ${response.status}`);
+                }
+                const cards = await response.json();
+
+                cardsContainer.innerHTML = '';
+
+                cards.forEach(cardData => {
+                    const card = createCard(cardData);
+                    cardsContainer.appendChild(card);
+                });
+            } catch (error) {
+                console.error('Failed to load cards: ', error);
+            }
+
+        }
+
+        fetchAndRenderCards();
+
+
         const slider = sliderblock.querySelector('.slider__viewport');
         const sliderLine = sliderblock.querySelector('.slider__line');
         const sliderItems = sliderblock.querySelectorAll('.slider__item');
@@ -46,17 +133,31 @@ export default function sliders(nameClassSlider) {
         function debounce(func, delay) {
             let timeoutId;
 
-            return function() {
-                const context = this;
-                const args = arguments;
+            return function(...args) { // Используем rest-оператор для сбора аргументов
+                const context = this; // Присваиваем текущий контекст вызова
 
-                clearTimeout(timeoutId);
+                clearTimeout(timeoutId); // Очищаем предыдущий таймаут
 
                 timeoutId = setTimeout(() => {
-                    func.apply(context, args);
+                    func.apply(context, args); // Вызываем функцию с правильным контекстом и аргументами
                 }, delay);
             };
         }
+
+        //function debounce(func, delay) {
+        //    let timeoutId;
+        //
+        //    return function() {
+        //        const context = data;
+        //        const args = arguments;
+        //
+        //        clearTimeout(timeoutId);
+        //
+        //        timeoutId = setTimeout(() => {
+        //            func.apply(context, args);
+        //        }, delay);
+        //    };
+        //}
 
         function getWidthSlider() {
             return slider.clientWidth;
