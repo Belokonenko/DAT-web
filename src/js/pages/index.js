@@ -11,15 +11,14 @@ import customSelect from '../../blocks/custom-select/customSelect';
 import quantity from '../../blocks/quantity/quantity';
 import modalLogin from '../../blocks/modal-login/modalLogin';
 import tabs from '../../blocks/tabs/tabs';
-import creatCard from '../services/creatCard';
-import slider_1 from '../../blocks/slider_1/slider_1.mjs';
-import getDataCards from '../module/getDataCards';
+import carousel from '../../blocks/carousel/carousel.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   order();
   buttonBurger('dropdown-panel');
   sliders('novelties');
-  sliders('stock');
+  //sliders('stock');
+  //carousel('novelties') ;
   seeds();
   navProd();
   scrollToTop();

@@ -2,7 +2,7 @@ export default function sliders(nameSlider) {
 
     const slider = document.querySelector(`[data-name_slider="${nameSlider}"]`);
     const API_URL = `http://localhost:4000/${nameSlider}`;
-    const counnt = 0;
+    let counnt = 0;
     main();
 
     ///////////////////////////////////////////////////////////////////////
@@ -15,6 +15,18 @@ export default function sliders(nameSlider) {
             renderCards(dataCards, sliderLine);
 
             createDots(slider);
+
+            const sliderItems = slider.querySelectorAll('.slider__item');
+            sliderItems.forEach(sliderItem => {
+                sliderItem.style.setProperty('width', `${getSizeCard()}px`, 'important');
+            });
+
+            const hideGrid = slider.querySelector('.slider__viewport-hide')
+            const styles = window.getComputedStyle(hideGrid);
+
+            const columnGap = parseFloat(styles.columnGap);
+            sliderLine.style.setProperty('gap', `${columnGap}px`, 'important');
+
         }
 
         console.log('exit main');
@@ -108,7 +120,7 @@ export default function sliders(nameSlider) {
     function createDots(slider) {
         const sliderItems = slider.querySelectorAll('.slider__item');
         const dotsList = slider.querySelector('.slider__dot-list');
-        
+
         for (let index = 0; index < sliderItems.length; index++) {
             const dotWrap = document.createElement('li');
             const dot = document.createElement('div');
@@ -118,16 +130,16 @@ export default function sliders(nameSlider) {
 
             dotWrap.setAttribute('data-cunt', index);
 
-            //dotWrap.addEventListener('click', () => {
-            //    counnt = index;
-            //
-            //    activeDot(counnt);
-            //
-            //    if (counnt <= getCounntItems() - getCounntVisebleItem()) {
-            //        mouveLine(counnt);
-            //    } else {
-            //    }
-            //});
+            dotWrap.addEventListener('click', () => {
+                counnt = index;
+
+                activeDot(counnt);
+
+                if (counnt <= getCounntItems() - getCounntVisebleItem()) {
+                    mouveLine(counnt);
+                } else {
+                }
+            });
 
             dotsList.append(dotWrap);
             dotWrap.append(dot);
@@ -147,6 +159,13 @@ export default function sliders(nameSlider) {
     }
 
     // --- /dots ---
+
+    function getSizeCard() {
+        const cell = document.querySelector('.silder__cell');
+        const width = cell.getBoundingClientRect().width;
+        return width
+
+    }
 
     ///////////////////////////////////////////////////////////////////////
 

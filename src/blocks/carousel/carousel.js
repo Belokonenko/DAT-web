@@ -1,4 +1,4 @@
-export default function slider_1() {
+export default function carousel(nameCarousel) {
 
     const wrapper = document.querySelector(".carousel__wrapper");
     const carousel = document.querySelector(".carousel__line");
