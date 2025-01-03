@@ -1,11 +1,118 @@
 export default function sliders(nameSlider) {
 
-
     const slider = document.querySelector(`[data-name_slider="${nameSlider}"]`);
+    const API_URL = `http://localhost:4000/${nameSlider}`;
 
-    if (slider) {
-        initSlider(slider)
+    main();
+
+    ///////////////////////////////////////////////////////////////////////
+
+    async function main() {
+        if (slider) {
+            const dataCards = await getData(API_URL);
+            const sliderLine = slider.querySelector('.slider__line') 
+            
+            renderCards(dataCards, sliderLine);
+        }
+
+        console.log('exit main');
     }
+
+    async function getData(url) {
+        try {
+            const res = await fetch(url);
+            if (res.ok) {
+                const data = await res.json();
+                return data;
+            } else {
+                throw new Error(`Error : ${res.status}`);
+            }
+
+        } catch (error) {
+            console.error(error);
+        }
+    }
+    
+    async function renderCards(arr, sliderLine) {
+        sliderLine.innerHTML = "";
+        arr.forEach(data => {
+            console.log(data);
+            
+            const element = document.createElement('li');
+
+            element.classList.add('slider__item');
+
+            element.innerHTML = `
+                <article class="card" draggable="false">
+                    <hr />
+                    <a href="product-page.html">
+                        <div class="card__img-wrap">
+                            <picture>
+                                <source
+                                    type="image/webp"
+                                    srcset="
+                                        ${data.src}.webp    1x,
+                                        ${data.src}@2x.webp 2x,
+                                        ${data.src}@3x.webp 3x,
+                                        ${data.src}@4x.webp 4x
+                                    "
+                                />
+                                <img
+                                    class="@@class-name"
+                                    width="@@width"
+                                    height="@@height"
+                                    src="${data.src}.png"
+                                    srcset="
+                                        ${data.src}@2x.png 2x,
+                                        ${data.src}@3x.png 3x,
+                                        ${data.src}@4x.png 4x
+                                    "
+                                    alt=${data.alt};
+                                />
+                            </picture>
+                        </div>
+
+                        <div class="card__block-text">
+                            <h3 class="card__prod-name">${data.nameProduct}</h3>
+                            <p class="card__prod-state">${data.state}</p>
+                            <div class="">
+                                <p class="card__prod-parce">${data.price} $</p>
+                                <p class="card__prod-quantity">${data.unit} unit</p>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <button class="card__btn-compare button button-round button_round button_theme_dark">
+                        <svg class="button-round__img" width="16" height="16">
+                            <use xlink:href="#comparison"></use>
+                        </svg>
+                    </button>
+
+                    <button class="button button-round button_round button_theme_dark card__btn" type="button">
+                        <svg class="button-round__img phone" width="16" height="16">
+                            <use xlink:href="#basket"></use>
+                        </svg>
+                    </button>
+                
+                </article>
+            `;
+
+            sliderLine.appendChild(element);
+        });
+    }
+
+    ///////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
 
     function initSlider(sliderblock) {
         const API_URL = `http://localhost:4000/${nameSlider}`;
