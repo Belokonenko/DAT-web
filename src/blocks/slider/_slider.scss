@@ -4,6 +4,8 @@ $transparent-padding-vp: calc($gap-sliders / 2);
 $max-width-container: 4;
 
 .slider {
+    --width-card : 255px;
+    --slider-gap :30px;
     position: relative;
     // background-color: rgba(255, 0, 0, 0.1);
     z-index: 1;
@@ -11,12 +13,15 @@ $max-width-container: 4;
 
 .slider__wrap-viewport {
     max-width: $max-width-container;
+
+    min-height: 355px;
     margin: 0 auto;
     padding: 0 $transparent-padding;
     overflow: hidden;
 }
 
 .slider__viewport {
+    height: 100%;
     position: relative;
     min-height: 50px;
     border: $transparent-padding-vp solid transparent;
@@ -30,7 +35,7 @@ $max-width-container: 4;
     position: absolute;
     display: grid;
     grid-template-columns: repeat(4,1fr);
-    gap: 20px;
+    gap:var(--slider-gap) ;
     
     width: 100%;
     height: 100%;
@@ -43,7 +48,7 @@ $max-width-container: 4;
 
 .slider__line {
     display: grid;
-    gap: $gap-sliders;
+    gap:var(--slider-gap) ;
     grid-auto-flow: column;
     height: 100%;
     transition: all 0.7s ease;
@@ -55,7 +60,7 @@ $max-width-container: 4;
     align-items: center;
     box-sizing: border-box;
     // border: 1px solid blue;
-    width: 278px;
+    width: var(--width-card) ;
 
     & * {
         user-select: none;

@@ -1,6 +1,7 @@
 export default function sliders(nameSlider) {
 
     const slider = document.querySelector(`[data-name_slider="${nameSlider}"]`);
+    console.log(slider)
     const API_URL = `http://localhost:4000/${nameSlider}`;
     let counnt = 0;
     main();
@@ -10,22 +11,18 @@ export default function sliders(nameSlider) {
     async function main() {
         if (slider) {
             const dataCards = await getData(API_URL);
-            const sliderLine = slider.querySelector('.slider__line')
+            const sliderLine = slider.querySelector('.slider__line');
+
+            const cell = document.querySelector('.silder__cell');
+
+            const width = cell.getBoundingClientRect().width;
+            console.log(width);
+            
+            slider.style.setProperty('--width-card', `${width}px`); // Новая ширина элемента
 
             renderCards(dataCards, sliderLine);
 
             createDots(slider);
-
-            const sliderItems = slider.querySelectorAll('.slider__item');
-            sliderItems.forEach(sliderItem => {
-                sliderItem.style.setProperty('width', `${getSizeCard()}px`, 'important');
-            });
-
-            const hideGrid = slider.querySelector('.slider__viewport-hide')
-            const styles = window.getComputedStyle(hideGrid);
-
-            const columnGap = parseFloat(styles.columnGap);
-            sliderLine.style.setProperty('gap', `${columnGap}px`, 'important');
 
         }
 
