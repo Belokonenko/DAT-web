@@ -1,22 +1,18 @@
-$transparent-padding: 0px;
-$gap-sliders: 30px;
-$transparent-padding-vp: calc($gap-sliders / 2);
-$max-width-container: 4;
 
 .slider {
-    --width-card : 255px;
-    --slider-gap :30px;
+    --transparent-padding-vp: 30px;
+    --width-card: 255px;
+    --slider-gap: 30px;
+    --slider-count-card: 4;
     position: relative;
-    // background-color: rgba(255, 0, 0, 0.1);
     z-index: 1;
 }
 
 .slider__wrap-viewport {
-    max-width: $max-width-container;
 
     min-height: 355px;
     margin: 0 auto;
-    padding: 0 $transparent-padding;
+    padding: 0; 
     overflow: hidden;
 }
 
@@ -24,7 +20,7 @@ $max-width-container: 4;
     height: 100%;
     position: relative;
     min-height: 50px;
-    border: $transparent-padding-vp solid transparent;
+    border:var(--transparent-padding-vp)  solid transparent;
 
     @include tablet {
         border: 33px solid transparent;
@@ -34,21 +30,16 @@ $max-width-container: 4;
 .slider__viewport-hide {
     position: absolute;
     display: grid;
-    grid-template-columns: repeat(4,1fr);
-    gap:var(--slider-gap) ;
-    
+    grid-template-columns: repeat(var(--slider-count-card), 1fr);
+    gap: var(--slider-gap);
+
     width: 100%;
     height: 100%;
-    background-color: red;
-
-}
-.silder__cell {
-    background-color: blue;
 }
 
 .slider__line {
     display: grid;
-    gap:var(--slider-gap) ;
+    gap: var(--slider-gap);
     grid-auto-flow: column;
     height: 100%;
     transition: all 0.7s ease;
@@ -59,8 +50,7 @@ $max-width-container: 4;
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
-    // border: 1px solid blue;
-    width: var(--width-card) ;
+    width: var(--width-card);
 
     & * {
         user-select: none;
@@ -150,41 +140,3 @@ $max-width-container: 4;
 
 //--- /dots ---
 
-// ---  adaptive ---
-@media (max-width: 1440px) {
-    // &__btn {
-    //     &-left {
-    //         left: 30px;
-    //     }
-
-    //     &-right {
-    //         right: 30px;
-    //     }
-    // }
-}
-
-@media (max-width: 1024px) {}
-
-@media (max-width: 992px) {
-    .slider__line {
-        gap: 20px;
-    }
-
-    .slider__btn {
-        display: none;
-    }
-}
-
-@media (max-width: 768px) {}
-
-@media (max-width: 425px) {
-    .slider {
-        // margin: 20px;
-    }
-}
-
-@media (max-width: 375px) {}
-
-@media (max-width: 320px) {}
-
-// ---  /adaptive ---
