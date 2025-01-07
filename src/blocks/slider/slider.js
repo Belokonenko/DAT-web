@@ -1,10 +1,11 @@
 export default function sliders(nameSlider) {
 
     const slider = document.querySelector(`[data-name_slider="${nameSlider}"]`);
-    console.log('slider = ', slider)
     const API_URL = `http://localhost:4000/${nameSlider}`;
+     
 
-    let counnt = 0;
+    let counnt = 0; //current card number
+
     main();
 
     ///////////////////////////////////////////////////////////////////////
@@ -21,22 +22,80 @@ export default function sliders(nameSlider) {
             renderCards(dataCards, sliderLine);
             createDots(slider);
 
+            const bntLeft = slider.querySelector('.slider__btn-left');
+            const bntRight = slider.querySelector('.slider__btn-right');
+
+            bntLeft.addEventListener('click', () => {
+                left();
+            });
+
+            bntRight.addEventListener('click', () => {
+                right();
+            });
         }
 
         console.log('exit main');
     }
 
-    // --- resize
-    const debouncedResizeHandler = debounce(resetSize, 300);
+    function getWidthItem() {
+        const cell = slider.querySelector('.silder__cell');
+        return cell.getBoundingClientRect().width;
+    }
 
+    function getGap() {
+        const styleSlider = getComputedStyle(slider);
+        return styleSlider.getPropertyValue('--slider-gap').trim();
+    }
+
+    // --- move ---
+
+
+    function getCounntVisebleItem() {
+
+        const styleSlider = getComputedStyle(slider);
+        return styleSlider.getPropertyValue('--slider-count-card').trim();
+    }
+
+
+    function getWidthShift() {
+        return (getWidthItem() + parseInt(getGap()));
+    }
+    
+    function mouveLine(num) {
+        //------- no break point mouve -----------
+        if (num < 0) {
+            num = getCounntVisebleItem();
+        }
+
+        if (num > getCounntVisebleItem()) {
+            num = 0;
+        }
+
+        //------- /no break point mouve -----------
+        const sliderLine = slider.querySelector('.slider__line');
+
+        sliderLine.style.transform = `translateX(-${ getWidthShift() * num}px)`;
+        activeDot(num);
+        counnt = num;
+    }
+
+    function left() {
+        mouveLine(--counnt);
+    }
+
+    function right() {
+        mouveLine(++counnt);
+    }
+
+    // --- /move ---
+
+    // --- resize
 
     function resetSize() {
-        console.log('resetSize');
         setWidthCard();
     }
 
     function debounce(func, delay) {
-        console.log('debounce', func, delay)
         let timeoutId;
 
         return function(...arg) {
@@ -47,18 +106,16 @@ export default function sliders(nameSlider) {
             }, delay)
         }
     }
+
+    const debouncedResizeHandler = debounce(resetSize, 300);
+
     // --- /resize
 
     function setWidthCard() {
-        console.log(' setWidthCard ',slider.querySelector('.silder__cell'));
-        const cell = slider.querySelector('.silder__cell');
+        //const cell = slider.querySelector('.silder__cell');
+        //const width = cell.getBoundingClientRect().width;
 
-        const width = cell.getBoundingClientRect().width;
-        console.log(width);
-
-        slider.style.setProperty('--width-card', `${width}px`); // Новая ширина элемента
-
-
+        slider.style.setProperty('--width-card', `${getWidthItem()}px`);
     }
 
     async function getData(url) {
@@ -78,8 +135,8 @@ export default function sliders(nameSlider) {
 
     async function renderCards(arrDataCards, parentBlock) {
         parentBlock.innerHTML = "";
+
         arrDataCards.forEach(data => {
-            console.log(data);
 
             const element = document.createElement('li');
 
@@ -189,12 +246,12 @@ export default function sliders(nameSlider) {
 
     // --- /dots ---
 
-    function getSizeCard() {
-        const cell = document.querySelector('.silder__cell');
-        const width = cell.getBoundingClientRect().width;
-        return width
-
-    }
+    //function getSizeCard() {
+    //    const cell = document.querySelector('.silder__cell');
+    //    const width = cell.getBoundingClientRect().width;
+    //    return width
+    //
+    //}
 
     ///////////////////////////////////////////////////////////////////////
 
