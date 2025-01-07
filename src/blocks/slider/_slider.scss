@@ -1,18 +1,47 @@
-
 .slider {
-    --transparent-padding-vp: 30px;
+    --transparent-padding-vp: 15px;
     --width-card: 255px;
     --slider-gap: 30px;
     --slider-count-card: 4;
+    
     position: relative;
     z-index: 1;
+
+
+    @include desktop-l {
+        --slider-count-card: 4;
+    }
+    
+    @include desktop {
+        --slider-count-card: 4;
+    }
+    
+    @include tablet {
+        --slider-count-card: 3;
+    }
+    
+    @include phone-l {
+        --slider-count-card: 2;
+    }
+    
+    @include phone-m {
+        --slider-count-card: 1;
+    }
+    
+
+
+
+
+
+
+
 }
 
 .slider__wrap-viewport {
 
     min-height: 355px;
     margin: 0 auto;
-    padding: 0; 
+    padding: 0;
     overflow: hidden;
 }
 
@@ -20,7 +49,7 @@
     height: 100%;
     position: relative;
     min-height: 50px;
-    border:var(--transparent-padding-vp)  solid transparent;
+    border: var(--transparent-padding-vp) solid transparent;
 
     @include tablet {
         border: 33px solid transparent;
@@ -43,6 +72,7 @@
     grid-auto-flow: column;
     height: 100%;
     transition: all 0.7s ease;
+    
 }
 
 .slider__item {
@@ -139,4 +169,3 @@
 }
 
 //--- /dots ---
-

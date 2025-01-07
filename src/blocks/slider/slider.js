@@ -1,8 +1,9 @@
 export default function sliders(nameSlider) {
 
     const slider = document.querySelector(`[data-name_slider="${nameSlider}"]`);
-    console.log(slider)
+    console.log('slider = ', slider)
     const API_URL = `http://localhost:4000/${nameSlider}`;
+
     let counnt = 0;
     main();
 
@@ -13,20 +14,51 @@ export default function sliders(nameSlider) {
             const dataCards = await getData(API_URL);
             const sliderLine = slider.querySelector('.slider__line');
 
-            const cell = document.querySelector('.silder__cell');
+            setWidthCard();
 
-            const width = cell.getBoundingClientRect().width;
-            console.log(width);
-            
-            slider.style.setProperty('--width-card', `${width}px`); // Новая ширина элемента
+            window.addEventListener('resize', debouncedResizeHandler);
 
             renderCards(dataCards, sliderLine);
-
             createDots(slider);
 
         }
 
         console.log('exit main');
+    }
+
+    // --- resize
+    const debouncedResizeHandler = debounce(resetSize, 300);
+
+
+    function resetSize() {
+        console.log('resetSize');
+        setWidthCard();
+    }
+
+    function debounce(func, delay) {
+        console.log('debounce', func, delay)
+        let timeoutId;
+
+        return function(...arg) {
+            clearTimeout(timeoutId);
+
+            timeoutId = setTimeout(() => {
+                func(...arg)
+            }, delay)
+        }
+    }
+    // --- /resize
+
+    function setWidthCard() {
+        console.log(' setWidthCard ',slider.querySelector('.silder__cell'));
+        const cell = slider.querySelector('.silder__cell');
+
+        const width = cell.getBoundingClientRect().width;
+        console.log(width);
+
+        slider.style.setProperty('--width-card', `${width}px`); // Новая ширина элемента
+
+
     }
 
     async function getData(url) {
@@ -207,34 +239,6 @@ export default function sliders(nameSlider) {
     //
     //// --- functions ---
     //
-    //function debounce(func, delay) {
-    //    let timeoutId;
-    //
-    //    return function(...args) { // Используем rest-оператор для сбора аргументов
-    //        const context = this; // Присваиваем текущий контекст вызова
-    //
-    //        clearTimeout(timeoutId); // Очищаем предыдущий таймаут
-    //
-    //        timeoutId = setTimeout(() => {
-    //            func.apply(context, args); // Вызываем функцию с правильным контекстом и аргументами
-    //        }, delay);
-    //    };
-    //}
-    //
-    ////function debounce(func, delay) {
-    ////    let timeoutId;
-    ////
-    ////    return function() {
-    ////        const context = data;
-    ////        const args = arguments;
-    ////
-    ////        clearTimeout(timeoutId);
-    ////
-    ////        timeoutId = setTimeout(() => {
-    ////            func.apply(context, args);
-    ////        }, delay);
-    ////    };
-    ////}
     //
     //function getWidthSlider() {
     //    return slider.clientWidth;
