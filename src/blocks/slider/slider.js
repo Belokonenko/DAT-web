@@ -2,18 +2,22 @@ export default function sliders(nameSlider) {
 
     const slider = document.querySelector(`[data-name_slider="${nameSlider}"]`);
     const API_URL = `http://localhost:4000/${nameSlider}`;
-     
+
+    const sliderLine = slider.querySelector('.slider__line');
 
     let counnt = 0; //current card number
 
-    main();
+    if (slider) {
+
+        main();
+    }
 
     ///////////////////////////////////////////////////////////////////////
 
     async function main() {
         if (slider) {
             const dataCards = await getData(API_URL);
-            const sliderLine = slider.querySelector('.slider__line');
+            //const sliderLine = slider.querySelector('.slider__line');
 
             setWidthCard();
 
@@ -36,6 +40,95 @@ export default function sliders(nameSlider) {
 
         console.log('exit main');
     }
+    
+    function getCounntItems() {
+        return slider.querySelectorAll('.slider__item').length;
+    }
+
+    function getMaxCounnt() {
+        return getCounntItems() - getCounntVisebleItem();
+    }
+    
+    // ---  swipe ---
+
+    let posInit = 0;
+    let posX1 = 0;
+    let posX2 = 0;
+    let posFinal = 0;
+
+    let trfRegExp = /[-0-9.]+(?=px)/;
+
+    slider.addEventListener('mousedown', swipeStart);
+    slider.addEventListener('touchstart', swipeStart);
+
+    function getEvent(event) {
+        // return evetn for touch or mouse to .clientX
+        return event.type.search('touch') !== -1 ? event.touches[0] : event;
+    }
+
+    function swipeStart(event) {
+        const sliderLine = slider.querySelector('.slider__line');
+
+        let e = getEvent(event);
+
+        posInit = posX1 = e.clientX; // first coordinate X axis
+
+        sliderLine.style.transition = ''; // remove the smooth transition
+
+        // отслеживать другие события на документе
+        slider.addEventListener('touchmove', swipeAction);
+        slider.addEventListener('touchend', swipeEnd);
+        slider.addEventListener('mousemove', swipeAction);
+        slider.addEventListener('mouseup', swipeEnd);
+        slider.addEventListener('mouseout', swipeEnd);
+        slider.addEventListener('pointerout', swipeEnd);
+    }
+
+    function swipeAction(event) {
+        const sliderLine = slider.querySelector('.slider__line');
+        let e = getEvent(event);
+        let style = sliderLine.style.transform || 'translateX(0px)';
+
+        console.log(style)
+
+        let transform = +style.match(trfRegExp)[0]; // считываем трансформацию с помощью регулярного выражения и сразу превращаем в число
+
+        posX2 = posX1 - e.clientX; // получаем разницу start и mouve
+
+        posX1 = e.clientX; // текущее положение в x1
+
+        sliderLine.style.transform = `translateX(${transform - posX2}px)`; // двигаем sliderLine
+    }
+
+    function swipeEnd() {
+        // финальная позиция курсора
+        posFinal = posInit - posX1;
+
+        slider.removeEventListener('touchmove', swipeAction);
+        slider.removeEventListener('mousemove', swipeAction);
+        slider.removeEventListener('touchend', swipeEnd);
+        slider.removeEventListener('mouseup', swipeEnd);
+        slider.removeEventListener('mouseout', swipeEnd);
+
+        slider.removeEventListener('pointerout', swipeEnd);
+
+        if (Math.abs(posFinal) > getMaxCounnt()) {
+            // убираем знак минус и сравниваем с порогом сдвига слайда
+            if (posInit < posX1) {
+                // если мы тянули вправо, то уменьшаем номер текущего слайда
+                --counnt; // если мы тянули влево, то увеличиваем номер текущего слайда
+            } else if (posInit > posX1) {
+                ++counnt;
+            }
+        }
+
+        // если курсор двигался, то запускаем функцию переключения слайдов
+        if (posInit !== posX1) {
+        }
+
+        mouveLine(counnt);
+    }
+    // --- /swipe ---
 
     function getWidthItem() {
         const cell = slider.querySelector('.silder__cell');
@@ -60,9 +153,8 @@ export default function sliders(nameSlider) {
     function getWidthShift() {
         return (getWidthItem() + parseInt(getGap()));
     }
-    
+
     function mouveLine(num) {
-        //------- no break point mouve -----------
         if (num < 0) {
             num = getCounntVisebleItem();
         }
@@ -71,10 +163,9 @@ export default function sliders(nameSlider) {
             num = 0;
         }
 
-        //------- /no break point mouve -----------
         const sliderLine = slider.querySelector('.slider__line');
 
-        sliderLine.style.transform = `translateX(-${ getWidthShift() * num}px)`;
+        sliderLine.style.transform = `translateX(-${getWidthShift() * num}px)`;
         activeDot(num);
         counnt = num;
     }
@@ -112,9 +203,6 @@ export default function sliders(nameSlider) {
     // --- /resize
 
     function setWidthCard() {
-        //const cell = slider.querySelector('.silder__cell');
-        //const width = cell.getBoundingClientRect().width;
-
         slider.style.setProperty('--width-card', `${getWidthItem()}px`);
     }
 
