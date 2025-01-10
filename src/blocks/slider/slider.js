@@ -1,26 +1,27 @@
 export default function sliders(nameSlider) {
 
     const slider = document.querySelector(`[data-name_slider="${nameSlider}"]`);
-    const API_URL = `http://localhost:4000/${nameSlider}`;
 
+    if (!slider) return;
+
+    const API_URL = `http://localhost:4000/${nameSlider}`;
+    const sliderLine = slider.querySelector('.slider__line');
 
     let counnt = 0; //current card number
 
-    if (slider) {
-        main();
-    }
+    main();
 
     ///////////////////////////////////////////////////////////////////////
 
     async function main() {
-        const sliderLine = slider.querySelector('.slider__line');
         const dataCards = await getData(API_URL);
 
         setWidthCard();
 
         window.addEventListener('resize', debouncedResizeHandler);
 
-        renderCards(dataCards, sliderLine);
+        await renderCards(dataCards, sliderLine);
+
         createDots(slider);
 
         const bntLeft = slider.querySelector('.slider__btn-left');
@@ -33,12 +34,57 @@ export default function sliders(nameSlider) {
         bntRight.addEventListener('click', () => {
             right();
         });
-
+        moveItemBeginn()
+        moveItemBeginn()
+        console.log(counnt)
         console.log('exit main');
     }
 
     ///////////////////////////////////////////////////////////////////////
-    
+
+    // --- Infinity---
+
+    function checkCounnt() {
+        console.log('checkCounnt()', 'counnt = ', counnt)
+
+        if (counnt == sliderLine.children.length) {
+            console.log(sliderLine.children.length)
+        }
+
+        if (counnt == 0) {
+            console.log(0)
+        }
+    }
+
+    function moveItemBeginn() {
+        console.log('moveItemBeginn()')
+
+        const sliderLine = slider.querySelector('.slider__line');
+        const slides = Array.from(sliderLine.children);
+        const firstSlide = slides[0];
+        const lastSlide = slides[slides.length - 1];
+
+        sliderLine.insertBefore(lastSlide.cloneNode(true), firstSlide);
+        lastSlide.remove();
+        counnt = ++counnt;
+
+    }
+
+    function moveItemEnd() {
+
+        console.log('moveItemEnd()')
+
+        const sliderLine = slider.querySelector('.slider__line');
+        const slides = Array.from(sliderLine.children);
+        const firstSlide = slides[0];
+        const lastSlide = slides[slides.length - 1];
+
+        sliderLine.appendChild(firstSlide.cloneNode(true));
+        firstSlide.remove();
+    }
+
+    // ---/Infinity---
+
     function getCounntItems() {
         return slider.querySelectorAll('.slider__item').length;
     }
@@ -152,6 +198,8 @@ export default function sliders(nameSlider) {
     }
 
     function mouveLine(num) {
+        console.log(`mouveLine(${num})`)
+        checkCounnt();
         if (num < 0) {
             num = getCounntItems();
         }
@@ -182,6 +230,7 @@ export default function sliders(nameSlider) {
     // --- resize
 
     function resetSize() {
+        console.log('resetSize()')
         setWidthCard();
     }
 
