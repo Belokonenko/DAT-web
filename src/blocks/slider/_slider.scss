@@ -18,6 +18,7 @@
 
     @include tablet {
         --slider-count-card: 3;
+        --slider-gap: 20px;
     }
 
     @include phone-l {

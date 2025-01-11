@@ -229,6 +229,7 @@ export default function sliders(nameSlider) {
     function resetSize() {
         console.log('resetSize()')
         setWidthCard();
+        moveLine(counnt)
     }
 
     function debounce(func, delay) {
