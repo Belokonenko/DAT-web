@@ -230,6 +230,7 @@ export default function sliders(nameSlider) {
         console.log('resetSize()')
         setWidthCard();
         moveLine(counnt)
+        createDots(slider);
     }
 
     function debounce(func, delay) {
@@ -360,10 +361,15 @@ export default function sliders(nameSlider) {
     // --- dots ---
 
     function createDots(slider) {
+        console.log('slider = ',slider);
         const sliderItems = slider.querySelectorAll('.slider__item');
+        
+        console.log('sliderItems',sliderItems)
+        
         const dotsList = slider.querySelector('.slider__dot-list');
         const counntVisebleDots = sliderItems.length - (getCounntVisebleItem() - 1);
-        
+
+        dotsList.innerHTML = ``;
         console.log('counntVisebleDots = ', counntVisebleDots)
 
         for (let index = 0; index < counntVisebleDots; index++) {
