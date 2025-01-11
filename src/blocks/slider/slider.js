@@ -34,7 +34,7 @@ export default function sliders(nameSlider) {
         bntRight.addEventListener('click', () => {
             right();
         });
-        
+
 
         console.log('exit main');
     }
@@ -168,7 +168,7 @@ export default function sliders(nameSlider) {
         if (posInit !== posX1) {
         }
 
-        mouveLine(counnt);
+        moveLine(counnt);
     }
     // --- /swipe ---
 
@@ -195,13 +195,13 @@ export default function sliders(nameSlider) {
         return (getWidthItem() + parseInt(getGap()));
     }
 
-    function mouveLine(num) {
-        console.log(`mouveLine(${num})`)
+    function moveLine(num) {
+        console.log(`moveLine(${num})`)
         if (num < 0) {
             num = getCounntItems();
         }
 
-        if (num > getCounntItems()) {
+        if (num > getCounntItems() - getCounntVisebleItem()) {
             num = 0;
         }
 
@@ -214,12 +214,12 @@ export default function sliders(nameSlider) {
 
     function left() {
         console.log('fun left() counnt = ', counnt)
-        mouveLine(--counnt);
+        moveLine(--counnt);
     }
 
     function right() {
         console.log('fun right() counnt = ', counnt)
-        mouveLine(++counnt);
+        moveLine(++counnt);
     }
 
     // --- /move ---
@@ -350,13 +350,14 @@ export default function sliders(nameSlider) {
             dotWrap.setAttribute('data-cunt', index);
 
             dotWrap.addEventListener('click', () => {
-                counnt = index;
-
-                activeDot(counnt);
 
                 if (counnt <= getCounntItems() - getCounntVisebleItem()) {
-                    mouveLine(counnt);
+                    counnt = index;
+                    moveLine(counnt);
+                    activeDot(counnt);
                 } else {
+                    counnt = index;
+                    activeDot(counnt);
                 }
             });
 
@@ -453,7 +454,7 @@ export default function sliders(nameSlider) {
 //
 //function resetSize() {
 //    setWidthItems();
-//    mouveLine(counnt);
+//    moveLine(counnt);
 //}
 //
 //function setWidthItems() {
@@ -507,7 +508,7 @@ export default function sliders(nameSlider) {
 //
 //// --- mouve ---
 //
-//function mouveLine(num) {
+//function moveLine(num) {
 //    //------- no break point mouve -----------
 //    if (num < 0) {
 //        num = getMaxCounnt();
@@ -526,11 +527,11 @@ export default function sliders(nameSlider) {
 //}
 //
 //function left() {
-//    mouveLine(--counnt);
+//    moveLine(--counnt);
 //}
 //
 //function right() {
-//    mouveLine(++counnt);
+//    moveLine(++counnt);
 //}
 //
 //// --- /mouve ---
@@ -605,7 +606,7 @@ export default function sliders(nameSlider) {
 //    if (posInit !== posX1) {
 //    }
 //
-//    mouveLine(counnt);
+//    moveLine(counnt);
 //}
 //
 //// --- /swipe ---
