@@ -332,6 +332,28 @@ export default function sliders(nameSlider) {
 
             parentBlock.appendChild(element);
         });
+
+        const numEmptyCards = getCounntVisebleItem() - parentBlock.children.length;
+
+        if (numEmptyCards > 0) {
+            console.log(`parentBlock.children.length = ${parentBlock.children.length}`)
+            console.log(`getCounntVisebleItem() = ${getCounntVisebleItem()}`)
+            console.log(` = ${getCounntVisebleItem() - parentBlock.children.length}`)
+
+            for (let index = 0; index < numEmptyCards; index++) {
+                const element = document.createElement('li');
+
+                element.classList.add('slider__item');
+
+                element.innerHTML = `
+                <article class="card" draggable="false">
+                    </article>
+            `;
+
+                parentBlock.appendChild(element);
+
+            }
+        }
     }
 
     // --- dots ---
@@ -339,7 +361,8 @@ export default function sliders(nameSlider) {
     function createDots(slider) {
         const sliderItems = slider.querySelectorAll('.slider__item');
         const dotsList = slider.querySelector('.slider__dot-list');
-        const counntVisebleDots =  sliderItems.length - (getCounntVisebleItem() - 1);
+        const counntVisebleDots = sliderItems.length - (getCounntVisebleItem() - 1);
+
 
         for (let index = 0; index < counntVisebleDots; index++) {
             const dotWrap = document.createElement('li');

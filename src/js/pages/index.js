@@ -17,8 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
   order();
   buttonBurger('dropdown-panel');
   sliders('novelties');
-  //sliders('stock');
-  //carousel('novelties') ;
+  sliders('stock');
   seeds();
   navProd();
   scrollToTop();
