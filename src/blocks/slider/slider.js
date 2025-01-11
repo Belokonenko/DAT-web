@@ -34,9 +34,8 @@ export default function sliders(nameSlider) {
         bntRight.addEventListener('click', () => {
             right();
         });
-        moveItemBeginn()
-        moveItemBeginn()
-        console.log(counnt)
+        
+
         console.log('exit main');
     }
 
@@ -44,20 +43,13 @@ export default function sliders(nameSlider) {
 
     // --- Infinity---
 
-    function checkCounnt() {
-        console.log('checkCounnt()', 'counnt = ', counnt)
-
-        if (counnt == sliderLine.children.length) {
-            console.log(sliderLine.children.length)
-        }
-
-        if (counnt == 0) {
-            console.log(0)
-        }
+    function moveLineQ() {
+        sliderLine.style.transition = 'none';
+        sliderLine.style.transform = `translateX(-${getWidthShift() * counnt}px)`;
     }
 
-    function moveItemBeginn() {
-        console.log('moveItemBeginn()')
+    function addItemBeginn() {
+        console.log('addItemBeginn()')
 
         const sliderLine = slider.querySelector('.slider__line');
         const slides = Array.from(sliderLine.children);
@@ -65,14 +57,17 @@ export default function sliders(nameSlider) {
         const lastSlide = slides[slides.length - 1];
 
         sliderLine.insertBefore(lastSlide.cloneNode(true), firstSlide);
-        lastSlide.remove();
-        counnt = ++counnt;
+
+        sliderLine.removeChild(sliderLine.lastElementChild);
+        ++counnt;
+        console.log(counnt)
+        moveLineQ();
 
     }
 
-    function moveItemEnd() {
+    function addItemEnd() {
 
-        console.log('moveItemEnd()')
+        console.log('addItemEnd()')
 
         const sliderLine = slider.querySelector('.slider__line');
         const slides = Array.from(sliderLine.children);
@@ -81,6 +76,9 @@ export default function sliders(nameSlider) {
 
         sliderLine.appendChild(firstSlide.cloneNode(true));
         firstSlide.remove();
+        --counnt;
+        console.log(counnt)
+        moveLineQ();
     }
 
     // ---/Infinity---
@@ -199,7 +197,6 @@ export default function sliders(nameSlider) {
 
     function mouveLine(num) {
         console.log(`mouveLine(${num})`)
-        checkCounnt();
         if (num < 0) {
             num = getCounntItems();
         }
