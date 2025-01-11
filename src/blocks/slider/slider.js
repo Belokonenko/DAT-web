@@ -363,7 +363,8 @@ export default function sliders(nameSlider) {
         const sliderItems = slider.querySelectorAll('.slider__item');
         const dotsList = slider.querySelector('.slider__dot-list');
         const counntVisebleDots = sliderItems.length - (getCounntVisebleItem() - 1);
-
+        
+        console.log('counntVisebleDots = ', counntVisebleDots)
 
         for (let index = 0; index < counntVisebleDots; index++) {
             const dotWrap = document.createElement('li');
