@@ -16,7 +16,8 @@
 }
 
 .partners__viewport {
-    overflow: visible;
+    overflow: visible !important;
+    min-height:100px!important;
 }
 
 .partners__img {
