@@ -1,10 +1,10 @@
-export default function sliders(nameSlider) {
+export default function slider(dataSlider) {
 
-    const slider = document.querySelector(`[data-name_slider="${nameSlider}"]`);
+    const slider = document.querySelector(`[data-name_slider="${dataSlider.name}"]`);
 
     if (!slider) return;
 
-    const API_URL = `http://localhost:4000/${nameSlider}`;
+    const API_URL = `http://localhost:4000/${dataSlider.name}`;
     const sliderLine = slider.querySelector('.slider__line');
 
     let counnt = 0; //current card number
@@ -20,7 +20,7 @@ export default function sliders(nameSlider) {
 
         window.addEventListener('resize', debouncedResizeHandler);
 
-        await renderCards(dataCards, sliderLine);
+        await renderCards(dataCards, sliderLine, dataSlider.type);
 
         createDots(slider);
 
@@ -36,7 +36,6 @@ export default function sliders(nameSlider) {
         });
 
 
-        console.log('exit main');
     }
 
     ///////////////////////////////////////////////////////////////////////
@@ -49,7 +48,6 @@ export default function sliders(nameSlider) {
     }
 
     function addItemBeginn() {
-        console.log('addItemBeginn()')
 
         const sliderLine = slider.querySelector('.slider__line');
         const slides = Array.from(sliderLine.children);
@@ -60,14 +58,12 @@ export default function sliders(nameSlider) {
 
         sliderLine.removeChild(sliderLine.lastElementChild);
         ++counnt;
-        console.log(counnt)
         moveLineQ();
 
     }
 
     function addItemEnd() {
 
-        console.log('addItemEnd()')
 
         const sliderLine = slider.querySelector('.slider__line');
         const slides = Array.from(sliderLine.children);
@@ -77,13 +73,14 @@ export default function sliders(nameSlider) {
         sliderLine.appendChild(firstSlide.cloneNode(true));
         firstSlide.remove();
         --counnt;
-        console.log(counnt)
         moveLineQ();
     }
 
     // ---/Infinity---
 
     function getCounntItems() {
+        const items = slider.querySelectorAll('.slider__item')
+        console.log(slider, items)
         return slider.querySelectorAll('.slider__item').length;
     }
 
@@ -131,7 +128,6 @@ export default function sliders(nameSlider) {
         let e = getEvent(event);
         let style = sliderLine.style.transform || 'translateX(0px)';
 
-        console.log(style)
 
         let transform = +style.match(trfRegExp)[0]; // считываем трансформацию с помощью регулярного выражения и сразу превращаем в число
 
@@ -196,7 +192,7 @@ export default function sliders(nameSlider) {
     }
 
     function moveLine(num) {
-        console.log(`moveLine(${num})`)
+        console.log()
         if (num < 0) {
             num = getCounntItems();
         }
@@ -206,19 +202,16 @@ export default function sliders(nameSlider) {
         }
 
         const sliderLine = slider.querySelector('.slider__line');
-
         sliderLine.style.transform = `translateX(-${getWidthShift() * num}px)`;
         activeDot(num);
         counnt = num;
     }
 
     function left() {
-        console.log('fun left() counnt = ', counnt)
         moveLine(--counnt);
     }
 
     function right() {
-        console.log('fun right() counnt = ', counnt)
         moveLine(++counnt);
     }
 
@@ -227,7 +220,6 @@ export default function sliders(nameSlider) {
     // --- resize
 
     function resetSize() {
-        console.log('resetSize()')
         setWidthCard();
         moveLine(counnt)
         createDots(slider);
@@ -268,7 +260,7 @@ export default function sliders(nameSlider) {
         }
     }
 
-    async function renderCards(arrDataCards, parentBlock) {
+    async function renderCards(arrDataCards, parentBlock, type) {
         parentBlock.innerHTML = "";
 
         arrDataCards.forEach(data => {
@@ -277,7 +269,55 @@ export default function sliders(nameSlider) {
 
             element.classList.add('slider__item');
 
-            element.innerHTML = `
+            element.innerHTML = renderCardProd(data);
+
+            switch (type) {
+                case "prod":
+                    element.innerHTML = renderCardProd(data);
+                    break;
+                case "partners":
+                    element.classList.add('partners__item')
+                    element.innerHTML = renderCardPartners(data);
+                    break;
+                default:
+                    console.warn("Unknown card type", data.type);
+                    return;
+            }
+
+            parentBlock.appendChild(element);
+        });
+
+        function renderCardPartners(data) {
+            return `
+
+              
+                    <picture>
+                        <source
+                            type="image/webp"
+                            srcset="
+                                ${data.src}.webp    1x,
+                                ${data.src}@2x.webp 2x,
+                                ${data.src}@3x.webp 3x,
+                                ${data.src}@4x.webp 4x
+                            "
+                        />
+                        <img
+                            class="partners__img"
+                            width="175"
+                            height="86"
+                            src=${data.src}${data.src}
+                            srcset="
+                                ${data.src}@2x.png 2x,
+                                ${data.src}@3x.png 3x,
+                                ${data.src}@4x.png 4x
+                            "
+                            alt=${data.alt}
+                        />
+                    </picture>
+            `;
+        }
+        function renderCardProd(data) {
+            return `
                 <article class="card" draggable="false">
                     <hr />
                     <a href="product-page.html">
@@ -331,17 +371,11 @@ export default function sliders(nameSlider) {
                 
                 </article>
             `;
-
-            parentBlock.appendChild(element);
-        });
+        }
 
         const numEmptyCards = getCounntVisebleItem() - parentBlock.children.length;
 
         if (numEmptyCards > 0) {
-            console.log(`parentBlock.children.length = ${parentBlock.children.length}`)
-            console.log(`getCounntVisebleItem() = ${getCounntVisebleItem()}`)
-            console.log(` = ${getCounntVisebleItem() - parentBlock.children.length}`)
-
             for (let index = 0; index < numEmptyCards; index++) {
                 const element = document.createElement('li');
 
@@ -361,16 +395,12 @@ export default function sliders(nameSlider) {
     // --- dots ---
 
     function createDots(slider) {
-        console.log('slider = ',slider);
         const sliderItems = slider.querySelectorAll('.slider__item');
-        
-        console.log('sliderItems',sliderItems)
-        
+
         const dotsList = slider.querySelector('.slider__dot-list');
         const counntVisebleDots = sliderItems.length - (getCounntVisebleItem() - 1);
 
         dotsList.innerHTML = ``;
-        console.log('counntVisebleDots = ', counntVisebleDots)
 
         for (let index = 0; index < counntVisebleDots; index++) {
             const dotWrap = document.createElement('li');

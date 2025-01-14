@@ -1,7 +1,7 @@
 'use strict';
 import order from '../../blocks/order/order';
 import buttonBurger from '../../blocks/button-burger/button-burger';
-import sliders from '../../blocks/slider/slider';
+import slider from '../../blocks/slider/slider';
 import seeds from '../../blocks/seeds/seeds';
 import navProd from '../../blocks/nav-prod/navProd';
 import scrollToTop from '../../blocks/scrollToTop/scrollToTop';
@@ -11,13 +11,13 @@ import customSelect from '../../blocks/custom-select/customSelect';
 import quantity from '../../blocks/quantity/quantity';
 import modalLogin from '../../blocks/modal-login/modalLogin';
 import tabs from '../../blocks/tabs/tabs';
-import carousel from '../../blocks/carousel/carousel.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   order();
   buttonBurger('dropdown-panel');
-  sliders('novelties');
-  sliders('stock');
+  slider({ name: 'novelties', type: 'prod' });
+  slider({ name: 'stock', type: 'prod' });
+  slider({ name: 'partners', type: 'partners' });
   seeds();
   navProd();
   scrollToTop();
