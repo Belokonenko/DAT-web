@@ -295,5 +295,25 @@
       "unit": "4",
       "nameProduct": "Scor"
     }
+  ],
+  "partners": [
+    {
+      "src": "images/par-lg/lg"
+    },
+    {
+      "src": "images/prt-rod/rod"
+    },
+    {
+      "src": "images/prt-ada/ada"
+    },
+    {
+      "src": "images/par-lead/lead"
+    },
+    {
+      "src": "images/par-decklb/dek"
+    },
+    {
+      "src": "images/par-basf/basf"
+    }
   ]
 }
