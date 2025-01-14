@@ -79,8 +79,6 @@ export default function slider(dataSlider) {
     // ---/Infinity---
 
     function getCounntItems() {
-        const items = slider.querySelectorAll('.slider__item')
-        console.log(slider, items)
         return slider.querySelectorAll('.slider__item').length;
     }
 
@@ -192,9 +190,11 @@ export default function slider(dataSlider) {
     }
 
     function moveLine(num) {
-        console.log()
         if (num < 0) {
-            num = getCounntItems();
+            console.log(num)
+            num = getCounntItems() - getCounntVisebleItem();
+            console.log(num)
+            //debugger;
         }
 
         if (num > getCounntItems() - getCounntVisebleItem()) {
