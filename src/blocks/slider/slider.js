@@ -35,6 +35,7 @@ export default function slider(dataSlider) {
         });
 
 
+        // --- Auto slide ---
         sliderLine.addEventListener('mouseenter', stopAutoSlide); 
         sliderLine.addEventListener('mouseleave', startAutoSlide);
         sliderLine.addEventListener('touchstart', stopAutoSlide); 
@@ -42,10 +43,11 @@ export default function slider(dataSlider) {
         
         startAutoSlide()
 
+        // --- /Auto slide ---
     }
     ///////////////////////////////////////////////////////////////////////
     
-    // --- auto slide ---
+    // --- Auto slide ---
     let setIntervalID;
     
     function startAutoSlide() {
@@ -59,7 +61,7 @@ export default function slider(dataSlider) {
         console.log('stopAutoSlide()')
         clearInterval(setIntervalID);
     }
-    // --- auto slide ---
+    // --- /Auto slide ---
     
     // --- Infinity---
     function moveLineQ() {
@@ -84,8 +86,6 @@ export default function slider(dataSlider) {
     }
 
     function addItemEnd() {
-
-
         const sliderLine = slider.querySelector('.slider__line');
         const slides = Array.from(sliderLine.children);
         const firstSlide = slides[0];
@@ -198,8 +198,6 @@ export default function slider(dataSlider) {
     }
 
     // --- move ---
-
-
     function getCounntVisebleItem() {
         const styleSlider = getComputedStyle(slider);
         return styleSlider.getPropertyValue('--slider-count-card').trim();
@@ -236,11 +234,9 @@ export default function slider(dataSlider) {
     function right() {
         moveLine(++counnt);
     }
-
     // --- /move ---
 
     // --- resize
-
     function resetSize() {
         setWidthCard();
         moveLine(counnt)
@@ -260,7 +256,6 @@ export default function slider(dataSlider) {
     }
 
     const debouncedResizeHandler = debounce(resetSize, 300);
-
     // --- /resize
 
     function setWidthCard() {
