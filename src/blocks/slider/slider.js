@@ -36,15 +36,37 @@ export default function slider(dataSlider) {
         });
 
 
+        sliderLine.addEventListener('mouseenter', stopAutoSlide); // Наведение мыши — остановка
+        sliderLine.addEventListener('mouseleave', startAutoSlide); // Уход мыши — запуск
+        sliderLine.addEventListener('touchstart', stopAutoSlide); // Касание (для мобильных устройств)
+        sliderLine.addEventListener('touchend', startAutoSlide);  // Завершение касания
+
+        startAutoSlide()
+
     }
-
     ///////////////////////////////////////////////////////////////////////
-
+    
+    // --- auto slide ---
+    let setIntervalID;
+    
+    function startAutoSlide() {
+        console.log('startAutoSlide()')
+        setIntervalID = setInterval(() => {
+            right();
+        }, 4000);
+    }
+    
+    function stopAutoSlide() {
+        console.log('stopAutoSlide()')
+        clearInterval(setIntervalID);
+    }
+    // --- auto slide ---
+    
     // --- Infinity---
-
     function moveLineQ() {
         sliderLine.style.transition = 'none';
         sliderLine.style.transform = `translateX(-${getWidthShift() * counnt}px)`;
+        sliderLine.style.transition = 'all 1s ease';
     }
 
     function addItemBeginn() {
@@ -190,6 +212,7 @@ export default function slider(dataSlider) {
     }
 
     function moveLine(num) {
+        console.log('moveLine', num)
         if (num < 0) {
             console.log(num)
             num = getCounntItems() - getCounntVisebleItem();
@@ -285,7 +308,12 @@ export default function slider(dataSlider) {
             }
 
             parentBlock.appendChild(element);
+
         });
+
+        counnt = (Math.round((parentBlock.children.length - getCounntVisebleItem()) / 2))
+        moveLineQ(counnt);
+
 
         function renderCardPartners(data) {
             return `

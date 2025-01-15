@@ -320,6 +320,30 @@
     {
       "src": "images/par-basf/basf",
       "alt": "logo partners BASF"
+    },
+    {
+      "src": "images/par-lg/lg",
+      "alt": "logo partners LG"
+    },
+    {
+      "src": "images/prt-rod/rod",
+      "alt": "logo partners Rodonit"
+    },
+    {
+      "src": "images/prt-ada/ada",
+      "alt": "logo partners ADAMA"
+    },
+    {
+      "src": "images/par-lead/lead",
+      "alt": "logo partners Lidea"
+    },
+    {
+      "src": "images/par-decklb/dek",
+      "alt": "logo partners Dekalb"
+    },
+    {
+      "src": "images/par-basf/basf",
+      "alt": "logo partners BASF"
     }
   ]
 }
