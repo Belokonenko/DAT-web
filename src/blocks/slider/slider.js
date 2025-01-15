@@ -15,6 +15,8 @@ export default function slider(dataSlider) {
 
     async function main() {
         const dataCards = await getData(API_URL);
+        const bntLeft = slider.querySelector('.slider__btn-left');
+        const bntRight = slider.querySelector('.slider__btn-right');
 
         setWidthCard();
 
@@ -23,9 +25,6 @@ export default function slider(dataSlider) {
         await renderCards(dataCards, sliderLine, dataSlider.type);
 
         createDots(slider);
-
-        const bntLeft = slider.querySelector('.slider__btn-left');
-        const bntRight = slider.querySelector('.slider__btn-right');
 
         bntLeft.addEventListener('click', () => {
             left();
@@ -36,11 +35,11 @@ export default function slider(dataSlider) {
         });
 
 
-        sliderLine.addEventListener('mouseenter', stopAutoSlide); // Наведение мыши — остановка
-        sliderLine.addEventListener('mouseleave', startAutoSlide); // Уход мыши — запуск
-        sliderLine.addEventListener('touchstart', stopAutoSlide); // Касание (для мобильных устройств)
-        sliderLine.addEventListener('touchend', startAutoSlide);  // Завершение касания
-
+        sliderLine.addEventListener('mouseenter', stopAutoSlide); 
+        sliderLine.addEventListener('mouseleave', startAutoSlide);
+        sliderLine.addEventListener('touchstart', stopAutoSlide); 
+        sliderLine.addEventListener('touchend', startAutoSlide); 
+        
         startAutoSlide()
 
     }
