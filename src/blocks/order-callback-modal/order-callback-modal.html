@@ -1,0 +1,17 @@
+<!-- order callback modal window -->
+<dialog class="callback-dialog" id="callbackDialog">
+  <form method="dialog" id="callbackForm">
+    <h2>Order a Call Back</h2>
+
+    <label for="name">Your Name</label>
+    <input type="text" id="name" name="name" required />
+
+    <label for="phone">Your Phone Number</label>
+    <input type="tel" id="phone" name="phone" pattern="^\+?[0-9\s\-()]{7,20}$" required />
+
+    <div class="dialog-buttons">
+      <button type="submit" class="submit-btn">Submit</button>
+      <button type="button" class="close-btn">Cancel</button>
+    </div>
+  </form>
+</dialog>

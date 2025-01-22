@@ -18,7 +18,7 @@
     }
 
     &.order_theme_mob .order__inner {
-        margin-left: -10px;
+        padding-left: 0;
     }
 
     &.order_active .order__inner {
@@ -27,6 +27,11 @@
         box-shadow: var(--shadow);
         height: 130px;
         background-color: inherit;
+    }
+    
+    &.order_active.order_theme_mob .order__inner {
+        margin-left: -10px;
+        padding-left: 10px;
     }
 
     &.order_active .order__list {
