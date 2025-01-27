@@ -1,9 +1,12 @@
 export default function orderCallBackModal() {
+
   const dialog = document.getElementById('callbackDialog');
-  const openBtn = document.querySelectorAll('.callback-btn');
+  const openBtn = document.querySelector('.callback-btn');
+  console.log(openBtn)
+
   const closeBtn = document.querySelector('.close-btn');
   const form = document.getElementById('callbackForm');
-  
+
   console.log(openBtn[0])
   // Открыть модальное окно
   openBtn.addEventListener('click', () => {
