@@ -6,25 +6,20 @@
       </svg>
     </a>
 
-    <button
-      class="button button_round button-round button_theme_light dropdown-panel__scale"
-    >
+    <button class="button button_round button-round button_theme_light dropdown-panel__scale">
       <svg class="button-round__img" width="16" height="16">
         <use xlink:href="#comparison"></use>
       </svg>
     </button>
 
     <div class="basket dropdown-panel__basket">
-      @@include('../button-round/button-round.html',
-      {"id":"basket","theme":"button_theme_light"})
+      @@include('../button-round/button-round.html', {"id":"basket","theme":"button_theme_light"})
       <span class="basket__price dropdown-panel__price"> 0.0$ </span>
     </div>
 
     <!-- === -->
 
-    <button
-      class="button button_round button-round button_theme_light dropdown-panel__heart"
-    >
+    <button class="button button_round button-round button_theme_light dropdown-panel__heart">
       <svg class="button-round__img heart">
         <use xlink:href="#heart"></use>
       </svg>
@@ -32,12 +27,7 @@
 
     <div class="search dropdown-panel__search">
       <form class="search__form dropdown-panel__form" method="GET">
-        <input
-          class="search__input"
-          type="text"
-          name="search"
-          placeholder="Search..."
-        />
+        <input class="search__input" type="text" name="search" placeholder="Search..." />
         <button class="button search__button" type="submit">
           <span class="visually-hidden">search</span>
         </button>
@@ -48,54 +38,33 @@
     <div class="order order_theme_mob dropdown-panel__order">
       <div class="order__inner">
         <a class="order__btn-wrap" href="tel:+380671150058">
-          <button
-            class="button button_round button-round button_theme_light"
-            title="Call us now"
-          >
+          <button class="button button_round button-round button_theme_light" title="Call us now">
             <span class="visually-hidden">Call us now</span>
-            <svg
-              class="button-round__img phone"
-              width="16"
-              height="16"
-              aria-hidden="true"
-              alt=""
-            >
+            <svg class="button-round__img phone" width="16" height="16" aria-hidden="true" alt="">
               <use xlink:href="#phone"></use>
             </svg>
           </button>
         </a>
 
         <div>
-          <a class="button order__tel" href="tel:+380671150058"
-            >+38 (067) 115 00 58
-          </a>
+          <a class="button order__tel" href="tel:+380671150058">+38 (067) 115 00 58 </a>
 
           <button class="button order__button order__btn" type="button">
-            <svg
-              class="order__arr-menu"
-              width="10"
-              height="10"
-              aria-hidden="true"
-              alt=""
-            >
+            <svg class="order__arr-menu" width="10" height="10" aria-hidden="true" alt="">
               <use xlink:href="#arr-menu"></use>
             </svg>
           </button>
         </div>
 
-        <a class="order__text" href="#">Order a call back</a>
+        <div class="order__text callback-btn" href="#">Order a call back</div>
 
         <ul class="order__list">
           <li class="order__item">
-            <a class="button order__tel" href="tel:+380671150057"
-              >+38 (067) 115 00 57
-            </a>
+            <a class="button order__tel" href="tel:+380671150057">+38 (067) 115 00 57 </a>
           </li>
 
           <li class="order__item">
-            <a class="button order__tel" href="tel:+380671150056"
-              >+38 (067) 115 00 56
-            </a>
+            <a class="button order__tel" href="tel:+380671150056">+38 (067) 115 00 56 </a>
           </li>
         </ul>
       </div>
