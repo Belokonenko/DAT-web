@@ -3,13 +3,13 @@ export default function order() {
 
     if (orders) {
         orders.forEach(order => {
-            order.addEventListener('mouseover', () => {
-                order.classList.add('order_active');
-            });
-
-            order.addEventListener('mouseout', () => {
-                order.classList.remove('order_active');
-            });
+            //order.addEventListener('mouseover', () => {
+            //    order.classList.add('order_active');
+            //});
+            //
+            //order.addEventListener('mouseout', () => {
+            //    order.classList.remove('order_active');
+            //});
 
             const btn = order.querySelector('.order__btn');
 

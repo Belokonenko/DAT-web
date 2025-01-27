@@ -21,6 +21,28 @@
         padding-left: 0;
     }
 
+    @media (hover: hover) and (pointer: fine) {
+        &:hover .order__inner {
+            background-color: red;
+            position: absolute;
+            box-shadow: var(--shadow);
+            height: 130px;
+            background-color: inherit;
+        }
+
+        &:hover .order__list {
+            display: grid;
+        }
+    
+        &.order_theme_mob:hover .order__inner {
+        margin-left: -10px;
+        padding-left: 10px;
+    }
+
+    }
+
+    // --- active order ---
+
     &.order_active .order__inner {
         background-color: red;
         position: absolute;
@@ -28,7 +50,7 @@
         height: 130px;
         background-color: inherit;
     }
-    
+
     &.order_active.order_theme_mob .order__inner {
         margin-left: -10px;
         padding-left: 10px;
@@ -42,6 +64,8 @@
         rotate: 180deg;
         transition: var(--transition-duration);
     }
+
+    // --- /active order ---
 
     &__inner {
         position: relative;
@@ -100,6 +124,7 @@
     &__tel {
         color: currentColor;
         font-weight: 300;
+
         &:hover {
             color: var(--color-accent);
         }
