@@ -1,26 +1,28 @@
 export default function orderCallBackModal() {
 
   const dialog = document.getElementById('callbackDialog');
-  const openBtn = document.querySelector('.callback-btn');
-  console.log(openBtn)
+  const openBtns = document.querySelectorAll('.callback-btn');
 
   const closeBtn = document.querySelector('.close-btn');
-  const form = document.getElementById('callbackForm');
+  const form  = document.getElementById('callbackForm');
+  console.log(form)
 
-  console.log(openBtn[0])
   // Открыть модальное окно
-  openBtn.addEventListener('click', () => {
-    dialog.showModal(); // Открыть диалог
-  });
+  openBtns.forEach(openBtn => {
+    openBtn.addEventListener('click', () => {
+      dialog.showModal(); // Открыть диалог
+    });
+  })
 
   // Закрыть модальное окно
   closeBtn.addEventListener('click', () => {
     dialog.close(); // Закрыть диалог
   });
 
-  // Обработка формы
+  // sent form
   form.addEventListener('submit', (event) => {
-    event.preventDefault(); // Останавливаем отправку формы
+    event.preventDefault();  
+    console.log('submit')
 
     const name = form.name.value.trim();
     const phone = form.phone.value.trim();
