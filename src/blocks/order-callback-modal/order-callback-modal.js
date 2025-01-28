@@ -6,8 +6,10 @@ export default function orderCallBackModal() {
   const form = document.getElementById('callbackForm');
   const responseMessage = document.querySelector('.responseMessage');
   const submitBtn = form.querySelector('[type="submit"]');
+  const preloader = document.getElementById('preloader');
 
-  // Открыть модальное окно
+  preloader.style.display = 'none';
+  
   openBtns.forEach((openBtn) => {
     openBtn.addEventListener('click', () => dialog.showModal());
   });
@@ -58,6 +60,8 @@ export default function orderCallBackModal() {
   // Отправить данные формы
   async function sendFormCallback(jsonData) {
     try {
+
+      preloader.style.display = 'flex';
       const response = await fetch(url, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -67,21 +71,23 @@ export default function orderCallBackModal() {
       if (!response.ok) {
         throw new Error(`Server error: ${response.status}`);
       }
-
       const result = await response.json();
 
-      // Показать сообщение об успехе
       responseMessage.textContent = 'Our operator will call you within 15 minutes. Thank you!';
       responseMessage.style.color = 'green';
       responseMessage.classList.remove('hide');
+
+
       form.classList.add('hide');
+
     } catch (error) {
-      // Показать сообщение об ошибке
       form.classList.add('hide');
       responseMessage.textContent = 'Submission failed. Please try again or call us.';
       responseMessage.style.color = 'red';
       responseMessage.classList.remove('hide');
     }
+
+      preloader.style.display = 'none';
   }
 }
 
