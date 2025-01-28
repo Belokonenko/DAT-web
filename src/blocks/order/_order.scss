@@ -33,8 +33,7 @@
         &:hover .order__list {
             display: grid;
         }
-    
-        &.order_theme_mob:hover .order__inner {
+    &.order_theme_mob:hover .order__inner {
         margin-left: -10px;
         padding-left: 10px;
     }
