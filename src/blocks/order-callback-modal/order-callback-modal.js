@@ -1,82 +1,87 @@
-export default await function orderCallBackModal() {
-  const url = 'http://localhost:4000/usersCalback1';
+export default function orderCallBackModal() {
+  const url = 'http://localhost:4000/usersCalback';
   const dialog = document.getElementById('callbackDialog');
   const openBtns = document.querySelectorAll('.callback-btn');
-
   const closeBtn = document.querySelector('.close-btn');
   const form = document.getElementById('callbackForm');
   const responseMessage = document.querySelector('.responseMessage');
+  const submitBtn = form.querySelector('[type="submit"]');
 
-  // open dialog window
-  openBtns.forEach(openBtn => {
-    openBtn.addEventListener('click', () => {
-      dialog.showModal(); // Открыть диалог
-    });
-  })
-
-  // close dialog window
-  closeBtn.addEventListener('click', () => {
-    dialog.close(); // Закрыть диалог
-    form.classList.remove('hide')
+  // Открыть модальное окно
+  openBtns.forEach((openBtn) => {
+    openBtn.addEventListener('click', () => dialog.showModal());
   });
 
-  // sent form
+  // Закрыть модальное окно
+  closeBtn.addEventListener('click', () => closeModal());
 
-  form.addEventListener('submit', (event) => {
+  // Обработка отправки формы
+  form.addEventListener('submit', async (event) => {
     event.preventDefault();
-    console.log('submit')
 
     const name = form.name.value.trim();
     const phone = form.phone.value.trim();
 
-    if (name && phone) {
-
-      const formData = new FormData(form);
-      const jsonData = Object.fromEntries(formData.entries());
-      jsonData.timestamp = new Date().toISOString(); // YYYY-MM-DDTHH:mm:ss.sssZ
-      sendFormCallback(jsonData);
-
-      //form.classList.add('hide')
-      //alert(`Thank you, ${name}! We will call you back at ${phone}.`);
-      //dialog.close();
-      //form.reset();
-    } else {
+    if (!name || !phone) {
       alert('Please fill in all fields.');
+      return;
     }
+
+    // Деактивируем кнопку отправки
+    toggleSubmitState(false);
+
+    const formData = new FormData(form);
+    const jsonData = Object.fromEntries(formData.entries());
+    jsonData.timestamp = new Date().toISOString(); // YYYY-MM-DDTHH:mm:ss.sssZ
+
+    await sendFormCallback(jsonData);
+
+    // Активируем кнопку отправки
+    toggleSubmitState(true);
   });
 
+  // Закрыть диалог и очистить состояние
+  function closeModal() {
+    dialog.close();
+    form.classList.remove('hide');
+    responseMessage.classList.add('hide');
+    responseMessage.textContent = '';
+    form.reset();
+  }
 
+  // Управление состоянием кнопки отправки
+  function toggleSubmitState(enabled) {
+    submitBtn.disabled = !enabled;
+    submitBtn.textContent = enabled ? 'Send' : 'Sending...';
+  }
+
+  // Отправить данные формы
   async function sendFormCallback(jsonData) {
     try {
-      
       const response = await fetch(url, {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(jsonData),
       });
 
       if (!response.ok) {
         throw new Error(`Server error: ${response.status}`);
-      }else {
-
-      const result = await response.json();
-      
-      form.reset();
-      form.classList.add('hide');
-      responseMessage.classList.remove('hide');
-      responseMessage.textContent = `Our operator will call you within 15 minutes. Thank you` ;
-      responseMessage.style.color = 'green';
-      
-      
       }
 
+      const result = await response.json();
 
+      // Показать сообщение об успехе
+      responseMessage.textContent = 'Our operator will call you within 15 minutes. Thank you!';
+      responseMessage.style.color = 'green';
+      responseMessage.classList.remove('hide');
+      form.classList.add('hide');
     } catch (error) {
-      responseMessage.textContent = `Submission failed. Please try again or call us.`;
+      // Показать сообщение об ошибке
+      form.classList.add('hide');
+      responseMessage.textContent = 'Submission failed. Please try again or call us.';
       responseMessage.style.color = 'red';
+      responseMessage.classList.remove('hide');
     }
   }
-};
+}
 

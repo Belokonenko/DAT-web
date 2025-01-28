@@ -3,10 +3,8 @@
   <form method="dialog" id="callbackForm">
     <h2 class="title title_size_l title_leaf-l title_leaf-r modal-login__title">Order a Call Back</h2>
 
-    <!--<label for="name">Your Name</label>-->
     <input class="form-registration__input name" type="text" id="name" name="name" placeholder="Your Name" required />
 
-    <!--<label for="phone">Your Phone Number</label>-->
     <input class="form-registration__input" type="tel" id="phone" name="phone" placeholder="Your Phone Number" required />
 
     <div class="dialog-buttons">
@@ -15,4 +13,9 @@
   </form>
   <div class="responseMessage hide"></div>
   <button type="button" class="close-btn button modal__btn-close modal-login__btn-close"></button>
+
+  <div id="preloader">
+    <!-- Здесь можно разместить анимацию или изображение индикатора загрузки -->
+    <div class="spinner"></div>
+  </div>
 </dialog>
