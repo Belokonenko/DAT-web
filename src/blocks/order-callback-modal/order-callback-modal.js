@@ -1,7 +1,10 @@
 export default function orderCallBackModal() {
-  const url = 'http://localhost:4000/usersCalback';
   const dialog = document.getElementById('callbackDialog');
+  
+  if(!dialog) return;
+  
   const openBtns = document.querySelectorAll('.callback-btn');
+  const url = 'http://localhost:4000/usersCalback';
   const closeBtn = document.querySelector('.close-btn');
   const form = document.getElementById('callbackForm');
   const responseMessage = document.querySelector('.responseMessage');

@@ -1,12 +1,13 @@
 <!-- order callback modal window -->
 <dialog class="modal callback-dialog" id="callbackDialog">
   <form method="dialog" id="callbackForm">
-    <h2 class="title title_size_l title_leaf-l title_leaf-r modal-login__title">Order a Call Back</h2>
-
-    <input class="form-registration__input name" type="text" id="name" name="name" placeholder="Your Name" required />
-
-    <input class="form-registration__input" type="tel" id="phone" name="phone" placeholder="Your Phone Number" required />
-
+    <h2 class="title title_size_l title_leaf-l title_leaf-r modal-login__title">Call Back</h2>
+    <div class="form-registration__fild">
+      <input class="form-registration__input name" type="text" id="name" name="name" placeholder="Your Name" required />
+    </div>
+    <div class="form-registration__fild">
+      <input class="form-registration__input tel" type="tel" id="phone" name="phone" placeholder="Your Phone Number" required />
+    </div>
     <div class="dialog-buttons">
       <button type="submit" class="submit-btn button button_smooth button_accent modal-login__button">Submit</button>
     </div>
@@ -15,7 +16,6 @@
   <button type="button" class="close-btn button modal__btn-close modal-login__btn-close"></button>
 
   <div id="preloader">
-    <!-- Здесь можно разместить анимацию или изображение индикатора загрузки -->
     <div class="spinner"></div>
   </div>
 </dialog>
