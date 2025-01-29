@@ -1,8 +1,9 @@
 export default function orderCallBackModal() {
+
   const dialog = document.getElementById('callbackDialog');
-  
-  if(!dialog) return;
-  
+
+  if (!dialog) return;
+  const body = document.querySelector('.page-body')
   const openBtns = document.querySelectorAll('.callback-btn');
   const url = 'http://localhost:4000/usersCalback';
   const closeBtn = document.querySelector('.close-btn');
@@ -11,10 +12,11 @@ export default function orderCallBackModal() {
   const submitBtn = form.querySelector('[type="submit"]');
   const preloader = document.getElementById('preloader');
 
-  preloader.style.display = 'none';
   
+  preloader.style.display = 'none';
+
   openBtns.forEach((openBtn) => {
-    openBtn.addEventListener('click', () => dialog.showModal());
+    openBtn.addEventListener('click', () => openModal());
   });
 
   // Закрыть модальное окно
@@ -44,10 +46,16 @@ export default function orderCallBackModal() {
     // Активируем кнопку отправки
     toggleSubmitState(true);
   });
-
+  
+  function openModal() {
+    dialog.showModal();
+    body.classList.add('scrollBlock');
+ 
+  }
   // Закрыть диалог и очистить состояние
   function closeModal() {
     dialog.close();
+    body.classList.remove('scrollBlock');
     form.classList.remove('hide');
     responseMessage.classList.add('hide');
     responseMessage.textContent = '';
@@ -90,7 +98,7 @@ export default function orderCallBackModal() {
       responseMessage.classList.remove('hide');
     }
 
-      preloader.style.display = 'none';
+    preloader.style.display = 'none';
   }
 }
 
