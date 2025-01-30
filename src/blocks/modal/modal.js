@@ -13,4 +13,6 @@ export default function modal(nameModal, classBtnOpen, btnClose) {
             modal.close();
         });
     }
+
+
 }

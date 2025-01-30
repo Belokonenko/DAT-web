@@ -51,14 +51,12 @@ export default function slider(dataSlider) {
     let setIntervalID;
     
     function startAutoSlide() {
-        console.log('startAutoSlide()')
         setIntervalID = setInterval(() => {
             right();
         }, 4000);
     }
     
     function stopAutoSlide() {
-        console.log('stopAutoSlide()')
         clearInterval(setIntervalID);
     }
     // --- /Auto slide ---
@@ -209,11 +207,8 @@ export default function slider(dataSlider) {
     }
 
     function moveLine(num) {
-        console.log('moveLine', num)
         if (num < 0) {
-            console.log(num)
             num = getCounntItems() - getCounntVisebleItem();
-            console.log(num)
             //debugger;
         }
 

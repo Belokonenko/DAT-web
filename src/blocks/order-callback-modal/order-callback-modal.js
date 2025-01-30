@@ -3,6 +3,7 @@ export default function orderCallBackModal() {
   const dialog = document.getElementById('callbackDialog');
 
   if (!dialog) return;
+
   const body = document.querySelector('.page-body')
   const openBtns = document.querySelectorAll('.callback-btn');
   const url = 'http://localhost:4000/usersCalback';
@@ -11,51 +12,61 @@ export default function orderCallBackModal() {
   const responseMessage = document.querySelector('.responseMessage');
   const submitBtn = form.querySelector('[type="submit"]');
   const preloader = document.getElementById('preloader');
-
+    const fixBlocks = document.querySelectorAll('.fix-block');
   
   preloader.style.display = 'none';
 
-  openBtns.forEach((openBtn) => {
-    openBtn.addEventListener('click', () => openModal());
-  });
-
-  // Закрыть модальное окно
-  closeBtn.addEventListener('click', () => closeModal());
-
-  // Обработка отправки формы
-  form.addEventListener('submit', async (event) => {
-    event.preventDefault();
-
-    const name = form.name.value.trim();
-    const phone = form.phone.value.trim();
-
-    if (!name || !phone) {
-      alert('Please fill in all fields.');
-      return;
-    }
-
-    // Деактивируем кнопку отправки
-    toggleSubmitState(false);
-
-    const formData = new FormData(form);
-    const jsonData = Object.fromEntries(formData.entries());
-    jsonData.timestamp = new Date().toISOString(); // YYYY-MM-DDTHH:mm:ss.sssZ
-
-    await sendFormCallback(jsonData);
-
-    // Активируем кнопку отправки
-    toggleSubmitState(true);
-  });
-  
-  function openModal() {
-    dialog.showModal();
-    body.classList.add('scrollBlock');
- 
+  if (openBtns) {
+    openBtns.forEach((openBtn) => {
+      openBtn.addEventListener('click', () => openModal());
+    });
   }
-  // Закрыть диалог и очистить состояние
+
+  if (closeBtn) {
+    closeBtn.addEventListener('click', () => closeModal());
+  }
+
+  if (form) {
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+
+      const name = form.name.value.trim();
+      const phone = form.phone.value.trim();
+
+      if (!name || !phone) {
+        alert('Please fill in all fields.');
+        return;
+      }
+
+      toggleSubmitState(false);
+
+      const formData = new FormData(form);
+      const jsonData = Object.fromEntries(formData.entries());
+      jsonData.timestamp = new Date().toISOString(); // YYYY-MM-DDTHH:mm:ss.sssZ
+
+      await sendFormCallback(jsonData);
+
+      toggleSubmitState(true);
+    });
+  }
+
+  function openModal() {
+    const scrollbarWidth = getScrollbarWidth();
+    fixBlocks.forEach(block => {
+      block.style.paddingRight = `${scrollbarWidth}px`;
+    })
+    document.body.style.paddingRight = `${scrollbarWidth}px`;
+    document.body.style.overflow = 'hidden';
+    dialog.showModal();
+  }
+
   function closeModal() {
     dialog.close();
-    body.classList.remove('scrollBlock');
+    fixBlocks.forEach(block => {
+      block.style.paddingRight = `0px`;
+    })
+    document.body.style.paddingRight = `0px`;
+    document.body.style.overflow = 'auto';
     form.classList.remove('hide');
     responseMessage.classList.add('hide');
     responseMessage.textContent = '';
@@ -71,7 +82,6 @@ export default function orderCallBackModal() {
   // Отправить данные формы
   async function sendFormCallback(jsonData) {
     try {
-
       preloader.style.display = 'flex';
       const response = await fetch(url, {
         method: 'POST',
@@ -82,12 +92,12 @@ export default function orderCallBackModal() {
       if (!response.ok) {
         throw new Error(`Server error: ${response.status}`);
       }
+
       const result = await response.json();
 
       responseMessage.textContent = 'Our operator will call you within 15 minutes. Thank you!';
       responseMessage.style.color = 'green';
       responseMessage.classList.remove('hide');
-
 
       form.classList.add('hide');
 
@@ -100,5 +110,17 @@ export default function orderCallBackModal() {
 
     preloader.style.display = 'none';
   }
+
+  function getScrollbarWidth() {
+    const div = document.createElement('div');
+    div.style.width = '100px';
+    div.style.height = '100px';
+    div.style.overflow = 'scroll';
+    document.body.appendChild(div);
+    const scrollbarWidth = div.offsetWidth - div.clientWidth;
+    document.body.removeChild(div);
+    return scrollbarWidth;
+  }
+
 }
 
