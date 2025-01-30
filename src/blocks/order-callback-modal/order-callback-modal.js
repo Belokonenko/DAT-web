@@ -4,6 +4,7 @@ export default function orderCallBackModal() {
 
   if (!dialog) return;
 
+  const buttonBurger = document.querySelector('.button-burger');
   const body = document.querySelector('.page-body')
   const openBtns = document.querySelectorAll('.callback-btn');
   const url = 'http://localhost:4000/usersCalback';
@@ -12,8 +13,8 @@ export default function orderCallBackModal() {
   const responseMessage = document.querySelector('.responseMessage');
   const submitBtn = form.querySelector('[type="submit"]');
   const preloader = document.getElementById('preloader');
-    const fixBlocks = document.querySelectorAll('.fix-block');
-  
+  const fixBlocks = document.querySelectorAll('.fix-block');
+
   preloader.style.display = 'none';
 
   if (openBtns) {
@@ -56,7 +57,10 @@ export default function orderCallBackModal() {
       block.style.paddingRight = `${scrollbarWidth}px`;
     })
     document.body.style.paddingRight = `${scrollbarWidth}px`;
-    document.body.style.overflow = 'hidden';
+
+    if (!buttonBurger.classList.contains('button-burger_active')){
+      document.body.style.overflow = 'hidden';
+    }
     dialog.showModal();
   }
 
@@ -66,7 +70,11 @@ export default function orderCallBackModal() {
       block.style.paddingRight = `0px`;
     })
     document.body.style.paddingRight = `0px`;
+
+    if (!buttonBurger.classList.contains('button-burger_active')){
+
     document.body.style.overflow = 'auto';
+    }
     form.classList.remove('hide');
     responseMessage.classList.add('hide');
     responseMessage.textContent = '';
