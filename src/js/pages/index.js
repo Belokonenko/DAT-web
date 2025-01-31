@@ -12,6 +12,7 @@ import quantity from '../../blocks/quantity/quantity';
 import modalLogin from '../../blocks/modal-login/modalLogin';
 import tabs from '../../blocks/tabs/tabs';
 import orderCallBackModal from '../../blocks/order-callback-modal/order-callback-modal';
+import addProdCart from '../../blocks/card-prod/card-prod';
 
 document.addEventListener('DOMContentLoaded', () => {
   order();
@@ -30,5 +31,6 @@ document.addEventListener('DOMContentLoaded', () => {
   //---
   customSelect();
   tabs();
+  addProdCart();
   orderCallBackModal();
 });

@@ -335,7 +335,7 @@ export default function slider(dataSlider) {
         }
         function renderCardProd(data) {
             return `
-                <article class="card" draggable="false">
+                <article class="card" data-product-id="${data.id}" draggable="false">
                     <hr />
                     <a href="product-page.html">
                         <div class="card__img-wrap">
@@ -380,7 +380,11 @@ export default function slider(dataSlider) {
                         </svg>
                     </button>
 
-                    <button class="button button-round button_round button_theme_dark card__btn" type="button">
+                    <button 
+                        type="button"
+                        class="button button-round button_round button_theme_dark card__btn add-to-cart-btn" 
+                        data-product-id="${data.id}">
+                         
                         <svg class="button-round__img phone" width="16" height="16">
                             <use xlink:href="#basket"></use>
                         </svg>
