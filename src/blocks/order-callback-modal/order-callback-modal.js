@@ -58,7 +58,7 @@ export default function orderCallBackModal() {
     })
     document.body.style.paddingRight = `${scrollbarWidth}px`;
 
-    if (!buttonBurger.classList.contains('button-burger_active')){
+    if (!buttonBurger.classList.contains('button-burger_active')) {
       document.body.style.overflow = 'hidden';
     }
     dialog.showModal();
@@ -71,9 +71,9 @@ export default function orderCallBackModal() {
     })
     document.body.style.paddingRight = `0px`;
 
-    if (!buttonBurger.classList.contains('button-burger_active')){
+    if (!buttonBurger.classList.contains('button-burger_active')) {
 
-    document.body.style.overflow = 'auto';
+      document.body.style.overflow = 'auto';
     }
     form.classList.remove('hide');
     responseMessage.classList.add('hide');
@@ -81,16 +81,17 @@ export default function orderCallBackModal() {
     form.reset();
   }
 
-  // Управление состоянием кнопки отправки
+  //  state of the button
   function toggleSubmitState(enabled) {
     submitBtn.disabled = !enabled;
     submitBtn.textContent = enabled ? 'Send' : 'Sending...';
   }
 
-  // Отправить данные формы
+  //  sent data
   async function sendFormCallback(jsonData) {
     try {
       preloader.style.display = 'flex';
+      
       const response = await fetch(url, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -100,8 +101,6 @@ export default function orderCallBackModal() {
       if (!response.ok) {
         throw new Error(`Server error: ${response.status}`);
       }
-
-      const result = await response.json();
 
       responseMessage.textContent = 'Our operator will call you within 15 minutes. Thank you!';
       responseMessage.style.color = 'green';

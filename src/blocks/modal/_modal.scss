@@ -2,6 +2,9 @@
     overflow: hidden;
 }
 
+
+
+
 .modal {
     position: fixed;
     left: 50%;
@@ -21,12 +24,47 @@
         padding: 35px 20px 20px 20px;
         min-width: 270px;
     }
+
     @include phone {
         width: 95%;
     }
 
     &::backdrop {
-        background: rgba(0, 0, 0, 0.7);
+    }
+
+    & {
+        display: none;
+        animation: vanish 0.5s;
+    }
+
+    &[open] {
+        display: block;
+        animation: appear 0.5s;
+    }
+
+    &[open]::backdrop {
+        background-color: rgba(0, 0, 0, 0.4);
+        animation: appear 0.5s;
+    }
+
+    @keyframes appear {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes vanish {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
     }
 
     &__btn-close {
