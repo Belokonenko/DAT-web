@@ -1,23 +1,40 @@
-export default function modalBasket(nameModal, classBtnOpen, btnClose) {
-    const modal = document.querySelector(nameModal);
+export default function modalBasket() {
+    const modal = document.querySelector('.modal-basket');
 
     if (modal) {
+
         window.addEventListener('click', (e) => {
             const target = e.target;
 
-            if (target.classList.contains(classBtnOpen.slice(1))) {
+            if (target.classList.contains('add-to-cart-btn')) {
                 console.log(target)
                 const btnDate = event.target.getAttribute('data-product-id');
                 console.log(btnDate)
                 modal.showModal();
+                return;
             }
 
-            if (target.classList.contains(btnClose.slice(1))) {
+            if (target.classList.contains('modal-basket__btn-close')) {
                 console.log(target)
                 modal.close();
+                return;
+            }
+
+            if(target.classList.contains('btn-continue')) {
+                console.log('btn-continue')
+                modal.close();
+                return;
+            }
+            
+            if(target.classList.contains('btn-makeOrder')) {
+                console.log('btn-makeOrder')
+                modal.close();
+                return;
             }
         })
+
     }
+
 }
 
 

@@ -1,84 +1,75 @@
 <dialog class="modal modal-basket">
-    <h2 class="title title_leaf-l title_leaf-r title_size_l modal-basket__title">Basket</h2>
+  <h2 class="title title_leaf-l title_leaf-r title_size_l modal-basket__title">Basket</h2>
 
-    <form class="modal-basket__form product-info" name="modal-basket__form" action="">
-        <h3 class="product-info__title">Herbicide kommand®, FMS UKRAINE</h3>
-        <div class="product-info__details-block">
-            <div class="product-info__wrap-img">
-                @@include('../picture-png/picture-png.html', { "path_img" : "./images/prod-crorpp/cro",
-                "alt": "image Crorpp", "class-name": "product-pic" ,"width":"254", "height": "171" })
-            </div>
+  <form class="modal-basket__form product-info" name="modal-basket__form" action="">
+    <h3 class="product-info__title">Herbicide kommand®, FMS UKRAINE</h3>
+    <div class="product-info__details-block">
+      <div class="product-info__wrap-img">
+        @@include('../picture-png/picture-png.html', { "path_img" : "./images/prod-crorpp/cro", "alt": "image Crorpp", "class-name": "product-pic" ,"width":"254", "height": "171" })
+      </div>
 
-
-
-            <div class="product-info__description">
-                <span class="product-info__price text_accent-light">7814,63 грн</span>
-                <span class="product-info__packaging">Ціна за 5 л </span>
-                <span class="text_strong">Виробник</span>
-                <div class="product-info__block-firm">
-
-@@include('../picture-png/picture-png.html', { "path_img" : "images/logo-fmc/fmc", "alt":
-"logo-fmc", "class-name":"logo-fmc", "width":"58", "height": "20" })
-                    <span class="product-info__firm-text">ФМС Украина</span>
-                </div>
-            </div>
-
-            <div class="modal-basket__wrap-select-quantity">
-                <div class="custom-select">
-                    <svg class="custom-select__arr-menu" width="10" height="10">
-                        <use xlink:href="#arr-menu"></use>
-                    </svg>
-
-                    <select class="custom-select__select visually-hidden">
-                        <option value="1">Option 1</option>
-                        <option value="2">Option 2</option>
-                        <option value="3">Option 3</option>
-                        <option value="4">Option 4</option>
-                    </select>
-
-                    <div class="custom-select__over custom-select__over_them-accetn modal-basket__selcect" hidden></div>
-
-                    <ul class="custom-select__options custom-select__options_them-accetn" style="display: none">
-                        <li data-value="1">Option 1</li>
-                        <li data-value="2">Option 2</li>
-                        <li data-value="3">Option 3</li>
-                        <li data-value="4">Option 4</li>
-                    </ul>
-                </div>
-
-                <div class="quantity modal-basket__quantity">
-                    <span class="quantity__text">Quantity</span>
-
-                    <button type="button" class="button quantity__decrement-button" aria-label="take away one item"
-                        title="take away one product">-</button>
-                    <input type="number" class="quantity__number-input" inputmode="numeric" value="1" min="1"
-                        pattern="[0-9]*" inputmode="numeric" />
-                    <button type="button" class="button quantity__increment-button" aria-label="add one product"
-                        title="add one product">+</button>
-                </div>
-            </div>
+      <div class="product-info__description">
+        <span class="product-info__price text_accent-light">7814,63 грн</span>
+        <span class="product-info__packaging">Ціна за 5 л </span>
+        <span class="text_strong">Виробник</span>
+        <div class="product-info__block-firm">
+          @@include('../picture-png/picture-png.html', { "path_img" : "images/logo-fmc/fmc", "alt": "logo-fmc", "class-name":"logo-fmc", "width":"58", "height": "20" })
+          <span class="product-info__firm-text">ФМС Украина</span>
         </div>
-    </form>
+      </div>
 
-    <div class="modal-basket__block-btn">
-        <button class="button button_accent-light button_smooth button_img-text" type="button">
-            <svg class="" width="16" height="16">
-                <use xlink:href="#basket"></use>
-            </svg>
-            Continue shopping
-        </button>
+      <div class="modal-basket__wrap-select-quantity">
+        <div class="custom-select">
+          <svg class="custom-select__arr-menu" width="10" height="10">
+            <use xlink:href="#arr-menu"></use>
+          </svg>
 
-        <a href="../../make-an-order-page.html" class="button button_accent button_smooth button_img-text">
-            <svg class="" width="20" height="20">
-                <use xlink:href="#list"></use>
-            </svg>
+          <select class="custom-select__select visually-hidden">
+            <option value="1">Option 1</option>
+            <option value="2">Option 2</option>
+            <option value="3">Option 3</option>
+            <option value="4">Option 4</option>
+          </select>
 
-            Make an order
-        </a>
+          <div class="custom-select__over custom-select__over_them-accetn modal-basket__selcect" hidden></div>
+
+          <ul class="custom-select__options custom-select__options_them-accetn" style="display: none">
+            <li data-value="1">Option 1</li>
+            <li data-value="2">Option 2</li>
+            <li data-value="3">Option 3</li>
+            <li data-value="4">Option 4</li>
+          </ul>
+        </div>
+
+        <div class="quantity modal-basket__quantity">
+          <span class="quantity__text">Quantity</span>
+
+          <button type="button" class="button quantity__decrement-button" aria-label="take away one item" title="take away one product">-</button>
+          <input type="number" class="quantity__number-input" inputmode="numeric" value="1" min="1" pattern="[0-9]*" inputmode="numeric" />
+          <button type="button" class="button quantity__increment-button" aria-label="add one product" title="add one product">+</button>
+        </div>
+      </div>
     </div>
+  </form>
 
-    <button class="modal__btn-close button modal-basket__btn-close" type="button" title="close basket"
-        id="closeModalLogin">
-        <span class="visually-hidden">close</span>
+  <div class="modal-basket__block-btn">
+    <button class="button button_accent-light button_smooth button_img-text btn-continue" type="button">
+      <svg class="" width="16" height="16">
+        <use xlink:href="#basket"></use>
+      </svg>
+      Continue shopping
     </button>
+
+    <a href="../../make-an-order-page.html" class="button button_accent button_smooth button_img-text btn-makeOrder">
+      <svg class="" width="20" height="20">
+        <use xlink:href="#list"></use>
+      </svg>
+
+      Make an order
+    </a>
+  </div>
+
+  <button class="modal__btn-close button modal-basket__btn-close" type="button" title="close basket" id="closeModalLogin">
+    <span class="visually-hidden">close</span>
+  </button>
 </dialog>

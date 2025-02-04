@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
   navProd();
   scrollToTop();
   modal('.modal-login', '.btn-open-modal', '.modal-login__btn-close');
-  modalBasket('.modal-basket', '.add-to-cart-btn', '.modal-basket__btn-close');
+  modalBasket();
   quantity();
   modalLogin();
   //---
