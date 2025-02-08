@@ -8,7 +8,7 @@ export default function modalBasket() {
 
             if (target.classList.contains('add-to-cart-btn')) {
                 console.log(target)
-                const btnDate = event.target.getAttribute('data-product-id');
+                const btnDate = target.getAttribute('data-product-id');
                 console.log(btnDate)
                 modal.showModal();
                 return;
@@ -20,19 +20,54 @@ export default function modalBasket() {
                 return;
             }
 
-            if(target.classList.contains('btn-continue')) {
+            if (target.classList.contains('btn-continue')) {
                 console.log('btn-continue')
+                
+                const id = target.getAttribute('data-product-id');
+                console.log(target.parent)
+                addToProdLocalS(id , 2)
+                
                 modal.close();
                 return;
             }
-            
-            if(target.classList.contains('btn-makeOrder')) {
+
+            if (target.classList.contains('btn-makeOrder')) {
                 console.log('btn-makeOrder')
                 modal.close();
                 return;
             }
         })
 
+    }
+
+    //addToProdLocalS('111', 2);
+    //addToProdLocalS('111', 2);
+
+    function addToProdLocalS(productId, quantity) {
+        // Получаем текущую корзину из localStorage
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        console.log('card = ', cart)
+        
+        //{
+        //    productId : 111,
+        //    quantity:0
+        //}
+        // Ищем товар в корзине
+        
+        let existingProduct = cart.find(item => item.productId === productId);
+
+        if (existingProduct) {
+            // Если товар уже есть в корзине, увеличиваем его количество
+            existingProduct.quantity += quantity;
+            console.log(`Количество товара с ID ${productId} увеличено до ${existingProduct.quantity}`);
+        } else {
+            // Если товара нет в корзине, добавляем его с количеством 1
+            cart.push({ productId: productId, quantity: 1 });
+            console.log(`Товар с ID ${productId} добавлен в корзину с количеством 1`);
+        }
+
+        // Сохраняем обновленную корзину в localStorage
+        localStorage.setItem('cart', JSON.stringify(cart));
     }
 
 }

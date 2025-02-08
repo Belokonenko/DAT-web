@@ -14,7 +14,17 @@
         padding-bottom: 20px;
     }
 
-    &__input:checked + .checkbox__castom {
+    &__content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        @include tablet {
+            grid-template-columns: 1fr;
+            grid-template-rows: max-content max-content;
+        }
+    }
+
+    &__input:checked+.checkbox__castom {
         border-color: var(--color-accent);
     }
 
